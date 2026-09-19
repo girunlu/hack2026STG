@@ -33,7 +33,8 @@ interface DonutChartProps {
   alert?: boolean
   /**
    * When "rings", each segment is drawn as its own concentric ring (outer → inner),
-   * with `value` interpreted as the fill fraction (0..1 or 0..100).
+   * with `value` interpreted as a percentage 0..100 and clamped there — a ring filled to the
+   * percentage it states.
    * When "arcs" (default), segments are arcs of a single ring, normalised to sum.
    */
   mode?: 'arcs' | 'rings'
@@ -89,7 +90,9 @@ export default function DonutChart({
       if (r <= 0) return null
       const c = 2 * Math.PI * r
       const raw = seg.value
-      const frac = raw > 1 ? Math.min(1, raw / 100) : Math.max(0, Math.min(1, raw))
+      // The percentage the caller states is the fraction drawn. Values outside 0..100 (or a
+      // negative deviation) clamp at the ends rather than wrapping or overfilling the ring.
+      const frac = Math.max(0, Math.min(1, raw / 100))
       const dash = c * frac
       return (
         <g key={i}>

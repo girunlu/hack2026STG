@@ -38,6 +38,15 @@ the visual reference for the briefing's *Portfolio Health Check*.
    volatility/expected return, no SAA) it simply does not appear. Titles and sub-lines are localised by
    `rail_widgets(client, portfolio, lang)`, and the SAA widget's centre carries the largest
    actual-vs-target deviation rather than a dash.
+   **A ring or bar is as full as the number it states.** Numeric widget values arrive as
+   percentages (`_pct`: `0.62` → `62.0`), and a widget's ring draws exactly that share
+   (`DonutChart mode="rings"`, the value clamped to 0..100); the SAA table's bars are scaled to
+   the weight they sit under. Measured defect, now closed: the rings were rendered as
+   single-segment charts in the default *proportional* mode, where one segment is normalised to
+   its own sum, so SAA `5.00%`, Product Risk `84.21%`, Sectors `80.00%` and Currencies `62.00%`
+   all drew a 100% ring; and the bars were scaled to `max = 0.6`, so Shares `80%` and Bonds
+   `60%` looked identical. A widget with no number (`Nachhaltigkeit`, a profile name) renders
+   no ring at all rather than an empty one.
 4. **Risk figures are guarded.** Position rows carry `risk_contribution` / `marginal_risk`, plus
    `risk_figure_dropped` + `risk_figure_reason` when the source value cannot be true (one int64
    overflow in `CASE-041-01`). The row then shows `—` and the portfolio's `data_gaps` says why.

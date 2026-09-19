@@ -64,7 +64,6 @@ const CATEGORY_LABEL_KEYS: Record<string, MessageKey> = {
 
 // Scale so that ≈60% of portfolio weight fills the bar. Using max=0.6 means
 // a 60% actual weight renders at 100% of the track; larger values cap at full.
-const SAA_BAR_MAX = 0.6;
 
 export default function PortfolioScreen({ clientRef, portfolioNr, onBack, onBriefing }: Props) {
   const { lang, t } = useI18n();
@@ -223,7 +222,7 @@ export default function PortfolioScreen({ clientRef, portfolioNr, onBack, onBrie
                               {formatFraction(row.difference, 2, true)}
                             </td>
                             <td colSpan={6} className="saa-bar-cell">
-                              <ProgressBar value={barValue} color={color} max={SAA_BAR_MAX} />
+                              <ProgressBar value={barValue} color={color} />
                             </td>
                           </tr>
                         );
@@ -487,11 +486,18 @@ function renderWidgetVisual(widget: Widget): ReactNode {
   switch (widget.type) {
     case 'donut': {
       const pct = typeof widget.value === 'number' ? widget.value : null;
+      // No number, nothing to draw: the card must not reserve space for an empty ring (the
+      // Sustainability widget states a profile name, not a share).
+      if (pct === null) return null;
+      // mode="rings" reads the value as the percentage to fill. In the default "arcs" mode a
+      // single segment is normalised to its own sum, so every ring rendered full — 5% and 84%
+      // looked identical.
       return (
         <DonutChart
           size={60}
           strokeWidth={6}
-          segments={pct !== null ? [{ value: pct, color: 'var(--primary)' }] : []}
+          mode="rings"
+          segments={[{ value: pct, color: 'var(--primary)' }]}
           alert={widget.alert}
         />
       );

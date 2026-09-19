@@ -213,6 +213,15 @@ guard usable rather than merely strict: the platform stores fractions (`0.9585`)
 (`22.6037%.`), which used to invent the token `22.6037.`; and JSON renders `196851.0` where a sentence
 says `196851`. Each was found by logging the rejected figures against a real answer, and each has a test.
 
+**A chart is as full as the number it states (found by looking at it).** Every ring in the metric
+rail drew a complete circle whatever its value — SAA `5.00%`, Product Risk `84.21%`, Sectors `80.00%`,
+Currencies `62.00%` all measured 100% filled. Cause: each was a single-segment donut in the default
+*proportional* mode, where one segment is normalised to its own sum. The widget rings now use
+`mode="rings"` (the value read as the percentage it is, clamped 0..100), the SAA table's bars lost
+their `max = 0.6` cap (so Shares `80%` and Bonds `60%` no longer look alike), and a widget with no
+number draws no ring instead of an empty one. Re-measured in the browser: `5.00% → 5%`, `84.21% → 84%`,
+`80.00% → 80%`, `62.00% → 62%`, Shares bar `80% → 80%`.
+
 **A decline is not an answer (found by using it).** Asked about an instrument the client's data has
 no view on, the assistant replied *"I can't tell which instrument you mean… what I can say is that the
 portfolio itself is not aligned"* — a canned non-answer padded with unrelated portfolio observations,
