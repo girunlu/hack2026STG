@@ -213,6 +213,33 @@ guard usable rather than merely strict: the platform stores fractions (`0.9585`)
 (`22.6037%.`), which used to invent the token `22.6037.`; and JSON renders `196851.0` where a sentence
 says `196851`. Each was found by logging the rejected figures against a real answer, and each has a test.
 
+**The assistant answers in frame, and a slice leads somewhere (found by using it).** Asking *"what are
+the strong parts of this investment case?"* or *"is the client happy with the portfolio?"* fell through to
+a public web search, which answered with a generic article (*how to build an investment case*, *how to keep
+clients happy*) and printed the classifier's own state — *"Question could not be classified"* — under
+"Not available". Frame, not keyword luck, now decides: a question the client's data cannot *hold* (an
+instrument/company the context does not carry — `_unknown_entities`) goes to the web, and everything else
+is answered from the client's own analysis, with a deterministic digest of the most urgent findings and the
+next actions when no section answers it directly. Measured after: *"strong parts"* and *"is the client
+happy"* → the client's own findings and actions, `source_kind=data`, no web call, scope declared in the
+advisor's words; *"Is NVIDIA worth investing?"* → the web, as it should be. Three regression tests
+(`tests/test_qa_scope.py`), suite **226 passed / 1 skipped**.
+
+The same click that reveals a slice now leads to the screen behind it. Every evidence row carries its data
+path, and `src/frontend/src/lib/evidenceTarget.ts` maps the path (or a finding's own type) to a
+destination, so a figure like *"13 rule violations"* is no longer a dead end: measured on `CASE-012`,
+clicking the violation row on the briefing lands on `#/client/CASE-012` at *"13 Regelverstösse"*, and the
+creative tile reading *"21 Regelverstösse"* lands in the same place. Evidence rows are one uniform list
+(49px value rows against a 91px finding row; one row measured 170px before, because a news URL was allowed
+to wrap).
+
+**"48 clients but 96 rule violations?" — both numbers are right, they count different things.** 47 clients
+come from `clients.json` and the loaded `SCEN-001` makes 48. The 96 is an **Error record count** summed over
+the 26 clients that carry violations (180 records in total: 96 Error + 84 Warning, median 4 per affected
+client, max 21, 50 rule codes, 28 portfolios), while *"04 - Rule Violations (urgent) 19"* is a **client**
+count. Verified from the source file and cross-checked against `/api/clients` and three client screens;
+recorded in `notes-task/PROJECT-NOTES.md`.
+
 **A case's violations and warnings are separated.** The client screen put every violation of both
 severities in one list under a single heading, so a warning sat between two urgent errors and severity
 was carried only by a colour. Errors now come first under *"5 rule violations"*, warnings second under

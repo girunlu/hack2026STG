@@ -433,38 +433,91 @@
   font-style: italic;
 }
 
+/* Two lines, always: the slice, then where it came from. The source line truncates instead of
+   wrapping (a news row's ref is a full URL), so rows stay the same height whether the value is a
+   percentage or a timestamp — previously one row measured 170px next to rows of 60px. */
 .evidence-row {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
   padding: var(--space-2);
   background: var(--bg-row-alt);
   border-radius: var(--radius-sm);
   border-left: 2px solid var(--primary);
   font-size: var(--fs-cell);
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+  color: inherit;
+}
+
+.evidence-row--action {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--primary);
+}
+
+.evidence-row--action:hover,
+.evidence-row--action:focus-visible {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.evidence-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.evidence-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.evidence-open {
+  flex: none;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--primary-text);
+  white-space: nowrap;
 }
 
 .evidence-label {
   font-weight: 600;
   color: var(--text-primary);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .evidence-value {
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
+  flex: none;
+  margin-left: auto;
+  text-align: right;
 }
 
 .evidence-source {
   color: var(--text-secondary);
   font-size: 10px;
-  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* The raw ref is no longer a line of its own; it is the row's tooltip and part of the source line. */
 .evidence-path {
   color: var(--text-muted);
   font-size: 10px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ---------- Stages ---------- */

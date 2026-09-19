@@ -36,6 +36,23 @@ These need no key and must work without one.
 
 **2. Free-form answers** — optional, LLM-rendered from `BriefingFacts` only.
 
+**3. The analysis digest — what the platform holds when the question matches no section.** A question the
+router cannot place ("what are the strong parts of this investment case?", "is the client happy with the
+portfolio?") is answered with the client's own analysis: the most urgent findings and the next actions,
+named as the briefing names them, under a plain statement that no section answers the question directly.
+Never empty, and never the open web — a generic article about how to build an investment case reads as an
+answer that missed the point. The scope is declared in `unavailable` as *"the question itself is not
+covered by the bank's data"*; the classifier's own state is not something to tell an advisor.
+
+**Which questions belong on the web** is decided by frame, not by whether the keywords matched. A
+question is out of frame when it is an instrument question the client's data cannot answer, or when it
+names a proper noun the client's context does not carry (`_unknown_entities`: "is NVIDIA worth
+investing?" — NVIDIA appears nowhere in this client's data, so the bank cannot answer it). Everything
+else stays in frame: `_answer_web` runs only for those, only after the model has had the client's context
+(an instrument question reaches the web when the model *declines* it), and never when no key is configured
+— without one, the routed answer stays in charge. A public answer carries no bank evidence: its rows are
+cleared, because the sources are its provenance.
+
 ## Rules
 
 - **Answer only from `BriefingFacts`.** If the answer is not there, say so explicitly and name what is

@@ -7,6 +7,7 @@ so explicitly and lists what is unavailable.
 
 from __future__ import annotations
 
+import json
 import re
 from typing import Any
 
@@ -1162,8 +1163,10 @@ def _answer_web(question: str, lang: str = DEFAULT_LANG) -> dict:
             "answer": t("qa.unknown_answer", lang),
             "sources": [],
             "source_kind": "none",
-            "unavailable": [t("qa.unclassified", lang)]
-            + [str(reason) for reason in (result.get("unavailable") or [])],
+            # The provider's own reasons are what the advisor can act on ("switched off", "no source
+            # answered"); the classifier's internal state is not, and reading it under "Not available"
+            # told the advisor nothing about their client.
+            "unavailable": [str(reason) for reason in (result.get("unavailable") or [])],
         }
 
     synthesis = browse.synthesize(question, items, lang)
@@ -1180,6 +1183,87 @@ def _answer_web(question: str, lang: str = DEFAULT_LANG) -> dict:
         "source_kind": "web",
         "unavailable": [t("qa.web_no_synthesis", lang, reason=str(synthesis.get("reason") or ""))],
     }
+
+
+# Words that open a question or name the platform itself; never an entity. A capitalised token that is
+# neither one of these nor present in the client's context is a proper noun from outside the bank's data.
+_ENTITY_STOPWORDS = frozenset({
+    "what", "which", "how", "why", "when", "where", "who", "whom", "is", "are", "was", "were", "does",
+    "do", "did", "can", "could", "should", "would", "will", "has", "have", "had", "the", "this", "that",
+    "these", "those", "there", "and", "or", "for", "with", "from", "about", "into", "tell", "show",
+    "give", "explain", "summarise", "summarize", "list", "name", "please", "client", "bank", "data",
+    "portfolio", "case", "assessment", "investment", "welche", "welcher", "welches", "wie", "was",
+    "warum", "wann", "wo", "wer", "ist", "sind", "war", "waren", "kann", "könnte", "soll", "sollte",
+    "wird", "hat", "haben", "hatte", "der", "die", "das", "den", "dem", "des", "ein", "eine", "einen",
+    "und", "oder", "für", "über", "von", "mit", "zum", "zur", "bitte", "zeig", "zeige", "nenn", "nenne",
+    "erklär", "erkläre", "klient", "klientin", "kunde", "kundin", "bank", "daten", "depot", "fall",
+})
+
+
+def _unknown_entities(question: str, context: dict) -> list[str]:
+    """Proper nouns the client's data does not carry — the mark of a question about the outside world.
+
+    "Is NVIDIA worth investing?" names NVIDIA, which appears nowhere in this client's context, so the
+    answer cannot come from the bank and a public source is the right place to look. "What are the
+    strong parts of this case?" names nothing outside the data, so the client's own analysis answers it.
+    """
+    haystack = json.dumps(context, ensure_ascii=False).lower()
+    found = []
+    for token in re.findall(r"[A-ZÄÖÜ][\w'&.-]{2,}", question):
+        lowered = token.lower()
+        if lowered in _ENTITY_STOPWORDS or lowered in haystack:
+            continue
+        found.append(token)
+    return found
+
+
+_SEVERITY_RANK = {"high": 0, "medium": 1, "low": 2}
+
+
+def _answer_analysis_digest(
+    bundle: dict, portfolio: dict | None, lang: str = DEFAULT_LANG
+) -> tuple[str, list[dict], list[str]]:
+    """What the client's own analysis holds, when the question matches no section of it.
+
+    A question the vocabulary does not cover ("what are the strong parts of this case?", "is the client
+    happy?") is not a question for the open web — a generic article about how to build an investment
+    case reads as an answer that missed the point. The platform's own answer is the analysis the
+    briefing shows, named in its own order of urgency, with the scope stated plainly. Never empty: the
+    three briefing sections are always present, and the advisor recognises every item from the screen.
+    """
+    findings = sorted(
+        (bundle.get("findings") or []),
+        key=lambda finding: _SEVERITY_RANK.get(str(finding.get("severity") or "").lower(), 9),
+    )[:2]
+    items = [str(finding.get("title") or "").strip() for finding in findings]
+    items += [
+        str(action.get("action") or "").strip()
+        for action in (bundle.get("actions") or [])[:2]
+    ]
+    items = [item for item in items if item]
+    if not items:
+        return t("qa.unknown_answer", lang), [], [t("qa.reason_not_covered", lang)]
+
+    evidence = []
+    for finding in findings:
+        for entry in finding.get("evidence") or []:
+            value = entry.get("value")
+            # The QA evidence contract carries scalars. A rule comparison arrives as {"left","right"}
+            # — engine numbers that the violations section renders with their units — so it is left out
+            # here rather than stringified into something an advisor cannot read as a figure.
+            if not isinstance(value, (int, float, str)):
+                continue
+            evidence.append({
+                "label": entry.get("label"),
+                "value": entry.get("value"),
+                "source": entry.get("source", "R3"),
+                "path": entry.get("path", ""),
+            })
+    return (
+        t("qa.digest_lead", lang, items="; ".join(items)),
+        evidence,
+        [t("qa.reason_not_covered", lang)],
+    )
 
 
 def _context_block(bundle: dict, portfolio: dict | None, lang: str = DEFAULT_LANG) -> dict:
@@ -1292,7 +1376,11 @@ def _context_block(bundle: dict, portfolio: dict | None, lang: str = DEFAULT_LAN
 
 
 def _answer_from_context(
-    bundle: dict, portfolio: dict | None, question: str, lang: str = DEFAULT_LANG
+    bundle: dict,
+    portfolio: dict | None,
+    question: str,
+    lang: str = DEFAULT_LANG,
+    context_block: dict | None = None,
 ) -> dict:
     """Ask the model to answer from the client context, or report why it did not.
 
@@ -1303,7 +1391,8 @@ def _answer_from_context(
 
     if not llm_module.available():
         return {"applied": False, "reason": "no key", "answer": None, "used": []}
-    return llm_module.answer(question, _context_block(bundle, portfolio, lang), lang)
+    block = context_block if context_block is not None else _context_block(bundle, portfolio, lang)
+    return llm_module.answer(question, block, lang)
 
 
 def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang: str = "en") -> dict:
@@ -1359,7 +1448,7 @@ def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang
     source_kind = "data"
     sources: list[dict] = []
     answered_by = "rules"
-    web_fallback_needed = False
+    unmatched = False
     
     if unsupported == "attribution":
         answer_text = t("qa.unsupported_attribution", lang)
@@ -1437,20 +1526,22 @@ def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang
     elif category == "data_quality":
         answer_text, evidence, unavailable = _answer_data_quality(bundle, question, portfolio, lang)
     else:
-        # Nothing in the bank's data routes this question. The web is the last resort, not the
-        # second: the client's own analysis gets its chance first (the model answers from it just
-        # below), and only if that declines does this become a web lookup ("is NVIDIA worth
-        # investing?"). A question about *this client* must never be answered from the internet while
-        # the platform holds the answer.
-        web_fallback_needed = True
-        answer_text = t("qa.unknown_answer", lang)
-        unavailable.append(t("qa.unclassified", lang))
+        # Nothing routed this question, and two very different questions hide behind that: one about
+        # *this client* that the vocabulary does not cover ("what are the strong parts of this case?",
+        # "is the client happy with the portfolio?"), and one about the world outside the bank's data
+        # ("is NVIDIA worth investing?"). The first is answered from the client's own analysis — never
+        # from the internet, which cannot know the client and returns an article that reads as an answer
+        # that missed the point. The second goes to the web, and that decision is taken below, once the
+        # client's own data has had its chance.
+        unmatched = True
+        answer_text, evidence, unavailable = _answer_analysis_digest(bundle, portfolio, lang)
         matched_sections.append("outlook_actions")
     
     # Prefer the model's wording of this client's own analysis when a key is available. The routed
     # answer is exact but templated, and the advisor asked in their own words; llm.answer rejects any
     # reply carrying a figure the context does not contain, so this can only improve the phrasing.
-    context_answer = _answer_from_context(bundle, portfolio, question, lang)
+    context_block = _context_block(bundle, portfolio, lang)
+    context_answer = _answer_from_context(bundle, portfolio, question, lang, context_block)
     if context_answer.get("applied"):
         answer_text = str(context_answer.get("answer"))
         answered_by = "llm"
@@ -1459,16 +1550,28 @@ def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang
         source_kind = "data"
         sources = []
 
-    # Only a *decline* routes onward. A missing key or a rejected reply means the model did not run
-    # on this question, and the routed answer — which is exact and evidenced — stays in charge; the
-    # web is consulted for an unclassified question regardless, as it always was.
+    # The public web answers questions the bank's data cannot *hold* — an instrument the client does not
+    # own, a company no recommendation list carries, a market event. It is decided by frame, not by
+    # whether the keywords matched:
+    #
+    #   * an instrument question the data cannot answer goes to the web when the model declines it
+    #     ("should I buy Nestlé?") — but NOT when the model never ran: without a key the routed answer
+    #     stays in charge, exactly as before;
+    #   * an unmatched question goes to the web only if it names something the client's data does not
+    #     carry ("is NVIDIA worth investing?"). An unmatched question about *this client* keeps the
+    #     analysis digest above, which is the platform's own answer to "what do you know about this
+    #     case" — where a web search would return a generic article about investing.
     model_declined = bool(context_answer.get("declined"))
-    if not context_answer.get("applied") and (web_fallback_needed or (model_declined and instrument_question)):
+    out_of_frame = instrument_question or (unmatched and bool(_unknown_entities(question, context_block)))
+    if not context_answer.get("applied") and out_of_frame and (model_declined or unmatched):
         web = _answer_web(question, lang)
         answer_text = web["answer"]
         sources = web["sources"]
         source_kind = web["source_kind"]
-        unavailable.extend(web["unavailable"])
+        unavailable = list(web["unavailable"])
+        # A public answer has no bank evidence: the digest's rows would name this client's findings
+        # next to an answer they do not support, and the sources are this answer's provenance.
+        evidence = []
 
     # Deduplicate evidence by path
     seen_paths = set()

@@ -304,6 +304,14 @@ export const messages = {
 
     // Q&A
     'qa.title': 'Assistant — ask about this client',
+    'evidenceTarget.violations': 'Show the rule violations',
+    'evidenceTarget.portfolios': 'Show the portfolios',
+    'evidenceTarget.notes': 'Show the notes',
+    'evidenceTarget.positions': 'Show the positions',
+    'evidenceTarget.allocation': 'Show the allocation',
+    'evidenceTarget.market': 'Open in market view',
+    'evidenceTarget.source': 'Open the source',
+    'evidenceTarget.open': 'Open',
     'qa.placeholder': 'e.g. What is the concentration risk?',
     'qa.ask': 'Ask',
     'qa.creating': 'Creating answer…',
@@ -714,6 +722,14 @@ export const messages = {
 
     // Q&A
     'qa.title': 'Assistent — zu diesem Klienten fragen',
+    'evidenceTarget.violations': 'Regelverletzungen anzeigen',
+    'evidenceTarget.portfolios': 'Portfolios anzeigen',
+    'evidenceTarget.notes': 'Notizen anzeigen',
+    'evidenceTarget.positions': 'Positionen anzeigen',
+    'evidenceTarget.allocation': 'Allokation anzeigen',
+    'evidenceTarget.market': 'In der Marktansicht öffnen',
+    'evidenceTarget.source': 'Quelle öffnen',
+    'evidenceTarget.open': 'Öffnen',
     'qa.placeholder': 'z.B. Wie hoch ist das Klumpenrisiko?',
     'qa.ask': 'Fragen',
     'qa.creating': 'Antwort wird erstellt …',

@@ -8,6 +8,7 @@ import BriefingScreen from './screens/briefing/BriefingScreen';
 import ClientScreen from './screens/client/ClientScreen';
 import CreativeBriefing from './screens/creative/CreativeBriefing';
 import DashboardScreen from './screens/dashboard/DashboardScreen';
+import type { EvidenceTarget } from './lib/evidenceTarget';
 import FremdbankenPanel from './screens/fremdbanken/FremdbankenPanel';
 import MarketSearchPanel from './screens/market/MarketSearchPanel';
 import PortfolioScreen from './screens/portfolio/PortfolioScreen';
@@ -148,9 +149,46 @@ export default function App() {
     setPendingScroll(section);
     setRoute({ name: 'client', clientRef });
   }, []);
+  const openPortfolioScroll = useCallback(
+    (clientRef: string, portfolioNr: string, section: string) => {
+      setPendingScroll(section);
+      setRoute({ name: 'portfolio', clientRef, portfolioNr });
+    },
+    [],
+  );
+  // The client and the portfolio screens both scroll to a pending section once their data has landed;
+  // any other route clears it so a later visit does not jump.
   useEffect(() => {
-    if (route.name !== 'client') setPendingScroll(null);
+    if (route.name !== 'client' && route.name !== 'portfolio') setPendingScroll(null);
   }, [route]);
+
+  /**
+   * Open an evidence slice where it lives. Every slice the briefing and the assistant quote carries
+   * the data path it came from, so this is the one place that turns a path into a screen: a violating
+   * rule into the client's violations, a weight into the positions table, a target into the SAA panel,
+   * a news ref into the article itself.
+   */
+  const openEvidence = useCallback(
+    (target: EvidenceTarget, clientRef: string, portfolioNr?: string | null) => {
+      if (target.kind === 'external') {
+        window.open(target.url, '_blank', 'noopener,noreferrer');
+        return;
+      }
+      if (target.kind === 'market') {
+        setRoute({ name: 'market', query: target.isin });
+        return;
+      }
+      if (target.kind === 'client') {
+        openClientScroll(clientRef, target.section);
+        return;
+      }
+      // A portfolio section needs the portfolio to open; without one, the client's portfolio list is
+      // the closest thing that shows where the figure comes from.
+      if (portfolioNr) openPortfolioScroll(clientRef, portfolioNr, target.section);
+      else openClientScroll(clientRef, 'client-portfolios');
+    },
+    [openClientScroll, openPortfolioScroll],
+  );
 
   // The language is part of the key: switching it remounts the screens, so every fetch that
   // returned language-dependent content (tab labels, findings, briefing prose) is re-issued
@@ -176,6 +214,7 @@ export default function App() {
         backToDashboard={backToDashboard}
         openDashboardTab={openDashboardTab}
         openClientScroll={openClientScroll}
+        openEvidence={openEvidence}
         pendingScroll={pendingScroll}
         setRoute={setRoute}
       />
@@ -193,6 +232,7 @@ function Shell({
   backToDashboard,
   openDashboardTab,
   openClientScroll,
+  openEvidence,
   pendingScroll,
   setRoute,
 }: {
@@ -205,6 +245,7 @@ function Shell({
   backToDashboard: () => void;
   openDashboardTab: (tab?: string) => void;
   openClientScroll: (clientRef: string, section: string) => void;
+  openEvidence: (target: EvidenceTarget, clientRef: string, portfolioNr?: string | null) => void;
   pendingScroll: string | null;
   setRoute: (route: Route) => void;
 }) {
@@ -322,6 +363,7 @@ function Shell({
           portfolioNr={route.portfolioNr}
           onBack={() => openClient(route.clientRef)}
           onBriefing={(portfolioNr) => openBriefing(route.clientRef, portfolioNr)}
+          initialScroll={pendingScroll}
         />
       )}
       {route.name === 'fremdbanken' && (
@@ -339,6 +381,7 @@ function Shell({
           portfolioNr={route.portfolioNr}
           onBack={() => openClient(route.clientRef)}
           onOpenMarket={(isin) => setRoute({ name: 'market', query: isin })}
+          onOpenEvidence={(target) => openEvidence(target, route.clientRef, route.portfolioNr)}
         />
       )}
       {route.name === 'creative' && (
@@ -348,6 +391,7 @@ function Shell({
           onBack={() => openClient(route.clientRef)}
           onPrint={() => window.print()}
           onOpenMarket={(isin) => setRoute({ name: 'market', query: isin })}
+          onOpenEvidence={(target) => openEvidence(target, route.clientRef, route.portfolioNr)}
         />
       )}
       {route.name === 'market' && (

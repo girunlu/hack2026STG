@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { api, ApiError, errorMessage } from '../../api/client';
 import EvidencePanel from './EvidencePanel';
+import type { EvidenceTarget } from '../../lib/evidenceTarget';
 import { useI18n } from '../../i18n';
 import type { EvidenceIndex, QaResponse } from './briefingTypes';
 
@@ -9,9 +10,11 @@ interface QaPanelProps {
   portfolioNr?: string | null;
   /** Pass the briefing's evidence_index so Q&A evidence can resolve the same visual language. */
   evidenceIndex: EvidenceIndex;
+  /** Open an evidence slice where it lives (violations, positions, allocation, notes, the web). */
+  onOpenEvidence?: (target: EvidenceTarget) => void;
 }
 
-export default function QaPanel({ clientRef, portfolioNr, evidenceIndex }: QaPanelProps) {
+export default function QaPanel({ clientRef, portfolioNr, evidenceIndex, onOpenEvidence }: QaPanelProps) {
   const { lang, t } = useI18n();
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState<QaResponse | null>(null);
@@ -120,6 +123,7 @@ export default function QaPanel({ clientRef, portfolioNr, evidenceIndex }: QaPan
               index={evidenceIndex}
               heading={t('qa.evidence')}
               inline={answer.evidence}
+              onOpen={onOpenEvidence}
             />
           ) : null}
         </>

@@ -28,6 +28,11 @@ A workable design:
 - A timeline spine showing the seven pipeline stages with real elapsed time (not a fabricated animation)
 - The three briefing sections rendered as cards, ordered by finding severity
 - Expandable evidence inline — click a finding to reveal its `evidence[]` array
+- **The metric band opens what it measures.** The four tiles are the briefing's briefest slices, so each
+  one that has a screen behind it is a button: *Regelverstösse* → the client's violations,
+  *Top-Position* → the positions table, *12M Rendite* and *Volumen* → the portfolio. Measured on
+  `CASE-012`: the tile reading *"21 Regelverstösse"* opens `#/client/CASE-012` at *"13 Regelverstösse"*
+  (13 errors + 8 warnings — two groups, see F3), which is what "inspect what the number counts" means.
 - Print-optimised layout with proper page breaks
 - The 60-second constraint still applies. A prettier 3-minute briefing is a worse briefing.
 

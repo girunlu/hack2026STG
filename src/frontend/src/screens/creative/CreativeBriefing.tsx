@@ -8,7 +8,13 @@ import type {
   EvidenceIndexEntry,
   FactsAction,
 } from './types';
-import { useI18n } from '../../i18n';
+import {
+  CLIENT_SECTION,
+  PORTFOLIO_SECTION,
+  targetLabelKey,
+  type EvidenceTarget,
+} from '../../lib/evidenceTarget';
+import { useI18n, type MessageKey } from '../../i18n';
 import './creative.css';
 
 interface Props {
@@ -18,9 +24,29 @@ interface Props {
   onPrint?: () => void;
   /** Opens the market search for an instrument the briefing talks about (its ISIN). */
   onOpenMarket?: (isin: string) => void;
+  /** Open a metric where it lives: the violations tile into the client's violations, and so on. */
+  onOpenEvidence?: (target: EvidenceTarget) => void;
 }
 
 type StageStatus = 'pending' | 'running' | 'done' | 'error';
+
+/** What each metric tile shows, and where clicking it goes. A tile without a destination stays a
+    plain figure: no screen holds a better answer than this page for it. */
+const METRIC_LABELS = {
+  return12m: 'creative.return12M',
+  volume: 'creative.volume',
+  topPosition: 'creative.topPosition',
+  violations: 'creative.ruleViolations',
+} as const satisfies Record<string, MessageKey>;
+
+const TILE_TARGETS: Record<keyof typeof METRIC_LABELS, EvidenceTarget | null> = {
+  // Both the return and the volume are the portfolio's own figures; the portfolio screen is where the
+  // risk/return card and the value they belong to live.
+  return12m: { kind: 'portfolio', section: PORTFOLIO_SECTION.allocation },
+  volume: { kind: 'portfolio', section: PORTFOLIO_SECTION.allocation },
+  topPosition: { kind: 'portfolio', section: PORTFOLIO_SECTION.positions },
+  violations: { kind: 'client', section: CLIENT_SECTION.violations },
+};
 
 interface Stage {
   id: string;
@@ -34,7 +60,14 @@ interface Stage {
  * B3 — Creative briefing format: three-act storyline with timeline spine.
  * Alternative rendering of R6's briefing payload, optimised for print and 60-second reading.
  */
-export default function CreativeBriefing({ clientRef, portfolioNr, onBack, onPrint, onOpenMarket }: Props) {
+export default function CreativeBriefing({
+  clientRef,
+  portfolioNr,
+  onBack,
+  onPrint,
+  onOpenMarket,
+  onOpenEvidence,
+}: Props) {
   const { lang, t } = useI18n();
   const [data, setData] = useState<BriefingApiResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -208,6 +241,29 @@ export default function CreativeBriefing({ clientRef, portfolioNr, onBack, onPri
   // Use top_weight from portfolio contract (fraction 0-1, or null)
   const topWeight = portfolio?.top_weight ?? null;
 
+  // The metric band, in one declaration: value, colour tone and destination key per tile.
+  const metricTiles = [
+    {
+      key: 'return12m',
+      value: return12m !== null ? formatPct(return12m) : '—',
+      tone:
+        return12m === null
+          ? ''
+          : return12m > 0
+            ? 'uro-creative__metric-value--positive'
+            : return12m < 0
+              ? 'uro-creative__metric-value--negative'
+              : '',
+    },
+    { key: 'volume', value: formatMoney(aum, currency, 0), tone: '' },
+    { key: 'topPosition', value: topWeight !== null ? formatFraction(topWeight) : '—', tone: '' },
+    {
+      key: 'violations',
+      value: String(violationCount),
+      tone: violationCount > 0 ? 'uro-creative__metric-value--warning' : '',
+    },
+  ] as const satisfies readonly { key: keyof typeof METRIC_LABELS; value: string; tone: string }[];
+
   // Determine provenance
   const hasMock = facts.house_view.mock;
   const hasLive =
@@ -321,46 +377,40 @@ export default function CreativeBriefing({ clientRef, portfolioNr, onBack, onPri
         </div>
       </div>
 
-      {/* Metric band */}
+      {/* Metric band. The tiles are the briefing's briefest slices, so each one that has a screen
+          behind it opens it — "21 rule violations" is only useful if the next click shows which. */}
       <div className="uro-creative__metrics">
-        <div className="uro-creative__metric">
-          <div
-            className={`uro-creative__metric-value ${
-              return12m !== null
-                ? return12m > 0
-                  ? 'uro-creative__metric-value--positive'
-                  : return12m < 0
-                    ? 'uro-creative__metric-value--negative'
-                    : ''
-                : ''
-            }`}
-          >
-            {return12m !== null ? formatPct(return12m) : '—'}
-          </div>
-          <div className="uro-creative__metric-label">{t('creative.return12M')}</div>
-        </div>
-        <div className="uro-creative__metric">
-          <div className="uro-creative__metric-value">
-            {formatMoney(aum, currency, 0)}
-          </div>
-          <div className="uro-creative__metric-label">{t('creative.volume')}</div>
-        </div>
-        <div className="uro-creative__metric">
-          <div className="uro-creative__metric-value">
-            {topWeight !== null ? formatFraction(topWeight) : '—'}
-          </div>
-          <div className="uro-creative__metric-label">{t('creative.topPosition')}</div>
-        </div>
-        <div className="uro-creative__metric">
-          <div
-            className={`uro-creative__metric-value ${
-              violationCount > 0 ? 'uro-creative__metric-value--warning' : ''
-            }`}
-          >
-            {violationCount}
-          </div>
-          <div className="uro-creative__metric-label">{t('creative.ruleViolations')}</div>
-        </div>
+        {metricTiles.map(({ key, value, tone }) => {
+          const target = TILE_TARGETS[key];
+          const body = (
+            <>
+              <div className={`uro-creative__metric-value ${tone}`}>{value}</div>
+              <div className="uro-creative__metric-label">
+                {t(METRIC_LABELS[key])}
+                {target && onOpenEvidence ? (
+                  <span className="uro-creative__metric-open">{t(targetLabelKey(target))} ↗</span>
+                ) : null}
+              </div>
+            </>
+          );
+          if (!target || !onOpenEvidence) {
+            return (
+              <div key={key} className="uro-creative__metric">
+                {body}
+              </div>
+            );
+          }
+          return (
+            <button
+              key={key}
+              type="button"
+              className="uro-creative__metric uro-creative__metric--action"
+              onClick={() => onOpenEvidence(target)}
+            >
+              {body}
+            </button>
+          );
+        })}
       </div>
 
       {/* Timeline with three acts */}

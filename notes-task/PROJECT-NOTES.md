@@ -466,3 +466,22 @@ What the build does about it:
   would waste both available market lines in a 60-second briefing.
 - Results are cached under `src/backend/app/external/cache/news/`, and a cold batch is bounded by a
   wall-clock deadline so a slow network cannot stall the briefing.
+
+## Violation counts: clients and records are different numbers (verified 2026-09-19)
+
+The question "48 clients but 96 rule violations?" has a plain answer, and it is worth stating on a slide:
+
+- `clients.json` holds **47 clients**; the app shows **48** because the loaded `SCEN-001` scenario client is
+  added on top (`/api/clients` returns 47 `CASE-*` + 1 `SCEN-001`).
+- The case data carries **180 violation records** in total: **96 `Error` + 84 `Warning`**, over **26**
+  clients (21 clients have none, 13 have both severities). Per affected client: min 1, median **4**, max
+  **21**. They come from 50 distinct rule codes and touch 28 portfolios; in 9 cases one client carries the
+  same rule code twice, because the same rule is broken in two different portfolios — each break is its own
+  record.
+- So a **record count is a sum**, not a headcount: 96 is the errors summed over 19 clients, while
+  *"04 - Rule Violations (urgent) 19"* on the dashboard is a **client** count and can never exceed 48.
+  The creative tile and the client screen show records (`CASE-012`: 21 = 13 + 8, `CASE-008`: 12 = 5 + 7);
+  the dashboard tabs show clients (19 errors, 20 warnings).
+- Both are the provider's data, not ours: every figure comes from `SuitabilityViolations[].Severity`. What
+  the prototype chooses are the check-style tabs (liquidity > 10%, maturities ≤ 365 days, last
+  consultation > 12 months, birthdays ≤ 90 days), which are **client** counts by construction.

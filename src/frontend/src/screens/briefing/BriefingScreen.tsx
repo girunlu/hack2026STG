@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { api, ApiError, preferredRenderer } from '../../api/client';
 import { formatDate } from '../../utils/format';
 import EvidencePanel from './EvidencePanel';
+import type { EvidenceTarget } from '../../lib/evidenceTarget';
 import QaPanel from './QaPanel';
 import type {
   Briefing,
@@ -19,6 +20,8 @@ interface Props {
   onBack: () => void;
   /** Opens the market search for an instrument the briefing talks about (its ISIN). */
   onOpenMarket?: (isin: string) => void;
+  /** Open an evidence slice where it lives (violations, positions, allocation, notes, the web). */
+  onOpenEvidence?: (target: EvidenceTarget) => void;
 }
 
 type ScreenState =
@@ -40,6 +43,7 @@ interface LoadedProps {
   data: BriefingResponse;
   onBack: () => void;
   onOpenMarket: (isin: string) => void;
+  onOpenEvidence?: (target: EvidenceTarget) => void;
   selectedRefs: string[] | null;
   selectedHeading: string | undefined;
   onSelectBlock: (refs: string[], heading?: string) => void;
@@ -120,7 +124,13 @@ function buildProvenance(facts: Facts, t: T): Provenance {
   return { hasLive, hasMock, hasSimulated, liveLabel, mockLabel, simulatedLabel };
 }
 
-export default function BriefingScreen({ clientRef, portfolioNr, onBack, onOpenMarket }: Props) {
+export default function BriefingScreen({
+  clientRef,
+  portfolioNr,
+  onBack,
+  onOpenMarket,
+  onOpenEvidence,
+}: Props) {
   const { lang, t } = useI18n();
   const [state, setState] = useState<ScreenState>({ kind: 'running', stages: [] });
   const [selectedRefs, setSelectedRefs] = useState<string[] | null>(null);
@@ -298,6 +308,7 @@ export default function BriefingScreen({ clientRef, portfolioNr, onBack, onOpenM
       data={data}
       onBack={onBack}
       onOpenMarket={onOpenMarket ?? (() => {})}
+      onOpenEvidence={onOpenEvidence}
       selectedRefs={selectedRefs}
       selectedHeading={selectedHeading}
       onSelectBlock={handleSelectBlock}
@@ -311,6 +322,7 @@ function BriefingLoaded({
   data,
   onBack,
   onOpenMarket,
+  onOpenEvidence,
   selectedRefs,
   selectedHeading,
   onSelectBlock,
@@ -513,6 +525,7 @@ function BriefingLoaded({
             clientRef={briefing.client_ref}
             portfolioNr={facts.meta.scope.portfolio_nr}
             evidenceIndex={briefing.evidence_index}
+            onOpenEvidence={onOpenEvidence}
           />
 
           <div className="evidence-panel">
@@ -522,7 +535,20 @@ function BriefingLoaded({
                 {t('briefing.selectBlockForEvidence')}
               </div>
             ) : (
-              <EvidencePanel refs={selectedRefs} index={briefing.evidence_index} />
+              <EvidencePanel
+                refs={selectedRefs}
+                index={briefing.evidence_index}
+                onOpen={onOpenEvidence}
+                findingTypeOf={(ref) => {
+                  const id = ref.split('#')[0].replace('finding:', '');
+                  // `facts.findings` is untyped in the payload contract; the id and type are what the
+                  // index refs are built from, so only those two fields are read here.
+                  const found = (facts.findings as { id?: string; type?: string }[]).find(
+                    (f) => f.id === id,
+                  );
+                  return found?.type ?? null;
+                }}
+              />
             )}
           </div>
 

@@ -113,6 +113,34 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   text-align: center;
+  /* A tile that opens a screen is a button: same box, plus a focus ring and a pointer. */
+  font-family: inherit;
+  color: inherit;
+  border: 1px solid transparent;
+}
+
+.uro-creative__metric--action {
+  cursor: pointer;
+}
+
+.uro-creative__metric--action:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.uro-creative__metric--action:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.uro-creative__metric-open {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .uro-creative__metric-value {

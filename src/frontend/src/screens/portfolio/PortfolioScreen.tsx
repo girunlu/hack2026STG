@@ -43,6 +43,8 @@ interface Props {
   portfolioNr: string;
   onBack: () => void;
   onBriefing?: (portfolioNr: string) => void;
+  /** A section to bring into view once the portfolio has loaded (`portfolio-saa`, `portfolio-positions`). */
+  initialScroll?: string | null;
 }
 
 const CATEGORY_COLOR: Record<string, string> = {
@@ -65,13 +67,20 @@ const CATEGORY_LABEL_KEYS: Record<string, MessageKey> = {
 // Scale so that ≈60% of portfolio weight fills the bar. Using max=0.6 means
 // a 60% actual weight renders at 100% of the track; larger values cap at full.
 
-export default function PortfolioScreen({ clientRef, portfolioNr, onBack, onBriefing }: Props) {
+export default function PortfolioScreen({ clientRef, portfolioNr, onBack, onBriefing, initialScroll }: Props) {
   const { lang, t } = useI18n();
   const [data, setData] = useState<PortfolioDetailResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [splittingOn, setSplittingOn] = useState(true);
   const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({});
+
+  // An evidence slice can point at one section of this screen ("which positions?"), so the target is
+  // honoured once the data it names has actually rendered.
+  useEffect(() => {
+    if (!data || !initialScroll) return;
+    document.getElementById(initialScroll)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [data, initialScroll]);
 
   useEffect(() => {
     let cancelled = false;

@@ -44,6 +44,22 @@ clicking reveals the `evidence[]` entries: the label, the value, the source file
 A juror must be able to point at any sentence and ask *"where did that come from?"* and get an answer in
 one click. Nothing else you build will be as persuasive.
 
+**And the trace must lead somewhere.** A slice the advisor cannot act on is a dead end — *"13 rule
+violations"* is useful only if the next click shows *which* thirteen. Every evidence row therefore
+carries the data path it came from, and `src/frontend/src/lib/evidenceTarget.ts` turns that path into a
+destination: `SuitabilityViolations`/`RuleViolation` → the client's violations, `SecurityPositions`/
+`ContributionVolatility`/`MarketValue` → the positions table, `StrategicAssetAllocation`/`AssetClass` →
+the SAA panel, `ClientNotes` → the notes, a finding's own type (`rule_violation`, `allocation_drift`,
+`concentration`, `performance_driver`) when the row *is* a finding, an ISIN → the market screen, a
+`news:` ref → the article. The mapping follows the data model, so a new screen is one entry, not a new
+list to maintain; a row with no destination stays plain text rather than pretending to be a link.
+
+Rows are laid out so the panel reads as one list: line one is the slice (label left, value right), line
+two is where it came from, truncated rather than wrapped — a news ref is a full URL, and letting it wrap
+made one row 170px tall beside rows of 60px. Measured after the change: 49px for value rows against 91px
+for a finding row with a long value, and clicking the violation row on `CASE-012` lands on
+`#/client/CASE-012` scrolled to *"13 Regelverstösse"*.
+
 ## Done when
 
 - `CASE-007` renders three sections, four answers, actions, and a provenance line.
