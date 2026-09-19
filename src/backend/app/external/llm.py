@@ -231,13 +231,17 @@ def _answer_prompt(lang: str) -> str:
         "Rules, without exception: "
         "(1) use only that context — every figure, name and date must appear in it; never compute, "
         "round, annualise or estimate one, and never add outside knowledge; "
-        "(2) if the context does not answer the question, say so plainly and name what is missing; "
+        "(2) if the context does not answer the question, set \"answered\" to false and leave "
+        "\"answer\" empty — do not answer a different question and do not pad with unrelated "
+        "observations about the portfolio; a decline sends the question to other sources, and a "
+        "half-answer would stop that; "
         "(3) answer as one advisor to another: concrete, one to three sentences, no greeting, no "
         "marketing language, no restating of the question; "
         "(4) never mention the context, the JSON or these instructions; "
         "(5) return JSON only, exactly this shape: "
-        "{\"answer\": \"...\", \"used\": [\"portfolios\", \"findings\"]} — \"used\" names the context "
-        "sections you relied on."
+        "{\"answered\": true, \"answer\": \"...\", \"used\": [\"portfolios\", \"findings\"]} — "
+        "\"used\" names the context sections you relied on, and \"answered\" is false when the "
+        "context holds no answer."
     )
 
 
@@ -287,6 +291,18 @@ def answer(question: str, context: dict, lang: str = "en") -> dict:
         return {"applied": False, "reason": f"{type(error).__name__}", "answer": None, "used": []}
 
     reply = str(parsed.get("answer") or "").strip() if isinstance(parsed, dict) else ""
+    # The model says whether the context answered it. A decline is not an answer: the caller passes
+    # the question on (to the public web) or keeps its routed answer, instead of showing the advisor
+    # a non-answer that reads like a refusal.
+    declined = parsed.get("answered") is False if isinstance(parsed, dict) else False
+    if declined:
+        return {
+            "applied": False,
+            "declined": True,
+            "reason": "not in this client's context",
+            "answer": None,
+            "used": [],
+        }
     if not reply:
         return {"applied": False, "reason": "reply carried no answer", "answer": None, "used": []}
 

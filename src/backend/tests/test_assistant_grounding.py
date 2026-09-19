@@ -194,3 +194,60 @@ def test_the_performance_question_routes_to_performance_analysis():
     """'performed' must reach the performance family, not fall through to the web."""
     assert qa_module._classify("How has this client portfolio performed?")[0] == "performance"
     assert qa_module._classify("What is the concentration risk?")[0] == "concentration"
+
+
+def test_a_decline_is_not_an_answer(monkeypatch):
+    """Measured: the model answered an out-of-context question with a non-answer plus unrelated
+    portfolio observations, which read as a canned refusal and blocked the web lookup."""
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "test-key")
+    monkeypatch.setattr(
+        llm_module,
+        "_chat",
+        lambda payload: json.dumps({
+            "answered": False,
+            "answer": "",
+            "used": [],
+        }),
+    )
+
+    outcome = llm_module.answer("is NVIDIA worth investing?", _context(), "en")
+
+    assert outcome["applied"] is False
+    assert outcome.get("declined") is True
+    assert outcome["answer"] is None
+
+
+def test_a_declined_instrument_question_reaches_the_web(monkeypatch):
+    """The advisor asked about a company the client's data has no view on: look it up."""
+    monkeypatch.setenv("DEEPSEEK_API_KEY", "test-key")
+    monkeypatch.setattr(
+        llm_module,
+        "_chat",
+        lambda payload: json.dumps({"answered": False, "answer": "", "used": []}),
+    )
+    monkeypatch.setattr(
+        qa_module,
+        "_answer_web",
+        lambda question, lang: {
+            "answer": "web answer",
+            "sources": [{"title": "T", "url": "https://x", "snippet": "S"}],
+            "source_kind": "web",
+            "unavailable": [],
+        },
+    )
+
+    outcome = qa_module.answer(CLIENT, "Should I buy Nestle?", None, "en")
+
+    assert outcome["source_kind"] == "web"
+    assert outcome["sources"], "the advisor gets sources rather than a non-answer"
+
+
+def test_without_a_key_an_instrument_question_keeps_the_routed_answer(monkeypatch):
+    """A missing key must not change which answer the platform gives on its own data."""
+    for name in llm_module._KEY_ENV:
+        monkeypatch.delenv(name, raising=False)
+
+    outcome = qa_module.answer(CLIENT, "Which instruments would you switch?", None, "en")
+
+    assert outcome["answered_by"] == "rules"
+    assert outcome["source_kind"] == "data"

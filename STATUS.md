@@ -15,7 +15,7 @@ from those documents is here; everything they listed as open is either closed be
 Reproduce every number in this file:
 
 ```
-cd src/backend && python -m pytest -q                    # 220 passed, 1 skipped
+cd src/backend && python -m pytest -q                    # 223 passed, 1 skipped
 cd src/backend && python -m tests.test_harness --out /tmp/x \
   && python -m tests.test_harness --diff tests/snapshots /tmp/x     # clean
 cd src/frontend && npm run typecheck && npm run build    # both clean
@@ -29,7 +29,7 @@ python tools/drill.py                                    # 11 PASS / 0 FAIL (iso
 | | |
 |---|---|
 | Dataset (live) | **48 clients / 58 portfolios** — the 47 shipped plus `SCEN-001` "Lena Vogt" (the brief's Example Scenario) from `data/uploads/scen-001.json`; `data/excustody/` empty; `data_as_of` 2026-09-03 |
-| Backend suite | **220 passed, 1 skipped** (the skip is the opt-in `--run-harness` drill); offline, deterministic |
+| Backend suite | **223 passed, 1 skipped** (the skip is the opt-in `--run-harness` drill); offline, deterministic |
 | Snapshot baseline | 49 files (48 clients + `_summary`); `--diff` against a fresh run **clean** |
 | Frontend | `tsc --noEmit` clean; `vite build` clean (dist 298.36 kB / gzip 85.01 kB, incl. 72 KB self-hosted Inter) |
 | Findings | **636** across 48 clients; **all 16 enum types fire** — `rule_violation` 153, `missing_data` 78, `allocation_drift` 77, `preference_conflict` 51, `stale_data` 48, `risk_alignment` 47, `performance_driver` 45, `pending_task` 31, `esg_alignment` 19, `concentration` 17, `reinvestment` 16, `fx_exposure` 16, `sector_concentration` 15, `material_change` 14, `open_proposal` 5, `liquidity_event` 4 |
@@ -212,6 +212,21 @@ guard usable rather than merely strict: the platform stores fractions (`0.9585`)
 `95.85 %`, so both units of a stored figure are accepted; prose puts punctuation after numbers
 (`22.6037%.`), which used to invent the token `22.6037.`; and JSON renders `196851.0` where a sentence
 says `196851`. Each was found by logging the rejected figures against a real answer, and each has a test.
+
+**A decline is not an answer (found by using it).** Asked about an instrument the client's data has
+no view on, the assistant replied *"I can't tell which instrument you mean… what I can say is that the
+portfolio itself is not aligned"* — a canned non-answer padded with unrelated portfolio observations,
+and because it counted as an answer it **blocked the web lookup** the feature exists for. The model now
+returns an explicit `answered` flag: a decline routes the question onward (to the web for an
+unclassified or instrument question, otherwise the routed answer stands), and the prompt forbids
+answering a different question or padding with unrelated observations. Verified live: *"Is Nestlé worth
+investing for this client?"* → a sourced web answer that reports the sources disagreeing (Seeking Alpha
+"cautious buy" vs Stockchase "BUY now", one analyst BUY and one SELL); *"Is NVIDIA worth investing?"* →
+sourced web answer; *"What is the concentration risk?"* → the client's own analysis.
+
+Introducing that distinction took a test to get right: **a missing key is not a decline**. Treating
+"the model did not run" like "the model declined" sent instrument questions to the web whenever no key
+was configured, changing answers the platform can give on its own data — `test_without_a_key_an_instrument_question_keeps_the_routed_answer` pins it.
 
 **The public web is now the last resort, not the second.** The unclassified branch used to call the web
 before the client's data had a chance, so *"how has this client's portfolio performed?"* was answered

@@ -1338,6 +1338,10 @@ def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang
         category, keywords = "instruments", [kw for kw in INSTRUMENT_KEYWORDS if kw in q_lower]
     else:
         category, keywords = _classify(question)
+    # An instrument question the client's data cannot answer ("should I buy Nestlé?") is exactly the
+    # case the advisor wants looked up elsewhere — the platform holds no view on a company that is in
+    # neither the holdings, the proposal nor the recommendation list.
+    instrument_question = category == "instruments"
     is_numeric = _is_numeric_question(question)
     unsupported = _is_unsupported(question)
     
@@ -1455,7 +1459,11 @@ def answer(client_ref: str, question: str, portfolio_nr: str | None = None, lang
         source_kind = "data"
         sources = []
 
-    if not context_answer.get("applied") and web_fallback_needed:
+    # Only a *decline* routes onward. A missing key or a rejected reply means the model did not run
+    # on this question, and the routed answer — which is exact and evidenced — stays in charge; the
+    # web is consulted for an unclassified question regardless, as it always was.
+    model_declined = bool(context_answer.get("declined"))
+    if not context_answer.get("applied") and (web_fallback_needed or (model_declined and instrument_question)):
         web = _answer_web(question, lang)
         answer_text = web["answer"]
         sources = web["sources"]
