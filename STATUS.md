@@ -213,6 +213,27 @@ guard usable rather than merely strict: the platform stores fractions (`0.9585`)
 (`22.6037%.`), which used to invent the token `22.6037.`; and JSON renders `196851.0` where a sentence
 says `196851`. Each was found by logging the rejected figures against a real answer, and each has a test.
 
+**The client list printed its values one column to the left (found by measuring the table).** Two
+independent defects, both in the dashboard table. (1) The violation and warning cells were declared
+*twice* — once as `columns` in `DashboardScreen`, once through `DataTable`'s own `showIndicators` — so
+every row carried four indicator cells and each icon appeared twice. (2) The indicator cell was styled
+`display: inline-flex` on a `<td>`, which takes the cell out of the table layout, collapsing the two
+indicator columns onto each other. Either one shifts every value one slot (20px) left of its header:
+the client number printed under an empty slot, the name under `Client no.`, the birthday under `Name`,
+and `Last consultation` stayed empty. Fixed both; re-measured in the browser, all eight columns sit
+exactly under their headers on every row (9 cells, 9 headers, one icon per indicator cell).
+
+The row checkboxes are gone with them: they selected nothing, and a click bubbled into the row handler
+and **navigated to the client** (`#/` → `#/client/CASE-022`, tick lost). The prototype has no bulk
+action, so the control was removed rather than left looking functional.
+
+Two questions raised while looking at the list, both answered from the data: the `Consultations` tab
+filters for a consultation or note, and all 48 clients qualify, so nothing visibly changes when it is
+selected (`01 - Liquidity > 10%` cuts the list to 13 — the filters are real); and the Error/Warning
+severities are the **case data's own** (`SuitabilityViolations.Severity`: 96 Error, 84 Warning over 48
+clients from 50 rule codes), not something the prototype invents — our own thresholds are the
+check-style tabs (liquidity, maturities, stale consultations, birthdays).
+
 **A chart is as full as the number it states (found by looking at it).** Every ring in the metric
 rail drew a complete circle whatever its value — SAA `5.00%`, Product Risk `84.21%`, Sectors `80.00%`,
 Currencies `62.00%` all measured 100% filled. Cause: each was a single-segment donut in the default

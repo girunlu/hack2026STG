@@ -28,12 +28,21 @@ def test_the_upload_directory_is_redirected_away_from_the_working_copy():
 
 
 def test_an_import_here_cannot_reach_the_working_copy():
-    """The store path a test writes to is not the one the demo server reads."""
+    """The store path a test writes to is not the one the demo server reads.
+
+    The working copy may legitimately *hold* a store — an advisor imports a statement while rehearsing
+    the demo, and that file lives outside the suite. What must not happen is this test *changing* it,
+    so the guard compares content instead of existence: asserting absence failed whenever the demo had
+    an imported statement of its own, which is a false alarm, not a leak.
+    """
     before = excustody_store.store_dir()
+    working_store = excustody_store.DEFAULT_DIR / excustody_store.STORE_FILE
+    untouched = working_store.read_bytes() if working_store.exists() else None
     excustody_store.save("CASE-TEST", {"PortfolioNr": "EXT-999-01", "PortfolioId": 1})
     try:
         assert excustody_store.store_dir() == before
-        assert not (excustody_store.DEFAULT_DIR / excustody_store.STORE_FILE).exists(), (
+        after = working_store.read_bytes() if working_store.exists() else None
+        assert after == untouched, (
             "an import in the test process reached the working copy's store"
         )
     finally:

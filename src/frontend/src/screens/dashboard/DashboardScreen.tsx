@@ -7,7 +7,6 @@ import FilterTabs from '../../components/FilterTabs';
 import MetaBand from '../../components/MetaBand';
 import Pagination from '../../components/Pagination';
 import SearchBox from '../../components/SearchBox';
-import { ViolationIcon, WarningIcon } from '../../components';
 import type { Column, SortState } from '../../components/types';
 import { useShellBadges } from '../../shell/ShellContext';
 import type { ClientRow, ClientsResponse, Tab } from '../../types';
@@ -198,13 +197,12 @@ export default function DashboardScreen({ onOpenClient, tab, onTabChange }: Prop
         {row.name}
       </a>
     );
-    const violationRender = (row: ClientRow): ReactNode =>
-      row.has_violation ? <ViolationIcon /> : null;
-    const warningRender = (row: ClientRow): ReactNode =>
-      row.has_warning ? <WarningIcon /> : null;
+    // The violation and warning cells are drawn by DataTable itself (`showIndicators` below), which
+    // owns their aria-labelled header cells. Declaring them here *as well* put four indicator cells in
+    // every row: each icon appeared twice, and the surplus cells pushed every value one column to the
+    // left of its header — the client number under an empty slot, the name under "Client no.", the
+    // birthday under "Name", with "Last consultation" left empty.
     return [
-      { key: '__indicator_violation', label: '', width: '28px', render: violationRender },
-      { key: '__indicator_warning', label: '', width: '28px', render: warningRender },
       { key: 'ref', label: t('dashboard.colClientNr'), sortable: true, width: '110px', render: (r) => r.ref },
       { key: 'name', label: t('dashboard.colName'), sortable: true, render: nameRender },
       {
@@ -299,7 +297,9 @@ export default function DashboardScreen({ onOpenClient, tab, onTabChange }: Prop
           rows={pageRows}
           rowKey={(r) => r.ref}
           onRowClick={(r) => onOpenClient(r.ref)}
-          showCheckboxes
+          // No checkbox column: the prototype has no bulk action, and a checkbox that selects nothing
+          // but bubbles its click into the row's handler navigated to the client instead (measured:
+          // #/ -> #/client/CASE-022, tick lost). A control must not look like it does something.
           showIndicators
           indicators={(r) => ({ violation: r.has_violation, warning: r.has_warning })}
           sort={sort}

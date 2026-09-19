@@ -439,11 +439,17 @@
   color: var(--text-secondary);
   font-size: var(--fs-cell);
 }
+/* Applies to a <td>: it must stay a table cell. `display: inline-flex` took the cell out of the
+   table layout, so the two indicator columns collapsed onto each other and every later column sat
+   one slot (20px) left of its header — the client number under an empty slot, the name under
+   "Client no.", the last column empty. */
 .uro-table__indicator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 20px;
+  text-align: center;
+  line-height: 0;
+}
+.uro-table__indicator > svg {
+  vertical-align: middle;
 }
 .uro-table__checkbox {
   width: 28px;
