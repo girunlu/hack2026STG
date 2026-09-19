@@ -213,6 +213,16 @@ guard usable rather than merely strict: the platform stores fractions (`0.9585`)
 (`22.6037%.`), which used to invent the token `22.6037.`; and JSON renders `196851.0` where a sentence
 says `196851`. Each was found by logging the rejected figures against a real answer, and each has a test.
 
+**A case's violations and warnings are separated.** The client screen put every violation of both
+severities in one list under a single heading, so a warning sat between two urgent errors and severity
+was carried only by a colour. Errors now come first under *"5 rule violations"*, warnings second under
+*"7 warnings"* (`client.violationsCount` / `client.warningsCount`, ICU plurals), each group rendered only
+when it has rows, with the single *"Keine Regelverletzungen."* line for a clean client. Measured on
+`CASE-008` (5 + 7, no card in the wrong group), `CASE-002` in both languages (`1 rule violation` /
+`1 Regelverstoss`, `2 warnings` / `2 Warnungen`) and `CASE-028` (empty). The anchor `#client-violations`
+stays on one element because the shell nav's *Regelverletzungen* button and the dashboard's skipped tabs
+scroll to it.
+
 **The client list printed its values one column to the left (found by measuring the table).** Two
 independent defects, both in the dashboard table. (1) The violation and warning cells were declared
 *twice* — once as `columns` in `DashboardScreen`, once through `DataTable`'s own `showIndicators` — so

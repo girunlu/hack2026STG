@@ -91,6 +91,12 @@ export default function ClientScreen({ clientRef, onOpenPortfolio, onOpenFremdba
 
   const { client, portfolios, proposals, violations, tags, data_gaps } = data;
 
+  // Errors and warnings are separated: a single list under one heading read as if every entry were
+  // equally urgent, with severity carried only by a colour. Errors first, then warnings, matching the
+  // dashboard's tabs and the shell nav.
+  const errorViolations = violations.filter((v) => v.severity === 'Error');
+  const warningViolations = violations.filter((v) => v.severity === 'Warning');
+
   const displayName = client.display_name || `${client.first_name ?? ''} ${client.last_name ?? ''}`.trim() || client.ref;
   const riskProfileName = client.risk_profile?.name ?? t('client.notAvailable');
 
@@ -261,16 +267,37 @@ export default function ClientScreen({ clientRef, onOpenPortfolio, onOpenFremdba
           </div>
         </section>
 
-        {/* Violations */}
+        {/* Violations — the shell nav and the skipped tabs scroll to #client-violations, so the
+            anchor stays on one section even though it now carries two groups. */}
         <section id="client-violations">
-          <h3 style={{ fontSize: 'var(--fs-card-title)', margin: '0 0 var(--space-2) 0' }}>{t('client.ruleViolations')}</h3>
           {violations.length === 0 ? (
             <div style={{ color: 'var(--text-muted)' }}>{t('client.noViolations')}</div>
           ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-              {violations.map((v, idx) => (
-                <ViolationRow key={v.id ?? idx} violation={v} portfolios={portfolios} t={t} />
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+              {errorViolations.length > 0 && (
+                <div data-group="errors">
+                  <h3 style={{ fontSize: 'var(--fs-card-title)', margin: '0 0 var(--space-2) 0' }}>
+                    {t('client.violationsCount', { count: errorViolations.length })}
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                    {errorViolations.map((v, idx) => (
+                      <ViolationRow key={v.id ?? idx} violation={v} portfolios={portfolios} t={t} />
+                    ))}
+                  </div>
+                </div>
+              )}
+              {warningViolations.length > 0 && (
+                <div data-group="warnings">
+                  <h3 style={{ fontSize: 'var(--fs-card-title)', margin: '0 0 var(--space-2) 0' }}>
+                    {t('client.warningsCount', { count: warningViolations.length })}
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
+                    {warningViolations.map((v, idx) => (
+                      <ViolationRow key={v.id ?? idx} violation={v} portfolios={portfolios} t={t} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </section>

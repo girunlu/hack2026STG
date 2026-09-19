@@ -33,6 +33,15 @@ Briefing** — so `R1`'s entry point belongs on this screen.
    visually distinct, and a rejected proposal should not read as an open one.
 7. **Violations show `rule_description`** (localized), not a hardcoded German field or raw C# field names (WEBSITE-BUGS.md #3, #11 fixed). The violation card renders the rule's description in the current language, plus the rule code and portfolio label.
 8. **Correct plurals** — "1 error rule violation" is gone; the UI renders "1 Regelverstoss" / "1 rule violation" with proper singular/plural handling (WEBSITE-BUGS.md #11 fixed).
+9. **Errors and warnings are separate groups, not one list.** The section carried a single heading over
+   every violation of both severities, so a warning sat between two urgent errors and severity was
+   carried only by a colour. It now renders the errors first under `{count} rule violations` /
+   `{count} Regelverstösse` and the warnings second under `{count} warnings` / `{count} Warnungen`
+   (`client.violationsCount` / `client.warningsCount`, ICU plurals), each group only when it has rows,
+   and the empty case keeps a single `No rule violations.` / `Keine Regelverletzungen.` line. The
+   section keeps the id `#client-violations` on one element — the shell nav's `Regelverletzungen`
+   button and the dashboard's skipped tabs scroll to it, so splitting the anchor would break them.
+   The nav's own count remains the client's total (errors + warnings).
 
 
 - `CASE-007` renders: one portfolio, **seven** proposals (all `Final`, the newest ending with
