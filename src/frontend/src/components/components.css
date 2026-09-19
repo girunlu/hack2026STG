@@ -1,0 +1,637 @@
+/* Shared URO Advisor Pro component kit — all values from tokens.css */
+
+/* ---------- Header ---------- */
+.uro-header {
+  height: var(--header-height);
+  background: var(--primary);
+  color: var(--logo-text-dark);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  box-shadow: var(--shadow-header);
+  position: relative;
+  z-index: 3;
+}
+.uro-header__logo {
+  height: 28px;
+  display: block;
+}
+.uro-header__spacer {
+  flex: 1;
+}
+.uro-header__search {
+  background: transparent;
+  border: none;
+  color: var(--logo-text-dark);
+  padding: var(--space-1) var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-md);
+}
+.uro-header__search:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.uro-header__user {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--logo-text-dark);
+  padding: var(--space-1) var(--space-2);
+  margin-left: var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body);
+  font-weight: 600;
+}
+.uro-header__user:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.uro-header__lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-right: var(--space-3);
+  font-size: var(--fs-cell);
+  font-weight: 600;
+}
+.uro-header__lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--logo-text-dark);
+  padding: 2px 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+  border-radius: var(--radius-sm);
+}
+.uro-header__lang-btn:hover {
+  opacity: 0.9;
+}
+.uro-header__lang-btn--active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+.uro-header__lang-sep {
+  opacity: 0.5;
+}
+
+/* ---------- Secondary Nav ---------- */
+.uro-nav {
+  height: var(--nav-height);
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  padding: 0 var(--space-4);
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+.uro-nav__title {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--fs-body);
+  border-right: 1px solid var(--border);
+}
+.uro-nav__items {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  overflow: hidden;
+}
+.uro-nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0 var(--space-3);
+  color: var(--text-primary);
+  font-size: var(--fs-cell);
+  font-weight: 400;
+  border: none;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.uro-nav__item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+.uro-nav__item--active {
+  color: var(--primary-text);
+  font-weight: 600;
+}
+.uro-nav__item--active:hover {
+  background: transparent;
+}
+.uro-nav__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+}
+.uro-nav__badge--danger {
+  background: var(--danger);
+}
+.uro-nav__badge--muted {
+  background: var(--badge-gray);
+}
+/* Client-file import (README: accept new client files) */
+.client-import {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.client-import input[type='file'] {
+  display: none;
+}
+.client-import__label {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--primary-text);
+  font-size: var(--fs-cell);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.client-import__label:hover {
+  background: var(--primary-light);
+}
+.client-import__status {
+  font-size: var(--fs-cell);
+  color: var(--text-secondary);
+}
+.client-import__status--failed {
+  color: var(--danger);
+}
+
+.uro-nav__badge--solid {
+  background: var(--badge-dark);
+}
+.uro-nav__right {
+  display: flex;
+  align-items: stretch;
+  margin-left: auto;
+}
+.uro-nav__right .uro-nav__item {
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+.uro-nav__back {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border);
+  cursor: pointer;
+}
+.uro-nav__back:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* ---------- Meta Band ---------- */
+.uro-meta {
+  min-height: var(--meta-height);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-4);
+}
+.uro-meta__left,
+.uro-meta__right {
+  display: flex;
+  align-items: center;
+}
+.uro-meta__right {
+  margin-left: auto;
+}
+.uro-meta__pairs {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.uro-meta__pair {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--space-4);
+  border-right: 1px solid var(--border);
+  min-height: 36px;
+  justify-content: center;
+}
+.uro-meta__pair:last-child {
+  border-right: none;
+}
+.uro-meta__label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+.uro-meta__value {
+  font-size: var(--fs-body);
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.uro-meta__total {
+  font-size: var(--fs-total);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Filter Tabs ---------- */
+.uro-filter-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.uro-filter-tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-primary);
+  font-size: var(--fs-cell);
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+.uro-filter-tabs__tab:hover {
+  color: var(--primary-text);
+}
+.uro-filter-tabs__tab--active {
+  color: var(--primary-text);
+  font-weight: 600;
+  border-bottom-color: var(--primary-text);
+}
+.uro-filter-tabs__tab--active .uro-filter-tabs__badge {
+  background: var(--primary-text);
+  color: #fff;
+}
+.uro-filter-tabs__tab--unsupported {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.uro-filter-tabs__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+  background: var(--badge-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+}
+.uro-filter-tabs__add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: var(--space-1) var(--space-2);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.uro-filter-tabs__add:hover {
+  background: var(--primary-text);
+}
+
+/* ---------- Search Box ---------- */
+.uro-search {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  padding: var(--space-1) var(--space-2);
+  height: 28px;
+}
+.uro-search__icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.uro-search__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--fs-cell);
+  color: var(--text-primary);
+  width: 160px;
+}
+.uro-search__input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ---------- DataTable ---------- */
+.uro-table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.uro-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.uro-table thead th {
+  background: var(--bg-nav);
+  color: var(--text-primary);
+  font-size: var(--fs-cell);
+  font-weight: 600;
+  text-align: left;
+  padding: 0 var(--space-2);
+  height: var(--row-height);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+.uro-table thead th.uro-table__th--right {
+  text-align: right;
+}
+.uro-table thead th.uro-table__th--center {
+  text-align: center;
+}
+.uro-table thead th.uro-table__th--sortable {
+  cursor: pointer;
+  padding-right: var(--space-4);
+}
+.uro-table__sort-arrow {
+  position: absolute;
+  right: var(--space-1);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1;
+}
+.uro-table__sort-arrow--active {
+  color: var(--primary-text);
+}
+.uro-table tbody td {
+  padding: 0 var(--space-2);
+  height: var(--row-height);
+  font-size: var(--fs-cell);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.uro-table tbody td.uro-table__td--right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.uro-table tbody td.uro-table__td--center {
+  text-align: center;
+}
+.uro-table tbody tr:nth-child(even) {
+  background: var(--bg-row-alt);
+}
+.uro-table tbody tr:hover {
+  background: var(--primary-light);
+}
+.uro-table tbody tr.uro-table__row--clickable {
+  cursor: pointer;
+}
+.uro-table__empty {
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--fs-cell);
+}
+.uro-table__indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+.uro-table__checkbox {
+  width: 28px;
+  text-align: center;
+}
+.uro-table__checkbox input {
+  cursor: pointer;
+}
+.uro-table__link {
+  color: var(--primary-text);
+  text-decoration: none;
+}
+.uro-table__link:hover {
+  text-decoration: underline;
+}
+.uro-table__footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-nav);
+}
+
+/* ---------- Pagination ---------- */
+.uro-pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-cell);
+}
+.uro-pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 var(--space-2);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--fs-cell);
+  cursor: pointer;
+}
+.uro-pagination__btn:hover:not(:disabled) {
+  background: var(--primary-light);
+}
+.uro-pagination__btn--active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+.uro-pagination__btn--active:hover {
+  background: var(--primary);
+}
+.uro-pagination__btn:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.uro-pagination__nav {
+  color: var(--primary-text);
+  background: transparent;
+  border: none;
+  padding: 0 var(--space-2);
+  height: 28px;
+  cursor: pointer;
+  font-size: var(--fs-cell);
+}
+.uro-pagination__nav:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.uro-pagination__spacer {
+  color: var(--text-muted);
+  padding: 0 var(--space-1);
+}
+.uro-pagination__right {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+}
+.uro-pagination__select {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  padding: 2px var(--space-1);
+  font-size: var(--fs-cell);
+  color: var(--text-primary);
+  height: 24px;
+}
+
+/* ---------- Card ---------- */
+.uro-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+.uro-card--padded {
+  padding: var(--space-4);
+}
+.uro-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+.uro-card__title {
+  font-size: var(--fs-card-title);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.uro-card__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.uro-card__body {
+  padding: var(--space-4);
+}
+.uro-card__body--flush {
+  padding: 0;
+}
+
+/* ---------- ProgressBar ---------- */
+.uro-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--track);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.uro-progress__fill {
+  height: 100%;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  transition: width 0.2s ease;
+}
+
+/* ---------- Donut / Gauge shared ---------- */
+.uro-donut {
+  display: inline-block;
+  position: relative;
+}
+.uro-donut__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+.uro-donut__center-text {
+  font-size: var(--fs-donut-center);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.uro-donut__center-sub {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+.uro-donut--alert .uro-donut__bg {
+  stroke: var(--chart-alert);
+}
+.uro-gauge {
+  display: inline-block;
+}
+.uro-gauge__label {
+  text-anchor: middle;
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.uro-gauge__label--empty {
+  fill: var(--text-muted);
+  font-weight: 400;
+  font-size: 11px;
+}

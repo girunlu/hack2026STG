@@ -1,0 +1,2186 @@
+{
+  "client": {
+    "client": {
+      "aum": 740557.28,
+      "birthday": "1993-04-13",
+      "city": null,
+      "client_id": 136659,
+      "company": null,
+      "counts": {
+        "errors": 0,
+        "external_portfolios": 0,
+        "notes": 3,
+        "portfolios": 1,
+        "proposals": 7,
+        "tags": 2,
+        "warnings": 1
+      },
+      "display_name": "SpongeBob SquarePants",
+      "esg_profile": null,
+      "first_name": "SpongeBob",
+      "is_company": false,
+      "is_employee": false,
+      "last_changed": "2026-09-03",
+      "last_consultation": "2026-05-03",
+      "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+      "last_name": "SquarePants",
+      "liquidity": 27346.08,
+      "liquidity_pct": 0.036926,
+      "profiling_date": "2024-04-20",
+      "ref": "CASE-035",
+      "reporting_currency": "CHF",
+      "risk_profile": {
+        "equity_quote": 1.0,
+        "id": 18,
+        "max_prc": 7,
+        "max_vola": 0.15,
+        "name": "Anlageprofil 6",
+        "risk_level": 6
+      },
+      "risk_profile_id": 18,
+      "street": null,
+      "type": "Private client",
+      "zip": null
+    },
+    "counts": {
+      "dangling_violations": 0,
+      "distinct_notes": 3,
+      "errors": 0,
+      "external_portfolios": 0,
+      "industry_tags": 2,
+      "notes": 3,
+      "open_proposals": 0,
+      "overrides": 0,
+      "portfolios": 1,
+      "proposals": 7,
+      "region_tags": 0,
+      "rejected_proposals": 1,
+      "violations": 1,
+      "warnings": 1
+    },
+    "data_gaps": [],
+    "lang": "en",
+    "notes": [
+      {
+        "date": "2026-02-04",
+        "duplicate_of": null,
+        "index": 0,
+        "path": "clients[CASE-035].ClientNotes[0]",
+        "source": "clients.json",
+        "text": "Prefers ESG-compliant investments, no defense or tobacco holdings."
+      },
+      {
+        "date": "2025-02-10",
+        "duplicate_of": null,
+        "index": 1,
+        "path": "clients[CASE-035].ClientNotes[1]",
+        "source": "clients.json",
+        "text": "Prefers semi-annual phone contact, no unannounced visits."
+      },
+      {
+        "date": "2024-10-13",
+        "duplicate_of": null,
+        "index": 2,
+        "path": "clients[CASE-035].ClientNotes[2]",
+        "source": "clients.json",
+        "text": "Prefers email communication, hard to reach by phone."
+      }
+    ],
+    "overrides": [],
+    "portfolios": [
+      {
+        "aum": 740557.28,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.05443,
+        "id": 130531,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "CASE-035-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 28,
+        "return_12m_pct": 27.7452,
+        "return_3m_pct": 9.068,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "CHF",
+        "top_security": "Anteile -A- iShares ETF (CH) - iShares Swiss Dividend ETF   (CH)",
+        "top_weight": 0.13509,
+        "value_at_risk": 0.12626,
+        "volatility": 0.10521
+      }
+    ],
+    "proposals": [
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2026-05-03",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.055,
+        "id": 22110,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2026-04-26",
+        "reason": "Risk profile update",
+        "security_count": 29,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.1273
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2026-02-17",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05262,
+        "id": 20593,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2026-02-16",
+        "reason": "New deposit received",
+        "security_count": 31,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.12167
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2026-01-17",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.03599,
+        "id": 19911,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2026-01-17",
+        "reason": "Follow-up from prior meeting",
+        "security_count": 28,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.11447
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2026-01-14",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.03338,
+        "id": 19848,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2026-01-14",
+        "reason": "Client relocation",
+        "security_count": 27,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.10431
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-09-03",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.03228,
+        "id": 16945,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2025-09-02",
+        "reason": "Annual review meeting",
+        "security_count": 23,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.07263
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-04-23",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.02143,
+        "id": 14068,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2025-04-23",
+        "reason": "Periodic portfolio review",
+        "security_count": 18,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.04707
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-01-21",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.01367,
+        "id": 12379,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-035-01",
+        "proposed_at": "2025-01-21",
+        "reason": "Periodic portfolio review",
+        "security_count": 18,
+        "service": "Depository Advisory",
+        "status": "Abgelehnt",
+        "status_allows_submit": false,
+        "status_archived": true,
+        "volatility": 0.02931
+      }
+    ],
+    "tags": {
+      "all": [
+        {
+          "name": "Financials",
+          "scope": "Client",
+          "type": "Industry"
+        },
+        {
+          "name": "Consumer Staples",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "industry": [
+        {
+          "name": "Financials",
+          "scope": "Client",
+          "type": "Industry"
+        },
+        {
+          "name": "Consumer Staples",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "other": [],
+      "region": []
+    },
+    "violations": [
+      {
+        "error_level": 1,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+            "label": "Asset class",
+            "left": 50000.0,
+            "operator": 10,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[1]",
+            "right": 50000.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 1.0,
+            "operator": 40,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[2]",
+            "right": 0.0,
+            "unit": "ratio"
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+            "label": "Sector",
+            "left": 57.0,
+            "operator": 10,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[3]",
+            "right": 57.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.1076344535079687,
+            "operator": 30,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[4]",
+            "right": 0.108,
+            "unit": "ratio"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.1076344535079687,
+            "operator": 60,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[5]",
+            "right": 0.058,
+            "unit": "ratio"
+          }
+        ],
+        "id": 898024,
+        "portfolio_id": 130531,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-035-01",
+        "rule_code": "Underweight in the equity sector \"Consumer Staples\"",
+        "rule_description": "Untergewicht (+/- 5% zum SAA-Sollwert der Benchmark) im Aktiensektor \"Basiskonsumg\u00fcter\"",
+        "severity": "Warning",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+            "label": "Asset class",
+            "limit": 50000.0,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 50000.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.0,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 1.0
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+            "label": "Sector",
+            "limit": 57.0,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 57.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.108,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[4]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.1076344535079687
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.058,
+            "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[5]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.1076344535079687
+          }
+        ]
+      }
+    ]
+  },
+  "portfolios": [
+    {
+      "client": {
+        "aum": 740557.28,
+        "birthday": "1993-04-13",
+        "city": null,
+        "client_id": 136659,
+        "company": null,
+        "counts": {
+          "errors": 0,
+          "external_portfolios": 0,
+          "notes": 3,
+          "portfolios": 1,
+          "proposals": 7,
+          "tags": 2,
+          "warnings": 1
+        },
+        "display_name": "SpongeBob SquarePants",
+        "esg_profile": null,
+        "first_name": "SpongeBob",
+        "is_company": false,
+        "is_employee": false,
+        "last_changed": "2026-09-03",
+        "last_consultation": "2026-05-03",
+        "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+        "last_name": "SquarePants",
+        "liquidity": 27346.08,
+        "liquidity_pct": 0.036926,
+        "profiling_date": "2024-04-20",
+        "ref": "CASE-035",
+        "reporting_currency": "CHF",
+        "risk_profile": {
+          "equity_quote": 1.0,
+          "id": 18,
+          "max_prc": 7,
+          "max_vola": 0.15,
+          "name": "Anlageprofil 6",
+          "risk_level": 6
+        },
+        "risk_profile_id": 18,
+        "street": null,
+        "type": "Private client",
+        "zip": null
+      },
+      "data_gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ],
+      "exposures": {
+        "asset_class": {
+          "splitting_off": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 554102.8852,
+              "weight": 0.748224
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 130026.1948,
+              "weight": 0.175579
+            },
+            {
+              "category": "Specialties andCommodities",
+              "label": "Specialties andCommodities",
+              "value": 29082.12,
+              "weight": 0.039271
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 27346.0775,
+              "weight": 0.036926
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Equities EmMa",
+              "label": "Equities EmMa",
+              "value": 257795.95,
+              "weight": 0.348111
+            },
+            {
+              "category": "Equities Switzerland",
+              "label": "Equities Switzerland",
+              "value": 211570.7743,
+              "weight": 0.285691
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 130026.1948,
+              "weight": 0.175579
+            },
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 84736.5,
+              "weight": 0.114423
+            },
+            {
+              "category": "Specialties andCommodities",
+              "label": "Specialties andCommodities",
+              "value": 29082.12,
+              "weight": 0.039271
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 27346.0775,
+              "weight": 0.036926
+            }
+          ]
+        },
+        "country": {
+          "splitting_off": [
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 381342.0614,
+              "weight": 0.514939
+            },
+            {
+              "category": "Others",
+              "label": "Others",
+              "value": 214182.5697,
+              "weight": 0.289218
+            },
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 102500.5688,
+              "weight": 0.13841
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 27346.0775,
+              "weight": 0.036926
+            },
+            {
+              "category": "Great Britain",
+              "label": "Great Britain",
+              "value": 15186.0,
+              "weight": 0.020506
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Equities Switzerland",
+              "label": "Equities Switzerland",
+              "value": 211517.7541,
+              "weight": 0.28562
+            },
+            {
+              "category": "Equities North America",
+              "label": "Equities North America",
+              "value": 187023.607,
+              "weight": 0.252544
+            },
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 173071.7614,
+              "weight": 0.233705
+            },
+            {
+              "category": "Others",
+              "label": "Others",
+              "value": 55587.0533,
+              "weight": 0.075061
+            },
+            {
+              "category": "Equities Euroland",
+              "label": "Equities Euroland",
+              "value": 28073.3182,
+              "weight": 0.037908
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 27346.0775,
+              "weight": 0.036926
+            },
+            {
+              "category": "Equities Japan",
+              "label": "Equities Japan",
+              "value": 21145.0984,
+              "weight": 0.028553
+            },
+            {
+              "category": "Great Britain",
+              "label": "Great Britain",
+              "value": 15186.0,
+              "weight": 0.020506
+            },
+            {
+              "category": "Aktien UK",
+              "label": "Aktien UK",
+              "value": 12157.0419,
+              "weight": 0.016416
+            },
+            {
+              "category": "Equities Pacific",
+              "label": "Equities Pacific",
+              "value": 9117.2344,
+              "weight": 0.012311
+            },
+            {
+              "category": "Equities EmMa",
+              "label": "Equities EmMa",
+              "value": 332.6702,
+              "weight": 0.000449
+            }
+          ]
+        },
+        "currency": {
+          "splitting_off": [
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 534415.1248,
+              "weight": 0.721639
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 206142.1527,
+              "weight": 0.278361
+            },
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 0.0,
+              "weight": 0.0
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 535319.9409,
+              "weight": 0.722861
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 151841.1285,
+              "weight": 0.205036
+            },
+            {
+              "category": "Japanese yen",
+              "label": "Japanese yen",
+              "value": 16810.878,
+              "weight": 0.0227
+            },
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 16808.7932,
+              "weight": 0.022697
+            },
+            {
+              "category": "British pound",
+              "label": "British pound",
+              "value": 8275.7214,
+              "weight": 0.011175
+            },
+            {
+              "category": "Canadian Dollar",
+              "label": "Canadian Dollar",
+              "value": 2763.7584,
+              "weight": 0.003732
+            },
+            {
+              "category": "Hong Kong Dollar",
+              "label": "Hong Kong Dollar",
+              "value": 2477.05,
+              "weight": 0.003345
+            },
+            {
+              "category": "South Korean Won",
+              "label": "South Korean Won",
+              "value": 2056.8672,
+              "weight": 0.002777
+            },
+            {
+              "category": "Danish krone",
+              "label": "Danish krone",
+              "value": 1332.0906,
+              "weight": 0.001799
+            },
+            {
+              "category": "Norwegian Krone",
+              "label": "Norwegian Krone",
+              "value": 833.6836,
+              "weight": 0.001126
+            },
+            {
+              "category": "Israeli Shekel",
+              "label": "Israeli Shekel",
+              "value": 583.1579,
+              "weight": 0.000787
+            },
+            {
+              "category": "Australian dollar",
+              "label": "Australian dollar",
+              "value": 487.9912,
+              "weight": 0.000659
+            },
+            {
+              "category": "Swedish Krona",
+              "label": "Swedish Krona",
+              "value": 465.5847,
+              "weight": 0.000629
+            },
+            {
+              "category": "Taiwan Dollar",
+              "label": "Taiwan Dollar",
+              "value": 291.8634,
+              "weight": 0.000394
+            },
+            {
+              "category": "Singapore Dollar",
+              "label": "Singapore Dollar",
+              "value": 208.6939,
+              "weight": 0.000282
+            },
+            {
+              "category": "New Zealand dollar",
+              "label": "New Zealand dollar",
+              "value": 0.3753,
+              "weight": 1e-06
+            },
+            {
+              "category": "Mexikanischer Peso",
+              "label": "Mexikanischer Peso",
+              "value": 0.0385,
+              "weight": 0.0
+            }
+          ]
+        },
+        "industry": {
+          "splitting_off": [
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 596966.3181,
+              "weight": 0.806104
+            },
+            {
+              "category": "Industrials",
+              "label": "Industrials",
+              "value": 44908.1667,
+              "weight": 0.060641
+            },
+            {
+              "category": "Financials",
+              "label": "Financials",
+              "value": 25836.501,
+              "weight": 0.034888
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 23778.0,
+              "weight": 0.032108
+            },
+            {
+              "category": "Health Care",
+              "label": "Health Care",
+              "value": 22066.0,
+              "weight": 0.029796
+            },
+            {
+              "category": "Real Estate",
+              "label": "Real Estate",
+              "value": 14222.2917,
+              "weight": 0.019205
+            },
+            {
+              "category": "Consumer Staples",
+              "label": "Consumer Staples",
+              "value": 12780.0,
+              "weight": 0.017257
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 127599.9329,
+              "weight": 0.172303
+            },
+            {
+              "category": "Health Care",
+              "label": "Health Care",
+              "value": 120320.9633,
+              "weight": 0.162474
+            },
+            {
+              "category": "Industrials",
+              "label": "Industrials",
+              "value": 104664.6106,
+              "weight": 0.141332
+            },
+            {
+              "category": "Financials",
+              "label": "Financials",
+              "value": 104370.6966,
+              "weight": 0.140935
+            },
+            {
+              "category": "Information Technology",
+              "label": "Information Technology",
+              "value": 71665.8822,
+              "weight": 0.096773
+            },
+            {
+              "category": "Consumer Staples",
+              "label": "Consumer Staples",
+              "value": 59640.5977,
+              "weight": 0.080535
+            },
+            {
+              "category": "Consumer Discretionary",
+              "label": "Consumer Discretionary",
+              "value": 32746.3003,
+              "weight": 0.044218
+            },
+            {
+              "category": "Communication Services",
+              "label": "Communication Services",
+              "value": 24133.9786,
+              "weight": 0.032589
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 23778.0,
+              "weight": 0.032108
+            },
+            {
+              "category": "Energy",
+              "label": "Energy",
+              "value": 22123.1743,
+              "weight": 0.029874
+            },
+            {
+              "category": "Real Estate",
+              "label": "Real Estate",
+              "value": 21686.3581,
+              "weight": 0.029284
+            },
+            {
+              "category": "Raw materials",
+              "label": "Raw materials",
+              "value": 20022.2772,
+              "weight": 0.027037
+            },
+            {
+              "category": "Utilities",
+              "label": "Utilities",
+              "value": 7804.8447,
+              "weight": 0.010539
+            }
+          ]
+        }
+      },
+      "fx": {
+        "portfolio_currency": "CHF",
+        "rows": [
+          {
+            "currency": "CHF",
+            "currency_group": "Swiss francs",
+            "value": 534415.1248,
+            "weight": 0.721639
+          },
+          {
+            "currency": "USD",
+            "currency_group": "US-Dollar",
+            "value": 206142.1527,
+            "weight": 0.278361
+          },
+          {
+            "currency": "EUR",
+            "currency_group": "Euro",
+            "value": 0.0,
+            "weight": 0.0
+          }
+        ],
+        "total": 740557.2775
+      },
+      "groups": [
+        {
+          "category": "Liquidity",
+          "expandable": true,
+          "positions": 3,
+          "value": 27346.0775,
+          "weight": 0.036926
+        },
+        {
+          "category": "Bonds",
+          "expandable": true,
+          "positions": 9,
+          "value": 130026.1947,
+          "weight": 0.175579
+        },
+        {
+          "category": "Shares",
+          "expandable": true,
+          "positions": 17,
+          "value": 554102.8852,
+          "weight": 0.748224
+        },
+        {
+          "category": "Specialties andCommodities",
+          "expandable": true,
+          "positions": 2,
+          "value": 29082.12,
+          "weight": 0.039271
+        }
+      ],
+      "integrity": {
+        "data_as_of": "2026-09-03",
+        "factory_date": "2026-09-03",
+        "portfolio_known": true
+      },
+      "lang": "en",
+      "maturity": {
+        "as_of": "2026-09-03",
+        "buckets": [
+          {
+            "category": "Unter 1 Jahr",
+            "label": "Under 1 year",
+            "value": 73211.944,
+            "weight": 0.102651
+          },
+          {
+            "category": "1\u20135 Jahre",
+            "label": "1\u20135 years",
+            "value": 59053.3708,
+            "weight": 0.082799
+          },
+          {
+            "category": "5\u201310 Jahre",
+            "label": "5\u201310 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "\u00dcber 10 Jahre",
+            "label": "Over 10 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "Nicht klassifiziert",
+            "label": "Not classified",
+            "value": 580945.8852,
+            "weight": 0.81455
+          }
+        ],
+        "classified_weight": 0.18545
+      },
+      "metrics": [
+        {
+          "alert": false,
+          "formula": "centre = largest actual-vs-target deviation; alert when an actual leaves Min/Max",
+          "id": "saa",
+          "sub": "Specialties andCommodities",
+          "title": "SAA",
+          "type": "donut",
+          "value": 3.9271
+        },
+        {
+          "formula": "share of the client's portfolios without an Error-severity violation",
+          "id": "suitability",
+          "sub": "0 error rule violations",
+          "title": "Suitability",
+          "type": "gauge",
+          "value": 100.0
+        },
+        {
+          "formula": "Portfolio.Volatility / Portfolio.ExpectedReturn, as delivered by the risk engine",
+          "id": "risk_return",
+          "sub": 5.443,
+          "sub_label": "Return",
+          "title": "Risk / Return",
+          "type": "scatter",
+          "value": 10.521,
+          "value_label": "Risk"
+        },
+        {
+          "formula": "share of value in holdings with PRC >= 5",
+          "id": "product_risk",
+          "sub": "max PRC 7",
+          "title": "Product Risk",
+          "type": "donut",
+          "value": 34.1315
+        },
+        {
+          "formula": "value-weighted country exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "countries",
+          "sub": "Equities Switzerland \u00b7 4% unclassified",
+          "title": "Countries",
+          "type": "map",
+          "value": 28.562
+        },
+        {
+          "formula": "value-weighted industry exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "industries",
+          "sub": "Health Care \u00b7 17% unclassified",
+          "title": "Sectors",
+          "type": "donut",
+          "value": 16.2474
+        },
+        {
+          "formula": "value-weighted currency exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "currencies",
+          "sub": "Swiss francs",
+          "title": "Currencies",
+          "type": "donut",
+          "value": 72.2861
+        },
+        {
+          "formula": "share of value in dated holdings, bucketed by MaturityDateUtc",
+          "id": "maturities",
+          "sub": "Under 1 year",
+          "title": "Maturities",
+          "type": "bar",
+          "value": 18.545
+        },
+        {
+          "formula": "IndividualRuleOverrides / SuitabilityRules / SuitabilityViolations counts",
+          "id": "restrictions",
+          "rows": [
+            {
+              "label": "Overrides",
+              "value": 0
+            },
+            {
+              "label": "Rules",
+              "value": 54
+            },
+            {
+              "label": "Violations",
+              "value": 1
+            }
+          ],
+          "sub": null,
+          "title": "Restrictions",
+          "type": "rows",
+          "value": 0
+        },
+        {
+          "direction": "up",
+          "formula": "trailing 12m from PerformanceHistory",
+          "id": "performance",
+          "sub": "12 months",
+          "title": "Performance",
+          "type": "line",
+          "value": 27.7452
+        },
+        {
+          "formula": "value-weighted SustainabilityScore over scored holdings",
+          "id": "sustainability",
+          "sub": "7.34 ESG score",
+          "title": "Sustainability",
+          "type": "donut",
+          "value": null
+        },
+        {
+          "formula": "SecurityPositions count",
+          "id": "positions",
+          "sub": "positions",
+          "title": "Positions list",
+          "type": "grid",
+          "value": 28
+        }
+      ],
+      "portfolio": {
+        "aum": 740557.28,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.05443,
+        "id": 130531,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "CASE-035-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 28,
+        "return_12m_pct": 27.7452,
+        "return_3m_pct": 9.068,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "CHF",
+        "top_security": "Anteile -A- iShares ETF (CH) - iShares Swiss Dividend ETF   (CH)",
+        "top_weight": 0.13509,
+        "value_at_risk": 0.12626,
+        "volatility": 0.10521
+      },
+      "positions": [
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto CHF",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 26696.13,
+          "weight": 0.03604,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto USD",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 649.9475,
+          "weight": 0.00088,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto EUR",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 0.0,
+          "weight": 0.0,
+          "whg": "EUR"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "IE00BF1QPK61",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.01799,
+          "position": "Anteile -Hedged CHF- SSGA SPDR ETFs Europe I PLC - SPDR Bloomberg Global Aggregate Bond UCITS ETF",
+          "prc": 2,
+          "price": 27.005,
+          "quantity": 600.0,
+          "risk_contribution": 0.0003936212,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 6721,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.12553,
+          "valor": "39419197",
+          "value": 16203.0,
+          "weight": 0.02188,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0434678428",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03006,
+          "position": "1.6 % Sulzer AG 2018-22.10.24",
+          "prc": 2,
+          "price": 0.9973,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0006120216,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 5153,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 8.4,
+          "valor": "43467842",
+          "value": 15074.8333,
+          "weight": 0.02036,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH1145096173",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03006,
+          "position": "2 % Implenia AG 2021-26.11.25 Reg S",
+          "prc": 2,
+          "price": 0.9965,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0006114204,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 35519,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 10.0,
+          "valor": "114509617",
+          "value": 15063.3333,
+          "weight": 0.02034,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0360677295",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03006,
+          "position": "0.825 % Swiss Prime Site AG 2017-11.05.26",
+          "prc": 2,
+          "price": 0.987,
+          "quantity": 15000.0,
+          "risk_contribution": 0.000605709,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 4115,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.7,
+          "valor": "36067729",
+          "value": 14919.8125,
+          "weight": 0.02015,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0517825318",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03006,
+          "position": "0.26 % Hyundai Capital Services Inc 2020-11.02.25",
+          "prc": 2,
+          "price": 0.9894,
+          "quantity": 15000.0,
+          "risk_contribution": 0.000602703,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 44273,
+          "success": null,
+          "sustainability_rating": 7,
+          "sustainability_score": 1.3,
+          "valor": "51782531",
+          "value": 14847.9333,
+          "weight": 0.02005,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH1160188343",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.01355,
+          "position": "0.625 % Axpo Holding AG 2022-04.02.27",
+          "prc": 2,
+          "price": 0.9695,
+          "quantity": 15000.0,
+          "risk_contribution": 0.000266393,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 42173,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.5,
+          "valor": "116018834",
+          "value": 14560.9896,
+          "weight": 0.01966,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0419041659",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.00895,
+          "position": "0.1525 % Cembra Money Bank AG 2019-14.10.26",
+          "prc": 2,
+          "price": 0.9655,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0001751515,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 40543,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 10.0,
+          "valor": "41904165",
+          "value": 14494.001,
+          "weight": 0.01957,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0506071213",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.01518,
+          "position": "0.25 % Mobimo Holding AG 2020-23.03.28",
+          "prc": 2,
+          "price": 0.948,
+          "quantity": 15000.0,
+          "risk_contribution": 0.000291456,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 15128,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 9.1,
+          "valor": "50607121",
+          "value": 14222.2917,
+          "weight": 0.0192,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "IE00B4YLF345",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03151,
+          "position": "Anteile CHF (Hedged) PIMCO Funds Glob.Inv.Series - Global Investment Grade Credit Fund",
+          "prc": 3,
+          "price": 15.2,
+          "quantity": 700.0,
+          "risk_contribution": 0.0004527987,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 1211,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.21844,
+          "valor": "3753364",
+          "value": 10640.0,
+          "weight": 0.01437,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "CH0237935637",
+          "kind": "security",
+          "lookthrough_rows": 13,
+          "marginal_risk": 0.10326,
+          "position": "Anteile -A- iShares ETF (CH) - iShares Swiss Dividend ETF   (CH)",
+          "prc": 4,
+          "price": 151.58,
+          "quantity": 660.0,
+          "risk_contribution": 0.0139493934,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 2346,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.75422,
+          "valor": "23793563",
+          "value": 100042.8,
+          "weight": 0.13509,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B8BVCK12",
+          "kind": "security",
+          "lookthrough_rows": 843,
+          "marginal_risk": 0.12445,
+          "position": "Anteile Hedged CHF ETF iShares VI PLC  - iShares MSCI World CHF Hedged UCITS ETF (Acc)",
+          "prc": 4,
+          "price": 69.5,
+          "quantity": 1000.0,
+          "risk_contribution": 0.0116796325,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 1672,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.88297,
+          "valor": "19328350",
+          "value": 69500.0,
+          "weight": 0.09385,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "CH0237935652",
+          "kind": "security",
+          "lookthrough_rows": 65,
+          "marginal_risk": 0.11909,
+          "position": "Anteile -A- iShares ETF (CH) - iShares Core SPI(R) ETF (CH)",
+          "prc": 4,
+          "price": 137.84,
+          "quantity": 500.0,
+          "risk_contribution": 0.0110837063,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 2353,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.64309,
+          "valor": "23793565",
+          "value": 68920.0,
+          "weight": 0.09307,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BP3QZB59",
+          "kind": "security",
+          "lookthrough_rows": 858,
+          "marginal_risk": 0.13726,
+          "position": "Anteile - USD ETF - iShares IV PLC - iShares Edge MSCI World Value Factor UCITS ETF",
+          "prc": 4,
+          "price": 42.145,
+          "quantity": 1500.0,
+          "risk_contribution": 0.0107049074,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 9093,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.1208,
+          "valor": "25546005",
+          "value": 57756.612,
+          "weight": 0.07799,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B53SZB19",
+          "kind": "security",
+          "lookthrough_rows": 122,
+          "marginal_risk": 0.16579,
+          "position": "Anteile Exchange Traded Fund USD iShares VII PLC - iShares NASDAQ 100 UCITS ETF",
+          "prc": 6,
+          "price": 1029.0,
+          "quantity": 50.0,
+          "risk_contribution": 0.0105226913,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8409,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.60621,
+          "valor": "10737617",
+          "value": 47005.6187,
+          "weight": 0.06347,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "CH0111762537",
+          "kind": "security",
+          "lookthrough_rows": 18,
+          "marginal_risk": 0.13907,
+          "position": "Anteile -(CHF) A-dis- UBS ETF (CH) - SMIM (R)",
+          "prc": 5,
+          "price": 262.05,
+          "quantity": 150.0,
+          "risk_contribution": 0.0073818356,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 1105,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.16886,
+          "valor": "11176253",
+          "value": 39307.5,
+          "weight": 0.05308,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B5BMR087",
+          "kind": "security",
+          "lookthrough_rows": 74,
+          "marginal_risk": 0.13541,
+          "position": "Anteile Exchange Traded Fund USD iShares VII PLC - iShares Core S&P 500 UCITS ETF",
+          "prc": 4,
+          "price": 540.7,
+          "quantity": 60.0,
+          "risk_contribution": 0.0054191082,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8449,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.58856,
+          "valor": "10737041",
+          "value": 29639.5779,
+          "weight": 0.04002,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0012214059",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.14999,
+          "position": "Namen-Aktie Holcim AG",
+          "prc": 6,
+          "price": 79.26,
+          "quantity": 300.0,
+          "risk_contribution": 0.0048161789,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 272,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.9,
+          "valor": "1221405",
+          "value": 23778.0,
+          "weight": 0.03211,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BMYDM794",
+          "kind": "security",
+          "lookthrough_rows": 225,
+          "marginal_risk": 0.20536,
+          "position": "Anteile -USD- Legal & General UCITS ETF Plc  - L&G Hydrogen Economy UCITS ETF",
+          "prc": 6,
+          "price": 4.53825,
+          "quantity": 4000.0,
+          "risk_contribution": 0.004600064,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 28135,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.47482,
+          "valor": "59058342",
+          "value": 16584.896,
+          "weight": 0.0224,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BYXG2H39",
+          "kind": "security",
+          "lookthrough_rows": 15,
+          "marginal_risk": 0.07473,
+          "position": "Anteile USD iShares IV PLC - NASDAQ US Biotechnology UCITS  ETF",
+          "prc": 5,
+          "price": 6.05,
+          "quantity": 3000.0,
+          "risk_contribution": 0.0016732047,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 14591,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.18458,
+          "valor": "37978279",
+          "value": 16582.155,
+          "weight": 0.02239,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0012221716",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.18679,
+          "position": "Namen-Aktie ABB Ltd",
+          "prc": 5,
+          "price": 42.2,
+          "quantity": 350.0,
+          "risk_contribution": 0.0037245926,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 267,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 10.0,
+          "valor": "1222171",
+          "value": 14770.0,
+          "weight": 0.01994,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BYTRR863",
+          "kind": "security",
+          "lookthrough_rows": 35,
+          "marginal_risk": 0.07761,
+          "position": "Anteile -USD- SSgA SPDR ETFs Europe II PLC - SPDR MSCI World Energy UCITS ETF",
+          "prc": 7,
+          "price": 53.83,
+          "quantity": 300.0,
+          "risk_contribution": 0.0015459912,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 9356,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.95067,
+          "valor": "30782159",
+          "value": 14754.0084,
+          "weight": 0.01992,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0012032048",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.09304,
+          "position": "Genussschein Roche Holding AG",
+          "prc": 5,
+          "price": 225.1,
+          "quantity": 60.0,
+          "risk_contribution": 0.0016970496,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 261,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.1,
+          "valor": "1203204",
+          "value": 13506.0,
+          "weight": 0.01824,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0009002962",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.09309,
+          "position": "Namen-Aktie Barry Callebaut AG",
+          "prc": 5,
+          "price": 1278.0,
+          "quantity": 10.0,
+          "risk_contribution": 0.0016067334,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 2235,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.4,
+          "valor": "900296",
+          "value": 12780.0,
+          "weight": 0.01726,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0011075394",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.08941,
+          "position": "Namen-Aktie Zurich Insurance Group AG",
+          "prc": 5,
+          "price": 453.7,
+          "quantity": 25.0,
+          "risk_contribution": 0.0013697612,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 230,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 9.3,
+          "valor": "1107539",
+          "value": 11342.5,
+          "weight": 0.01532,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "US46138G7060",
+          "kind": "security",
+          "lookthrough_rows": 270,
+          "marginal_risk": 0.18725,
+          "position": "Anteile   Invesco Solar ETF",
+          "prc": 7,
+          "price": 40.6,
+          "quantity": 250.0,
+          "risk_contribution": 0.00234437,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 26370,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.72749,
+          "valor": "41998976",
+          "value": 9273.2172,
+          "weight": 0.01252,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0038389992",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.15025,
+          "position": "Namen-Aktie BB Biotech AG",
+          "prc": 6,
+          "price": 42.8,
+          "quantity": 200.0,
+          "risk_contribution": 0.00173689,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 625,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": "3838999",
+          "value": 8560.0,
+          "weight": 0.01156,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Specialties andCommodities",
+          "cost_basis": null,
+          "group": "Specialties andCommodities",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH1287863422",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.13502,
+          "position": "8.78 % Reverse Convertible UBS London 2023-19.08.24 on Straumann/Lonza Grp/VATGroup",
+          "prc": 6,
+          "price": 1.0124,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0027692602,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 53980,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 8.5,
+          "valor": "128786342",
+          "value": 15186.0,
+          "weight": 0.02051,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Specialties andCommodities",
+          "cost_basis": null,
+          "group": "Specialties andCommodities",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH1286940320",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.13701,
+          "position": "9.07 % Reverse Convertible Vontobel FP 2023-19.08.24 on Apple/Microsoft/Alphabet-A",
+          "prc": 4,
+          "price": 1.014,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0025703076,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 53979,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.8,
+          "valor": "128694032",
+          "value": 13896.12,
+          "weight": 0.01876,
+          "whg": "USD"
+        }
+      ],
+      "prc": {
+        "distribution": {
+          "2": 0.167392,
+          "3": 0.014918,
+          "4": 0.476374,
+          "5": 0.151832,
+          "6": 0.155795,
+          "7": 0.033689
+        },
+        "max_prc": 7,
+        "share_prc_ge_5": 0.341315
+      },
+      "saa": {
+        "available": true,
+        "description": "Depotberatung / CHF / Anlageprofil 6",
+        "reason": null,
+        "rows": [
+          {
+            "actual": 0.036926,
+            "category": "Liquidity",
+            "difference": 0.006926,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.175579,
+            "category": "Bonds",
+            "difference": -0.014421,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.19
+          },
+          {
+            "actual": 0.748224,
+            "category": "Shares",
+            "difference": -0.001776,
+            "max": 1.0,
+            "min": 0.3,
+            "target": 0.75
+          },
+          {
+            "actual": 0.0,
+            "category": "Real estate",
+            "difference": -0.03,
+            "max": 0.15,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.039271,
+            "category": "Specialties andCommodities",
+            "difference": 0.039271,
+            "max": 0.2,
+            "min": 0.0,
+            "target": 0.0
+          }
+        ],
+        "saa_id": 69,
+        "saa_name": "Depotberatung / CHF / Anlageprofil 6"
+      },
+      "sustainability": {
+        "esg_profile": null,
+        "positioned_weight": 713211.2,
+        "score": 7.34,
+        "scored_weight": 704651.2
+      },
+      "total": {
+        "accounts": 3,
+        "currency": "CHF",
+        "portfolio_aum": 740557.2775,
+        "positions": 28,
+        "value": 740557.2774
+      },
+      "violations": [
+        {
+          "error_level": 1,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+              "label": "Asset class",
+              "left": 50000.0,
+              "operator": 10,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[1]",
+              "right": 50000.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 1.0,
+              "operator": 40,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[2]",
+              "right": 0.0,
+              "unit": "ratio"
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+              "label": "Sector",
+              "left": 57.0,
+              "operator": 10,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[3]",
+              "right": 57.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.1076344535079687,
+              "operator": 30,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[4]",
+              "right": 0.108,
+              "unit": "ratio"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.1076344535079687,
+              "operator": 60,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[5]",
+              "right": 0.058,
+              "unit": "ratio"
+            }
+          ],
+          "id": 898024,
+          "portfolio_id": 130531,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-035-01",
+          "rule_code": "Underweight in the equity sector \"Consumer Staples\"",
+          "rule_description": "Untergewicht (+/- 5% zum SAA-Sollwert der Benchmark) im Aktiensektor \"Basiskonsumg\u00fcter\"",
+          "severity": "Warning",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+              "label": "Asset class",
+              "limit": 50000.0,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 50000.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.0,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 1.0
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+              "label": "Sector",
+              "limit": 57.0,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 57.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.108,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[4]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.1076344535079687
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.058,
+              "path": "clients[CASE-035].SuitabilityViolations[0].ViolationPath[5]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.1076344535079687
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

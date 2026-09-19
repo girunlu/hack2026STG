@@ -1,0 +1,2888 @@
+{
+  "client": {
+    "client": {
+      "aum": 528369.73,
+      "birthday": "1964-04-30",
+      "city": null,
+      "client_id": 172426,
+      "company": null,
+      "counts": {
+        "errors": 2,
+        "external_portfolios": 0,
+        "notes": 5,
+        "portfolios": 1,
+        "proposals": 5,
+        "tags": 1,
+        "warnings": 4
+      },
+      "display_name": "Zorro",
+      "esg_profile": null,
+      "first_name": "Zorro",
+      "is_company": false,
+      "is_employee": false,
+      "last_changed": "2026-09-03",
+      "last_consultation": "2026-06-14",
+      "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+      "last_name": null,
+      "liquidity": 13831.94,
+      "liquidity_pct": 0.026179,
+      "profiling_date": "2025-11-23",
+      "ref": "CASE-042",
+      "reporting_currency": "CHF",
+      "risk_profile": {
+        "equity_quote": 0.65,
+        "id": 16,
+        "max_prc": 6,
+        "max_vola": 0.1,
+        "name": "Anlageprofil 4",
+        "risk_level": 4
+      },
+      "risk_profile_id": 16,
+      "street": null,
+      "type": "Private client",
+      "zip": null
+    },
+    "counts": {
+      "dangling_violations": 0,
+      "distinct_notes": 5,
+      "errors": 2,
+      "external_portfolios": 0,
+      "industry_tags": 0,
+      "notes": 5,
+      "open_proposals": 1,
+      "overrides": 0,
+      "portfolios": 1,
+      "proposals": 5,
+      "region_tags": 1,
+      "rejected_proposals": 2,
+      "violations": 6,
+      "warnings": 4
+    },
+    "data_gaps": [
+      "Client has no last name in the source data"
+    ],
+    "lang": "en",
+    "notes": [
+      {
+        "date": "2026-02-04",
+        "duplicate_of": null,
+        "index": 0,
+        "path": "clients[CASE-042].ClientNotes[0]",
+        "source": "clients.json",
+        "text": "Open to increasing the equity allocation if markets remain stable."
+      },
+      {
+        "date": "2025-09-03",
+        "duplicate_of": null,
+        "index": 1,
+        "path": "clients[CASE-042].ClientNotes[1]",
+        "source": "clients.json",
+        "text": "Was informed of the risks of structured products and explicitly accepts them."
+      },
+      {
+        "date": "2025-08-30",
+        "duplicate_of": null,
+        "index": 2,
+        "path": "clients[CASE-042].ClientNotes[2]",
+        "source": "clients.json",
+        "text": "Prefers to avoid any exposure to fossil-fuel energy in the portfolio."
+      },
+      {
+        "date": "2024-11-29",
+        "duplicate_of": null,
+        "index": 3,
+        "path": "clients[CASE-042].ClientNotes[3]",
+        "source": "clients.json",
+        "text": "Risk profile discussed again after the market downturn, client keeps current classification."
+      },
+      {
+        "date": "2024-10-19",
+        "duplicate_of": null,
+        "index": 4,
+        "path": "clients[CASE-042].ClientNotes[4]",
+        "source": "clients.json",
+        "text": "Prefers to keep a cash reserve on hand for unexpected medical expenses."
+      }
+    ],
+    "overrides": [],
+    "portfolios": [
+      {
+        "aum": 528369.73,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.0563,
+        "id": 180692,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "CASE-042-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 21,
+        "return_12m_pct": 21.479,
+        "return_3m_pct": 4.6524,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "CHF",
+        "top_security": "Namen-Aktie BB Biotech AG",
+        "top_weight": 0.13771,
+        "value_at_risk": 0.11703,
+        "volatility": 0.11889
+      }
+    ],
+    "proposals": [
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": true,
+        "changed_at": "2026-06-14",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05726,
+        "id": 23088,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-042-01",
+        "proposed_at": "2026-06-14",
+        "reason": "Withdrawal request",
+        "security_count": 23,
+        "service": "Depository Advisory",
+        "status": "Entwurf",
+        "status_allows_submit": false,
+        "status_archived": false,
+        "volatility": 0.14128
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-12-29",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05566,
+        "id": 19562,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-042-01",
+        "proposed_at": "2025-12-29",
+        "reason": "New deposit received",
+        "security_count": 21,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.14534
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-12-16",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05496,
+        "id": 18868,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-042-01",
+        "proposed_at": "2025-12-16",
+        "reason": "Portfolio rebalancing",
+        "security_count": 20,
+        "service": "Depository Advisory",
+        "status": "Final",
+        "status_allows_submit": true,
+        "status_archived": false,
+        "volatility": 0.1366
+      },
+      {
+        "advisory_type": "Investment proposal",
+        "can_delete": false,
+        "changed_at": "2025-11-18",
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05404,
+        "id": 18518,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-042-01",
+        "proposed_at": "2025-11-18",
+        "reason": "Client relocation",
+        "security_count": 23,
+        "service": "Depository Advisory",
+        "status": "Abgelehnt",
+        "status_allows_submit": false,
+        "status_archived": true,
+        "volatility": 0.12715
+      },
+      {
+        "advisory_type": "Depot meeting",
+        "can_delete": false,
+        "changed_at": null,
+        "changed_by": null,
+        "container": "Depotberatung",
+        "data_gaps": [
+          "Changed by is not present in the source data"
+        ],
+        "expected_return": 0.05546,
+        "id": 23083,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_name": "Depotberatung",
+        "portfolio_nr": "CASE-042-01",
+        "proposed_at": null,
+        "reason": "Estate planning discussion",
+        "security_count": 21,
+        "service": "Depository Advisory",
+        "status": "Abgelehnt",
+        "status_allows_submit": false,
+        "status_archived": true,
+        "volatility": 0.13685
+      }
+    ],
+    "tags": {
+      "all": [
+        {
+          "name": "Rest of Europe",
+          "scope": "Client",
+          "type": "Region"
+        }
+      ],
+      "industry": [],
+      "other": [],
+      "region": [
+        {
+          "name": "Rest of Europe",
+          "scope": "Client",
+          "type": "Region"
+        }
+      ]
+    },
+    "violations": [
+      {
+        "error_level": 1,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationVolatilityRuleField`1",
+            "label": "Volatility",
+            "left": 0.118892514604,
+            "operator": 40,
+            "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[1]",
+            "right": 0.1,
+            "unit": "ratio"
+          }
+        ],
+        "id": 657307,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Compliance with maximum volatility",
+        "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder Verm\u00f6gensverwaltung muss PF Vola < max Kundenprofil Vola sein.",
+        "severity": "Warning",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "SimulationVolatilityRuleField`1",
+            "label": "Volatility",
+            "limit": 0.1,
+            "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.118892514604
+          }
+        ]
+      },
+      {
+        "error_level": 1,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "GenericSimulationFilterNumericRuleField",
+            "label": "Numeric filter",
+            "left": 3.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[1]",
+            "right": 3.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.11490031731971488,
+            "operator": 50,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[2]",
+            "right": 0.121,
+            "unit": "ratio"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.11490031731971488,
+            "operator": 60,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[3]",
+            "right": 0.071,
+            "unit": "ratio"
+          }
+        ],
+        "id": 669434,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Overweight in the equity region \"Switzerland\"",
+        "rule_description": "\u00dcbergewicht (+/- 5% zum SAA-Sollwert der Benchmark) in der Aktienregion \"Grossbritannien\"",
+        "severity": "Warning",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "GenericSimulationFilterNumericRuleField",
+            "label": "Numeric filter",
+            "limit": 3.0,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 3.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.121,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.11490031731971488
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.071,
+            "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.11490031731971488
+          }
+        ]
+      },
+      {
+        "error_level": 1,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+            "label": "Asset class",
+            "left": 50000.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[1]",
+            "right": 50000.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 1.0,
+            "operator": 40,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[2]",
+            "right": 0.0,
+            "unit": "ratio"
+          },
+          {
+            "field": "GenericSimulationFilterNumericRuleField",
+            "label": "Numeric filter",
+            "left": 4.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[3]",
+            "right": 4.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.22738886051658902,
+            "operator": 50,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[4]",
+            "right": 0.265,
+            "unit": "ratio"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.22738886051658902,
+            "operator": 60,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[5]",
+            "right": 0.215,
+            "unit": "ratio"
+          }
+        ],
+        "id": 669435,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Underweight in the equity region \"North America\"",
+        "rule_description": "Untergewicht (+/- 5% zum SAA-Sollwert der Benchmark) in der Aktienregion \"Nordamerika\"",
+        "severity": "Warning",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+            "label": "Asset class",
+            "limit": 50000.0,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 50000.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.0,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 1.0
+          },
+          {
+            "field": "GenericSimulationFilterNumericRuleField",
+            "label": "Numeric filter",
+            "limit": 4.0,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 4.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.265,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[4]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.22738886051658902
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.215,
+            "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[5]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.22738886051658902
+          }
+        ]
+      },
+      {
+        "error_level": 2,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "PositionPortfolioValueRuleField`1",
+            "label": "Position weight",
+            "left": 0.13771,
+            "operator": 40,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[1]",
+            "right": 0.075,
+            "unit": "ratio"
+          },
+          {
+            "field": "PositionIsSecurityRuleField`1",
+            "label": "Position is a security",
+            "left": 0.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[2]",
+            "right": 0.0,
+            "unit": "value"
+          },
+          {
+            "field": "PositionTopLevelSecurityTypeRuleField`1",
+            "label": "Security type",
+            "left": 180.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[3]",
+            "right": 180.0,
+            "unit": "value"
+          }
+        ],
+        "id": 670470,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Cluster risk of a single financial instrument",
+        "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder trx basierte Anlageberatung muss Einzeltitel Anteil < x% sein (x variiert mit Instrument Typ)",
+        "severity": "Error",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "PositionPortfolioValueRuleField`1",
+            "label": "Position weight",
+            "limit": 0.075,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.13771
+          },
+          {
+            "field": "PositionIsSecurityRuleField`1",
+            "label": "Position is a security",
+            "limit": 0.0,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 0.0
+          },
+          {
+            "field": "PositionTopLevelSecurityTypeRuleField`1",
+            "label": "Security type",
+            "limit": 180.0,
+            "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 180.0
+          }
+        ]
+      },
+      {
+        "error_level": 1,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+            "label": "Sector",
+            "left": 58.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[1]",
+            "right": 58.0,
+            "unit": "value"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.32985928560881206,
+            "operator": 50,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[2]",
+            "right": 0.343,
+            "unit": "ratio"
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "left": 0.32985928560881206,
+            "operator": 60,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[3]",
+            "right": 0.293,
+            "unit": "ratio"
+          }
+        ],
+        "id": 681300,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Overweight in the equity sector \"Health Care\"",
+        "rule_description": "\u00dcbergewicht (+/- 5% zum SAA-Sollwert der Benchmark) im Aktiensektor \"Gesundheitswesen\"",
+        "severity": "Warning",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+            "label": "Sector",
+            "limit": 58.0,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 58.0
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.343,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.32985928560881206
+          },
+          {
+            "field": "SimulationPositionCollectionPortfolioValueRuleField",
+            "label": "Position weight",
+            "limit": 0.293,
+            "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.32985928560881206
+          }
+        ]
+      },
+      {
+        "error_level": 2,
+        "explanation": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "left": 13.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[0]",
+            "right": 13.0,
+            "unit": "value"
+          },
+          {
+            "field": "PositionPortfolioValueRuleField`1",
+            "label": "Position weight",
+            "left": 0.08572,
+            "operator": 40,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[1]",
+            "right": 0.075,
+            "unit": "ratio"
+          },
+          {
+            "field": "PositionIsSecurityRuleField`1",
+            "label": "Position is a security",
+            "left": 0.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[2]",
+            "right": 0.0,
+            "unit": "value"
+          },
+          {
+            "field": "PositionTopLevelSecurityTypeRuleField`1",
+            "label": "Security type",
+            "left": 180.0,
+            "operator": 10,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[3]",
+            "right": 180.0,
+            "unit": "value"
+          }
+        ],
+        "id": 694946,
+        "portfolio_id": 180692,
+        "portfolio_known": true,
+        "portfolio_nr": "CASE-042-01",
+        "rule_code": "Cluster risk of a single financial instrument",
+        "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder trx basierte Anlageberatung muss Einzeltitel Anteil < x% sein (x variiert mit Instrument Typ)",
+        "severity": "Error",
+        "values": [
+          {
+            "field": "RegulatoryClientTypeRuleField`1",
+            "label": "Client type",
+            "limit": 13.0,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[0]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 13.0
+          },
+          {
+            "field": "PositionPortfolioValueRuleField`1",
+            "label": "Position weight",
+            "limit": 0.075,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[1]",
+            "source": "clients.json",
+            "unit": "ratio",
+            "value": 0.08572
+          },
+          {
+            "field": "PositionIsSecurityRuleField`1",
+            "label": "Position is a security",
+            "limit": 0.0,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[2]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 0.0
+          },
+          {
+            "field": "PositionTopLevelSecurityTypeRuleField`1",
+            "label": "Security type",
+            "limit": 180.0,
+            "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[3]",
+            "source": "clients.json",
+            "unit": "value",
+            "value": 180.0
+          }
+        ]
+      }
+    ]
+  },
+  "portfolios": [
+    {
+      "client": {
+        "aum": 528369.73,
+        "birthday": "1964-04-30",
+        "city": null,
+        "client_id": 172426,
+        "company": null,
+        "counts": {
+          "errors": 2,
+          "external_portfolios": 0,
+          "notes": 5,
+          "portfolios": 1,
+          "proposals": 5,
+          "tags": 1,
+          "warnings": 4
+        },
+        "display_name": "Zorro",
+        "esg_profile": null,
+        "first_name": "Zorro",
+        "is_company": false,
+        "is_employee": false,
+        "last_changed": "2026-09-03",
+        "last_consultation": "2026-06-14",
+        "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+        "last_name": null,
+        "liquidity": 13831.94,
+        "liquidity_pct": 0.026179,
+        "profiling_date": "2025-11-23",
+        "ref": "CASE-042",
+        "reporting_currency": "CHF",
+        "risk_profile": {
+          "equity_quote": 0.65,
+          "id": 16,
+          "max_prc": 6,
+          "max_vola": 0.1,
+          "name": "Anlageprofil 4",
+          "risk_level": 4
+        },
+        "risk_profile_id": 16,
+        "street": null,
+        "type": "Private client",
+        "zip": null
+      },
+      "data_gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ],
+      "exposures": {
+        "asset_class": {
+          "splitting_off": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 425122.3494,
+              "weight": 0.804593
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 89415.4369,
+              "weight": 0.169229
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 13831.9399,
+              "weight": 0.026179
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 228273.8502,
+              "weight": 0.432034
+            },
+            {
+              "category": "Equities EmMa",
+              "label": "Equities EmMa",
+              "value": 154844.753,
+              "weight": 0.293061
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 89415.4369,
+              "weight": 0.169229
+            },
+            {
+              "category": "Equities Switzerland",
+              "label": "Equities Switzerland",
+              "value": 42004.4743,
+              "weight": 0.079498
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 13831.9399,
+              "weight": 0.026179
+            }
+          ]
+        },
+        "country": {
+          "splitting_off": [
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 251705.6135,
+              "weight": 0.476382
+            },
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 110431.6552,
+              "weight": 0.209005
+            },
+            {
+              "category": "Others",
+              "label": "Others",
+              "value": 80815.5891,
+              "weight": 0.152953
+            },
+            {
+              "category": "Great Britain",
+              "label": "Great Britain",
+              "value": 45289.5502,
+              "weight": 0.085716
+            },
+            {
+              "category": "Rest of Europe",
+              "label": "Rest of Europe",
+              "value": 26295.3783,
+              "weight": 0.049767
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 13831.9399,
+              "weight": 0.026179
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 212398.1135,
+              "weight": 0.401988
+            },
+            {
+              "category": "Equities North America",
+              "label": "Equities North America",
+              "value": 96668.2522,
+              "weight": 0.182956
+            },
+            {
+              "category": "Great Britain",
+              "label": "Great Britain",
+              "value": 45289.5502,
+              "weight": 0.085716
+            },
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 45153.69,
+              "weight": 0.085459
+            },
+            {
+              "category": "Equities Switzerland",
+              "label": "Equities Switzerland",
+              "value": 42004.4743,
+              "weight": 0.079498
+            },
+            {
+              "category": "Equities Euroland",
+              "label": "Equities Euroland",
+              "value": 36611.4482,
+              "weight": 0.069291
+            },
+            {
+              "category": "Others",
+              "label": "Others",
+              "value": 14847.9333,
+              "weight": 0.028101
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 13831.9399,
+              "weight": 0.026179
+            },
+            {
+              "category": "Equities Pacific",
+              "label": "Equities Pacific",
+              "value": 10139.7117,
+              "weight": 0.019191
+            },
+            {
+              "category": "Equities Japan",
+              "label": "Equities Japan",
+              "value": 6246.0063,
+              "weight": 0.011821
+            },
+            {
+              "category": "Aktien UK",
+              "label": "Aktien UK",
+              "value": 3557.2263,
+              "weight": 0.006732
+            },
+            {
+              "category": "Equities EmMa",
+              "label": "Equities EmMa",
+              "value": 1622.1084,
+              "weight": 0.00307
+            }
+          ]
+        },
+        "currency": {
+          "splitting_off": [
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 279380.7269,
+              "weight": 0.52876
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 177404.0709,
+              "weight": 0.335757
+            },
+            {
+              "category": "Andere",
+              "label": "Andere",
+              "value": 45289.5502,
+              "weight": 0.085716
+            },
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 26295.3783,
+              "weight": 0.049767
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 281741.9143,
+              "weight": 0.533229
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 141770.1508,
+              "weight": 0.268316
+            },
+            {
+              "category": "Andere",
+              "label": "Andere",
+              "value": 45289.5502,
+              "weight": 0.085716
+            },
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 33422.5486,
+              "weight": 0.063256
+            },
+            {
+              "category": "Japanese yen",
+              "label": "Japanese yen",
+              "value": 6247.3628,
+              "weight": 0.011824
+            },
+            {
+              "category": "British pound",
+              "label": "British pound",
+              "value": 3360.8726,
+              "weight": 0.006361
+            },
+            {
+              "category": "Canadian Dollar",
+              "label": "Canadian Dollar",
+              "value": 2351.8238,
+              "weight": 0.004451
+            },
+            {
+              "category": "Taiwan Dollar",
+              "label": "Taiwan Dollar",
+              "value": 1707.088,
+              "weight": 0.003231
+            },
+            {
+              "category": "Australian dollar",
+              "label": "Australian dollar",
+              "value": 1527.5329,
+              "weight": 0.002891
+            },
+            {
+              "category": "China Renminbi",
+              "label": "China Renminbi",
+              "value": 1497.7076,
+              "weight": 0.002835
+            },
+            {
+              "category": "Danish krone",
+              "label": "Danish krone",
+              "value": 1226.0713,
+              "weight": 0.00232
+            },
+            {
+              "category": "Hong Kong Dollar",
+              "label": "Hong Kong Dollar",
+              "value": 1187.988,
+              "weight": 0.002248
+            },
+            {
+              "category": "Indian Rupee",
+              "label": "Indian Rupee",
+              "value": 1163.1781,
+              "weight": 0.002201
+            },
+            {
+              "category": "South Korean Won",
+              "label": "South Korean Won",
+              "value": 1141.1546,
+              "weight": 0.00216
+            },
+            {
+              "category": "Real",
+              "label": "Real",
+              "value": 1110.1592,
+              "weight": 0.002101
+            },
+            {
+              "category": "Swedish Krona",
+              "label": "Swedish Krona",
+              "value": 848.0968,
+              "weight": 0.001605
+            },
+            {
+              "category": "Saudi Riyal",
+              "label": "Saudi Riyal",
+              "value": 343.5518,
+              "weight": 0.00065
+            },
+            {
+              "category": "Israeli Shekel",
+              "label": "Israeli Shekel",
+              "value": 272.4236,
+              "weight": 0.000516
+            },
+            {
+              "category": "Singapore Dollar",
+              "label": "Singapore Dollar",
+              "value": 251.7411,
+              "weight": 0.000476
+            },
+            {
+              "category": "Norwegian Krone",
+              "label": "Norwegian Krone",
+              "value": 230.0898,
+              "weight": 0.000435
+            },
+            {
+              "category": "Mexikanischer Peso",
+              "label": "Mexikanischer Peso",
+              "value": 215.2293,
+              "weight": 0.000407
+            },
+            {
+              "category": "South African Rand",
+              "label": "South African Rand",
+              "value": 191.949,
+              "weight": 0.000363
+            },
+            {
+              "category": "Thai Bath",
+              "label": "Thai Bath",
+              "value": 187.9803,
+              "weight": 0.000356
+            },
+            {
+              "category": "Indonesian Rupiah",
+              "label": "Indonesian Rupiah",
+              "value": 174.866,
+              "weight": 0.000331
+            },
+            {
+              "category": "UAE Dirham",
+              "label": "UAE Dirham",
+              "value": 146.4982,
+              "weight": 0.000277
+            },
+            {
+              "category": "Malaysian Ringgit",
+              "label": "Malaysian Ringgit",
+              "value": 142.7215,
+              "weight": 0.00027
+            },
+            {
+              "category": "New Zealand dollar",
+              "label": "New Zealand dollar",
+              "value": 101.6312,
+              "weight": 0.000192
+            },
+            {
+              "category": "Qatar",
+              "label": "Qatar",
+              "value": 96.4223,
+              "weight": 0.000182
+            },
+            {
+              "category": "Chilenischer Peso",
+              "label": "Chilenischer Peso",
+              "value": 84.2318,
+              "weight": 0.000159
+            },
+            {
+              "category": "Turkish Lira",
+              "label": "Turkish Lira",
+              "value": 81.7064,
+              "weight": 0.000155
+            },
+            {
+              "category": "Kuwaiti Dinars",
+              "label": "Kuwaiti Dinars",
+              "value": 77.4356,
+              "weight": 0.000147
+            },
+            {
+              "category": "Poland",
+              "label": "Poland",
+              "value": 69.1308,
+              "weight": 0.000131
+            },
+            {
+              "category": "Philippinischer Peso",
+              "label": "Philippinischer Peso",
+              "value": 31.545,
+              "weight": 6e-05
+            },
+            {
+              "category": "Hungarian Forint",
+              "label": "Hungarian Forint",
+              "value": 27.7276,
+              "weight": 5.2e-05
+            },
+            {
+              "category": "Kolumbianischer Peso",
+              "label": "Kolumbianischer Peso",
+              "value": 15.1289,
+              "weight": 2.9e-05
+            },
+            {
+              "category": "Czech Koruna",
+              "label": "Czech Koruna",
+              "value": 14.4581,
+              "weight": 2.7e-05
+            },
+            {
+              "category": "Egyptian Pounds",
+              "label": "Egyptian Pounds",
+              "value": 9.0339,
+              "weight": 1.7e-05
+            },
+            {
+              "category": "Romanian LEU",
+              "label": "Romanian LEU",
+              "value": 5.0791,
+              "weight": 1e-05
+            },
+            {
+              "category": "Iceland Kronas",
+              "label": "Iceland Kronas",
+              "value": 4.8465,
+              "weight": 9e-06
+            },
+            {
+              "category": "Offshore Renminbi Yuan",
+              "label": "Offshore Renminbi Yuan",
+              "value": 1.6134,
+              "weight": 3e-06
+            },
+            {
+              "category": "Pakistan Rupees",
+              "label": "Pakistan Rupees",
+              "value": 0.2132,
+              "weight": 0.0
+            }
+          ]
+        },
+        "industry": {
+          "splitting_off": [
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 271951.0651,
+              "weight": 0.514698
+            },
+            {
+              "category": "Health Care",
+              "label": "Health Care",
+              "value": 118049.5502,
+              "weight": 0.223422
+            },
+            {
+              "category": "Financials",
+              "label": "Financials",
+              "value": 51350.001,
+              "weight": 0.097186
+            },
+            {
+              "category": "Consumer Staples",
+              "label": "Consumer Staples",
+              "value": 36832.5,
+              "weight": 0.06971
+            },
+            {
+              "category": "Consumer Discretionary",
+              "label": "Consumer Discretionary",
+              "value": 27993.81,
+              "weight": 0.052981
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 22192.8,
+              "weight": 0.042002
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Health Care",
+              "label": "Health Care",
+              "value": 140230.7946,
+              "weight": 0.265403
+            },
+            {
+              "category": "Financials",
+              "label": "Financials",
+              "value": 79372.1721,
+              "weight": 0.150221
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 75102.5658,
+              "weight": 0.14214
+            },
+            {
+              "category": "Consumer Staples",
+              "label": "Consumer Staples",
+              "value": 51802.9468,
+              "weight": 0.098043
+            },
+            {
+              "category": "Consumer Discretionary",
+              "label": "Consumer Discretionary",
+              "value": 46591.6103,
+              "weight": 0.08818
+            },
+            {
+              "category": "Information Technology",
+              "label": "Information Technology",
+              "value": 44602.8966,
+              "weight": 0.084416
+            },
+            {
+              "category": "Industrials",
+              "label": "Industrials",
+              "value": 31871.9073,
+              "weight": 0.060321
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 22192.8,
+              "weight": 0.042002
+            },
+            {
+              "category": "Utilities",
+              "label": "Utilities",
+              "value": 9519.6557,
+              "weight": 0.018017
+            },
+            {
+              "category": "Communication Services",
+              "label": "Communication Services",
+              "value": 8411.65,
+              "weight": 0.01592
+            },
+            {
+              "category": "Energy",
+              "label": "Energy",
+              "value": 7815.7736,
+              "weight": 0.014792
+            },
+            {
+              "category": "Raw materials",
+              "label": "Raw materials",
+              "value": 6603.7113,
+              "weight": 0.012498
+            },
+            {
+              "category": "Real Estate",
+              "label": "Real Estate",
+              "value": 4251.9702,
+              "weight": 0.008047
+            }
+          ]
+        }
+      },
+      "fx": {
+        "portfolio_currency": "CHF",
+        "rows": [
+          {
+            "currency": "CHF",
+            "currency_group": "Swiss francs",
+            "value": 279380.7269,
+            "weight": 0.52876
+          },
+          {
+            "currency": "USD",
+            "currency_group": "US-Dollar",
+            "value": 177404.0709,
+            "weight": 0.335757
+          },
+          {
+            "currency": "GBP",
+            "currency_group": "British pound",
+            "value": 45289.5502,
+            "weight": 0.085716
+          },
+          {
+            "currency": "EUR",
+            "currency_group": "Euro",
+            "value": 26295.3783,
+            "weight": 0.049767
+          }
+        ],
+        "total": 528369.7263
+      },
+      "groups": [
+        {
+          "category": "Liquidity",
+          "expandable": true,
+          "positions": 3,
+          "value": 13831.94,
+          "weight": 0.026179
+        },
+        {
+          "category": "Bonds",
+          "expandable": true,
+          "positions": 6,
+          "value": 89415.4368,
+          "weight": 0.169229
+        },
+        {
+          "category": "Shares",
+          "expandable": true,
+          "positions": 15,
+          "value": 425122.3495,
+          "weight": 0.804593
+        }
+      ],
+      "integrity": {
+        "data_as_of": "2026-09-03",
+        "factory_date": "2026-09-03",
+        "portfolio_known": true
+      },
+      "lang": "en",
+      "maturity": {
+        "as_of": "2026-09-03",
+        "buckets": [
+          {
+            "category": "Unter 1 Jahr",
+            "label": "Under 1 year",
+            "value": 59647.691,
+            "weight": 0.115925
+          },
+          {
+            "category": "1\u20135 Jahre",
+            "label": "1\u20135 years",
+            "value": 29767.7458,
+            "weight": 0.057853
+          },
+          {
+            "category": "5\u201310 Jahre",
+            "label": "5\u201310 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "\u00dcber 10 Jahre",
+            "label": "Over 10 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "Nicht klassifiziert",
+            "label": "Not classified",
+            "value": 425122.3494,
+            "weight": 0.826222
+          }
+        ],
+        "classified_weight": 0.173778
+      },
+      "metrics": [
+        {
+          "alert": false,
+          "formula": "centre = largest actual-vs-target deviation; alert when an actual leaves Min/Max",
+          "id": "saa",
+          "sub": "Shares",
+          "title": "SAA",
+          "type": "donut",
+          "value": 5.4593
+        },
+        {
+          "formula": "share of the client's portfolios without an Error-severity violation",
+          "id": "suitability",
+          "sub": "2 error rule violations",
+          "title": "Suitability",
+          "type": "gauge",
+          "value": 0.0
+        },
+        {
+          "formula": "Portfolio.Volatility / Portfolio.ExpectedReturn, as delivered by the risk engine",
+          "id": "risk_return",
+          "sub": 5.63,
+          "sub_label": "Return",
+          "title": "Risk / Return",
+          "type": "scatter",
+          "value": 11.889,
+          "value_label": "Risk"
+        },
+        {
+          "formula": "share of value in holdings with PRC >= 5",
+          "id": "product_risk",
+          "sub": "max PRC 7",
+          "title": "Product Risk",
+          "type": "donut",
+          "value": 62.6423
+        },
+        {
+          "formula": "value-weighted country exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "countries",
+          "sub": "Switzerland \u00b7 3% unclassified",
+          "title": "Countries",
+          "type": "map",
+          "value": 40.1988
+        },
+        {
+          "formula": "value-weighted industry exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "industries",
+          "sub": "Health Care \u00b7 14% unclassified",
+          "title": "Sectors",
+          "type": "donut",
+          "value": 26.5403
+        },
+        {
+          "formula": "value-weighted currency exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "currencies",
+          "sub": "Swiss francs",
+          "title": "Currencies",
+          "type": "donut",
+          "value": 53.3229
+        },
+        {
+          "formula": "share of value in dated holdings, bucketed by MaturityDateUtc",
+          "id": "maturities",
+          "sub": "Under 1 year",
+          "title": "Maturities",
+          "type": "bar",
+          "value": 17.3778
+        },
+        {
+          "formula": "IndividualRuleOverrides / SuitabilityRules / SuitabilityViolations counts",
+          "id": "restrictions",
+          "rows": [
+            {
+              "label": "Overrides",
+              "value": 0
+            },
+            {
+              "label": "Rules",
+              "value": 54
+            },
+            {
+              "label": "Violations",
+              "value": 6
+            }
+          ],
+          "sub": null,
+          "title": "Restrictions",
+          "type": "rows",
+          "value": 0
+        },
+        {
+          "direction": "up",
+          "formula": "trailing 12m from PerformanceHistory",
+          "id": "performance",
+          "sub": "12 months",
+          "title": "Performance",
+          "type": "line",
+          "value": 21.479
+        },
+        {
+          "formula": "value-weighted SustainabilityScore over scored holdings",
+          "id": "sustainability",
+          "sub": "7.01 ESG score",
+          "title": "Sustainability",
+          "type": "donut",
+          "value": null
+        },
+        {
+          "formula": "SecurityPositions count",
+          "id": "positions",
+          "sub": "positions",
+          "title": "Positions list",
+          "type": "grid",
+          "value": 21
+        }
+      ],
+      "portfolio": {
+        "aum": 528369.73,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.0563,
+        "id": 180692,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "CASE-042-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 21,
+        "return_12m_pct": 21.479,
+        "return_3m_pct": 4.6524,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "CHF",
+        "top_security": "Namen-Aktie BB Biotech AG",
+        "top_weight": 0.13771,
+        "value_at_risk": 0.11703,
+        "volatility": 0.11889
+      },
+      "positions": [
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto CHF",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 12827.18,
+          "weight": 0.02425,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto USD",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 1004.76,
+          "weight": 0.0019,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Investitionskonto EUR",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 0.0,
+          "weight": 0.0,
+          "whg": "EUR"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US91282CDB46",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.0436,
+          "position": "0.625 % Vereinigte Staaten von Amerika 2021-15.10.24 Series AT-2024",
+          "prc": 3,
+          "price": 0.9773,
+          "quantity": 20000.0,
+          "risk_contribution": 0.00147368,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 49496,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 5.8574,
+          "valor": "114092094",
+          "value": 17857.56,
+          "weight": 0.0338,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0360677295",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03209,
+          "position": "0.825 % Swiss Prime Site AG 2017-11.05.26",
+          "prc": 2,
+          "price": 0.987,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0009062216,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 4115,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.7,
+          "valor": "36067729",
+          "value": 14919.8125,
+          "weight": 0.02824,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0517825318",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03209,
+          "position": "0.26 % Hyundai Capital Services Inc 2020-11.02.25",
+          "prc": 2,
+          "price": 0.9894,
+          "quantity": 15000.0,
+          "risk_contribution": 0.000901729,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 44273,
+          "success": null,
+          "sustainability_rating": 7,
+          "sustainability_score": 1.3,
+          "valor": "51782531",
+          "value": 14847.9333,
+          "weight": 0.0281,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0419041659",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.00737,
+          "position": "0.1525 % Cembra Money Bank AG 2019-14.10.26",
+          "prc": 2,
+          "price": 0.9655,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0002021591,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 40543,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 10.0,
+          "valor": "41904165",
+          "value": 14494.001,
+          "weight": 0.02743,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US023135BW50",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.04764,
+          "position": "0.45 % Amazon.com Inc 2021-12.05.24 Global",
+          "prc": 3,
+          "price": 0.9961,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0012310176,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 37724,
+          "success": null,
+          "sustainability_rating": 4,
+          "sustainability_score": 4.6,
+          "valor": "111555519",
+          "value": 13650.81,
+          "weight": 0.02584,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US14913R2L06",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.12485,
+          "position": "0.45 % Caterpillar Financial Services Corp 2021-17.05.24 Series J",
+          "prc": 3,
+          "price": 0.9957,
+          "quantity": 15000.0,
+          "risk_contribution": 0.0032248755,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 37725,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.1,
+          "valor": "111570211",
+          "value": 13645.32,
+          "weight": 0.02583,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0038389992",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.2011,
+          "position": "Namen-Aktie BB Biotech AG",
+          "prc": 6,
+          "price": 42.8,
+          "quantity": 1700.0,
+          "risk_contribution": 0.027693481,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 625,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": "3838999",
+          "value": 72760.0,
+          "weight": 0.13771,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "GB00BN7SWP63",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.11162,
+          "position": "Namen-Aktie GSK PLC",
+          "prc": 5,
+          "price": 16.435,
+          "quantity": 2421.0,
+          "risk_contribution": 0.0095680664,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 41193,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.5,
+          "valor": "119642297",
+          "value": 45289.5502,
+          "weight": 0.08572,
+          "whg": "GBP"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B5BMR087",
+          "kind": "security",
+          "lookthrough_rows": 74,
+          "marginal_risk": 0.12485,
+          "position": "Anteile Exchange Traded Fund USD iShares VII PLC - iShares Core S&P 500 UCITS ETF",
+          "prc": 4,
+          "price": 540.7,
+          "quantity": 80.0,
+          "risk_contribution": 0.00933878,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8449,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.58856,
+          "valor": "10737041",
+          "value": 39519.4372,
+          "weight": 0.0748,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "CH0111762537",
+          "kind": "security",
+          "lookthrough_rows": 18,
+          "marginal_risk": 0.1291,
+          "position": "Anteile -(CHF) A-dis- UBS ETF (CH) - SMIM (R)",
+          "prc": 5,
+          "price": 262.05,
+          "quantity": 150.0,
+          "risk_contribution": 0.009603749,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 1105,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.16886,
+          "valor": "11176253",
+          "value": 39307.5,
+          "weight": 0.07439,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B8GKDB10",
+          "kind": "security",
+          "lookthrough_rows": 2958,
+          "marginal_risk": 0.12026,
+          "position": "Anteile Vanguard Funds PLC - FTSE All-World High Dividend Yield UCITS ETF",
+          "prc": 4,
+          "price": 64.3,
+          "quantity": 660.0,
+          "risk_contribution": 0.0088246788,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8882,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.90647,
+          "valor": "20974572",
+          "value": 38772.098,
+          "weight": 0.07338,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B53L3W79",
+          "kind": "security",
+          "lookthrough_rows": 30,
+          "marginal_risk": 0.14667,
+          "position": "Anteile - ETF EUR iShares VII PLC  - iShares Core EURO STOXX 50 UCITS ETF",
+          "prc": 5,
+          "price": 180.36,
+          "quantity": 150.0,
+          "risk_contribution": 0.0072997659,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 11044,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.9203,
+          "valor": "10737573",
+          "value": 26295.3783,
+          "weight": 0.04977,
+          "whg": "EUR"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BD1F4M44",
+          "kind": "security",
+          "lookthrough_rows": 62,
+          "marginal_risk": 0.14273,
+          "position": "Anteile -USD- iShares IV PLC - iShares  Edge MSCI USA Value Factor UCITS ETF",
+          "prc": 5,
+          "price": 9.398,
+          "quantity": 3000.0,
+          "risk_contribution": 0.0069580875,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 9241,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.90792,
+          "valor": "33587599",
+          "value": 25758.528,
+          "weight": 0.04875,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0038863350",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.06547,
+          "position": "Namen-Aktie Nestle SA",
+          "prc": 4,
+          "price": 92.5,
+          "quantity": 265.0,
+          "risk_contribution": 0.0030371533,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 644,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.3,
+          "valor": "3886335",
+          "value": 24512.5,
+          "weight": 0.04639,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0012214059",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.14742,
+          "position": "Namen-Aktie Holcim AG",
+          "prc": 6,
+          "price": 79.26,
+          "quantity": 280.0,
+          "risk_contribution": 0.00619164,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 272,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.9,
+          "valor": "1221405",
+          "value": 22192.8,
+          "weight": 0.042,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0014852781",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.12628,
+          "position": "Namen-Aktie Swiss Life Holding AG",
+          "prc": 6,
+          "price": 623.6,
+          "quantity": 30.0,
+          "risk_contribution": 0.0044715748,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 227,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.7,
+          "valor": "1485278",
+          "value": 18708.0,
+          "weight": 0.03541,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0011075394",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.08926,
+          "position": "Namen-Aktie Zurich Insurance Group AG",
+          "prc": 5,
+          "price": 453.7,
+          "quantity": 40.0,
+          "risk_contribution": 0.003066081,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 230,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 9.3,
+          "valor": "1107539",
+          "value": 18148.0,
+          "weight": 0.03435,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00BYZK4552",
+          "kind": "security",
+          "lookthrough_rows": 489,
+          "marginal_risk": 0.18644,
+          "position": "Anteile - USD ETF - iShares IV PLC - iShares Automation & Robotics UCITS ETF",
+          "prc": 6,
+          "price": 12.996,
+          "quantity": 1400.0,
+          "risk_contribution": 0.0058654024,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 9178,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.05108,
+          "valor": "33305410",
+          "value": 16622.7208,
+          "weight": 0.03146,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0276837694",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.12912,
+          "position": "Namen-Aktie mobilezone holding ag",
+          "prc": 6,
+          "price": 13.66,
+          "quantity": 1050.0,
+          "risk_contribution": 0.003505608,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 2771,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.8,
+          "valor": "27683769",
+          "value": 14343.0,
+          "weight": 0.02715,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0111677362",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.13885,
+          "position": "Namen-Aktie Orior AG",
+          "prc": 5,
+          "price": 61.6,
+          "quantity": 200.0,
+          "risk_contribution": 0.003237982,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 1049,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.1,
+          "valor": "11167736",
+          "value": 12320.0,
+          "weight": 0.02332,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": true,
+          "kennung": "IE00B1XNHC34",
+          "kind": "security",
+          "lookthrough_rows": 690,
+          "marginal_risk": 0.11328,
+          "position": "Anteile Exchange Traded Fund USD iShares II PLC - Global Clean Energy UCITS ETF",
+          "prc": 7,
+          "price": 7.715,
+          "quantity": 1500.0,
+          "risk_contribution": 0.0022667328,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8150,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.02513,
+          "valor": "3246465",
+          "value": 10572.837,
+          "weight": 0.02001,
+          "whg": "USD"
+        }
+      ],
+      "prc": {
+        "distribution": {
+          "2": 0.086022,
+          "3": 0.087756,
+          "4": 0.199799,
+          "5": 0.324794,
+          "6": 0.28108,
+          "7": 0.020548
+        },
+        "max_prc": 7,
+        "share_prc_ge_5": 0.626423
+      },
+      "saa": {
+        "available": true,
+        "description": "Depotberatung / CHF / Anlageprofil 6",
+        "reason": null,
+        "rows": [
+          {
+            "actual": 0.026179,
+            "category": "Liquidity",
+            "difference": -0.003821,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.169229,
+            "category": "Bonds",
+            "difference": -0.020771,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.19
+          },
+          {
+            "actual": 0.804593,
+            "category": "Shares",
+            "difference": 0.054593,
+            "max": 1.0,
+            "min": 0.3,
+            "target": 0.75
+          },
+          {
+            "actual": 0.0,
+            "category": "Real estate",
+            "difference": -0.03,
+            "max": 0.15,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.0,
+            "category": "Specialties andCommodities",
+            "difference": 0.0,
+            "max": 0.2,
+            "min": 0.0,
+            "target": 0.0
+          }
+        ],
+        "saa_id": 69,
+        "saa_name": "Depotberatung / CHF / Anlageprofil 6"
+      },
+      "sustainability": {
+        "esg_profile": null,
+        "positioned_weight": 514537.7863,
+        "score": 7.01,
+        "scored_weight": 441777.7863
+      },
+      "total": {
+        "accounts": 3,
+        "currency": "CHF",
+        "portfolio_aum": 528369.7263,
+        "positions": 21,
+        "value": 528369.7263
+      },
+      "violations": [
+        {
+          "error_level": 1,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationVolatilityRuleField`1",
+              "label": "Volatility",
+              "left": 0.118892514604,
+              "operator": 40,
+              "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[1]",
+              "right": 0.1,
+              "unit": "ratio"
+            }
+          ],
+          "id": 657307,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Compliance with maximum volatility",
+          "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder Verm\u00f6gensverwaltung muss PF Vola < max Kundenprofil Vola sein.",
+          "severity": "Warning",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "SimulationVolatilityRuleField`1",
+              "label": "Volatility",
+              "limit": 0.1,
+              "path": "clients[CASE-042].SuitabilityViolations[0].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.118892514604
+            }
+          ]
+        },
+        {
+          "error_level": 1,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "GenericSimulationFilterNumericRuleField",
+              "label": "Numeric filter",
+              "left": 3.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[1]",
+              "right": 3.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.11490031731971488,
+              "operator": 50,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[2]",
+              "right": 0.121,
+              "unit": "ratio"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.11490031731971488,
+              "operator": 60,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[3]",
+              "right": 0.071,
+              "unit": "ratio"
+            }
+          ],
+          "id": 669434,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Overweight in the equity region \"Switzerland\"",
+          "rule_description": "\u00dcbergewicht (+/- 5% zum SAA-Sollwert der Benchmark) in der Aktienregion \"Grossbritannien\"",
+          "severity": "Warning",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "GenericSimulationFilterNumericRuleField",
+              "label": "Numeric filter",
+              "limit": 3.0,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 3.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.121,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.11490031731971488
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.071,
+              "path": "clients[CASE-042].SuitabilityViolations[1].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.11490031731971488
+            }
+          ]
+        },
+        {
+          "error_level": 1,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+              "label": "Asset class",
+              "left": 50000.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[1]",
+              "right": 50000.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 1.0,
+              "operator": 40,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[2]",
+              "right": 0.0,
+              "unit": "ratio"
+            },
+            {
+              "field": "GenericSimulationFilterNumericRuleField",
+              "label": "Numeric filter",
+              "left": 4.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[3]",
+              "right": 4.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.22738886051658902,
+              "operator": 50,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[4]",
+              "right": 0.265,
+              "unit": "ratio"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.22738886051658902,
+              "operator": 60,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[5]",
+              "right": 0.215,
+              "unit": "ratio"
+            }
+          ],
+          "id": 669435,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Underweight in the equity region \"North America\"",
+          "rule_description": "Untergewicht (+/- 5% zum SAA-Sollwert der Benchmark) in der Aktienregion \"Nordamerika\"",
+          "severity": "Warning",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAAssetClassRuleField",
+              "label": "Asset class",
+              "limit": 50000.0,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 50000.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.0,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 1.0
+            },
+            {
+              "field": "GenericSimulationFilterNumericRuleField",
+              "label": "Numeric filter",
+              "limit": 4.0,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 4.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.265,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[4]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.22738886051658902
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.215,
+              "path": "clients[CASE-042].SuitabilityViolations[2].ViolationPath[5]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.22738886051658902
+            }
+          ]
+        },
+        {
+          "error_level": 2,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "PositionPortfolioValueRuleField`1",
+              "label": "Position weight",
+              "left": 0.13771,
+              "operator": 40,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[1]",
+              "right": 0.075,
+              "unit": "ratio"
+            },
+            {
+              "field": "PositionIsSecurityRuleField`1",
+              "label": "Position is a security",
+              "left": 0.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[2]",
+              "right": 0.0,
+              "unit": "value"
+            },
+            {
+              "field": "PositionTopLevelSecurityTypeRuleField`1",
+              "label": "Security type",
+              "left": 180.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[3]",
+              "right": 180.0,
+              "unit": "value"
+            }
+          ],
+          "id": 670470,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Cluster risk of a single financial instrument",
+          "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder trx basierte Anlageberatung muss Einzeltitel Anteil < x% sein (x variiert mit Instrument Typ)",
+          "severity": "Error",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "PositionPortfolioValueRuleField`1",
+              "label": "Position weight",
+              "limit": 0.075,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.13771
+            },
+            {
+              "field": "PositionIsSecurityRuleField`1",
+              "label": "Position is a security",
+              "limit": 0.0,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 0.0
+            },
+            {
+              "field": "PositionTopLevelSecurityTypeRuleField`1",
+              "label": "Security type",
+              "limit": 180.0,
+              "path": "clients[CASE-042].SuitabilityViolations[3].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 180.0
+            }
+          ]
+        },
+        {
+          "error_level": 1,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+              "label": "Sector",
+              "left": 58.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[1]",
+              "right": 58.0,
+              "unit": "value"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.32985928560881206,
+              "operator": 50,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[2]",
+              "right": 0.343,
+              "unit": "ratio"
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "left": 0.32985928560881206,
+              "operator": 60,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[3]",
+              "right": 0.293,
+              "unit": "ratio"
+            }
+          ],
+          "id": 681300,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Overweight in the equity sector \"Health Care\"",
+          "rule_description": "\u00dcbergewicht (+/- 5% zum SAA-Sollwert der Benchmark) im Aktiensektor \"Gesundheitswesen\"",
+          "severity": "Warning",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "SimulationFilterTopLevelSAAIndustryRuleField",
+              "label": "Sector",
+              "limit": 58.0,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 58.0
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.343,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.32985928560881206
+            },
+            {
+              "field": "SimulationPositionCollectionPortfolioValueRuleField",
+              "label": "Position weight",
+              "limit": 0.293,
+              "path": "clients[CASE-042].SuitabilityViolations[4].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.32985928560881206
+            }
+          ]
+        },
+        {
+          "error_level": 2,
+          "explanation": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "left": 13.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[0]",
+              "right": 13.0,
+              "unit": "value"
+            },
+            {
+              "field": "PositionPortfolioValueRuleField`1",
+              "label": "Position weight",
+              "left": 0.08572,
+              "operator": 40,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[1]",
+              "right": 0.075,
+              "unit": "ratio"
+            },
+            {
+              "field": "PositionIsSecurityRuleField`1",
+              "label": "Position is a security",
+              "left": 0.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[2]",
+              "right": 0.0,
+              "unit": "value"
+            },
+            {
+              "field": "PositionTopLevelSecurityTypeRuleField`1",
+              "label": "Security type",
+              "left": 180.0,
+              "operator": 10,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[3]",
+              "right": 180.0,
+              "unit": "value"
+            }
+          ],
+          "id": 694946,
+          "portfolio_id": 180692,
+          "portfolio_known": true,
+          "portfolio_nr": "CASE-042-01",
+          "rule_code": "Cluster risk of a single financial instrument",
+          "rule_description": "F\u00fcr Privatkunden mit Finanzdienstleistung Umfassende Anlageberatung oder trx basierte Anlageberatung muss Einzeltitel Anteil < x% sein (x variiert mit Instrument Typ)",
+          "severity": "Error",
+          "values": [
+            {
+              "field": "RegulatoryClientTypeRuleField`1",
+              "label": "Client type",
+              "limit": 13.0,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[0]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 13.0
+            },
+            {
+              "field": "PositionPortfolioValueRuleField`1",
+              "label": "Position weight",
+              "limit": 0.075,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[1]",
+              "source": "clients.json",
+              "unit": "ratio",
+              "value": 0.08572
+            },
+            {
+              "field": "PositionIsSecurityRuleField`1",
+              "label": "Position is a security",
+              "limit": 0.0,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[2]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 0.0
+            },
+            {
+              "field": "PositionTopLevelSecurityTypeRuleField`1",
+              "label": "Security type",
+              "limit": 180.0,
+              "path": "clients[CASE-042].SuitabilityViolations[5].ViolationPath[3]",
+              "source": "clients.json",
+              "unit": "value",
+              "value": 180.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

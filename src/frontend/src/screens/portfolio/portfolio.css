@@ -1,0 +1,406 @@
+/* F4 — Portfolio analysis screen styles.
+   All colors/spacing/radii from tokens.css variables. */
+
+/* Stacked, not a sidebar. A 520px rail beside the allocation panel forced the positions table — 12
+   columns, ~1000px of intrinsic width — into an 816px column, so it painted 198px over the rail's
+   cards. Full width for the table, the tiles across a strip, and nothing overlaps or sits in an empty
+   column. */
+.portfolio-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.portfolio-main {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+/* Allocation table beside its own donut. */
+.saa-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.saa-donut {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* A strip of tiles across the content width: as many as fit, each sized to its own content. */
+.portfolio-rail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-2);
+  align-content: start;
+  align-items: start;
+}
+
+/* Section header: title left, actions right */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-card-title);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.section-actions {
+  display: flex;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.section-actions svg {
+  cursor: pointer;
+}
+
+.section-actions svg:hover {
+  color: var(--primary);
+}
+
+/* SAA panel */
+.saa-name {
+  font-weight: 600;
+  font-size: var(--fs-body);
+  margin-bottom: var(--space-2);
+}
+
+.saa-description {
+  font-size: var(--fs-body);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 var(--space-3) 0;
+}
+
+.anlagetipp {
+  font-size: var(--fs-body);
+  color: var(--text-primary);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.5;
+}
+
+.anlagetipp strong {
+  font-weight: 700;
+}
+
+.saa-subheading {
+  text-align: center;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  margin: var(--space-4) 0 var(--space-3) 0;
+  color: var(--text-primary);
+}
+
+.saa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-cell);
+}
+
+.saa-table th,
+.saa-table td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.saa-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.saa-table th.num,
+.saa-table td.num {
+  text-align: right;
+}
+
+.saa-row td.positive {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.saa-row td.negative {
+  color: var(--text-primary);
+}
+
+.saa-bar-cell {
+  padding: var(--space-1) var(--space-3) var(--space-3) var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.saa-empty {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  color: var(--text-secondary);
+}
+
+.saa-empty strong {
+  display: block;
+  font-size: var(--fs-card-title);
+  margin-bottom: var(--space-2);
+}
+
+.saa-reason {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Positions section */
+.positions-section {
+  margin-top: var(--space-5);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.split-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-cell);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.split-toggle:hover {
+  background: var(--primary-text);
+}
+
+.positions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-cell);
+  margin-top: var(--space-3);
+}
+
+.positions-table th,
+.positions-table td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.positions-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--bg-row-alt);
+}
+
+.positions-table th.num,
+.positions-table td.num {
+  text-align: right;
+}
+
+.total-row {
+  background: var(--bg-total-row);
+  font-weight: 700;
+}
+
+.total-row td {
+  border-bottom: 2px solid var(--border);
+}
+
+.group-row {
+  background: var(--bg-row-alt);
+}
+
+.group-row td {
+  font-weight: 600;
+}
+
+.group-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0;
+}
+
+.group-toggle:hover {
+  color: var(--primary);
+}
+
+.position-row:nth-child(even) {
+  background: var(--bg-row-alt);
+}
+
+.position-row:hover {
+  background: var(--primary-light);
+}
+
+.position-name {
+  font-weight: 500;
+}
+
+/* Exposures summary */
+.exposures-summary {
+  display: flex;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.exposure-block {
+  flex: 1;
+}
+
+.exposure-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.exposure-value {
+  font-size: var(--fs-card-title);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exposure-category {
+  font-size: var(--fs-cell);
+  color: var(--text-secondary);
+}
+
+/* Data gaps */
+.data-gaps {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  background: var(--bg-row-alt);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-cell);
+  color: var(--text-secondary);
+}
+
+.data-gaps strong {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.data-gaps ul {
+  margin: 0;
+  padding-left: var(--space-4);
+}
+
+.data-gaps li {
+  margin-bottom: var(--space-1);
+}
+
+/* Briefing bar */
+.briefing-bar {
+  margin-top: var(--space-4);
+  text-align: right;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.primary-button:hover {
+  background: var(--primary-text);
+}
+
+/* Metric cards size to their content: the fixed 100px floor left empty space in every card that
+   holds one number and no chart. */
+.metric-card {
+  min-height: 0;
+}
+
+.metric-card.metric-alert {
+  background: var(--chart-alert);
+  color: white;
+  border-color: var(--chart-alert);
+}
+
+.metric-card.metric-alert .metric-value,
+.metric-card.metric-alert .metric-sub {
+  color: white;
+}
+
+.metric-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin-bottom: var(--space-2);
+}
+
+.metric-value {
+  font-size: var(--fs-card-title);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.metric-sub {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: var(--space-1);
+}
+
+.metric-rows {
+  font-size: 10px;
+  width: 100%;
+}
+
+.metric-row-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1200px) {
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .saa-grid {
+    grid-template-columns: 1fr;
+  }
+}

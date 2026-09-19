@@ -1,0 +1,297 @@
+{
+  "CASE-007": {
+    "actions": 5,
+    "block_count": 14,
+    "evidence_index_size": 40,
+    "findings": 10,
+    "numbers": {
+      "aum": [
+        905453.68
+      ],
+      "finding_scores": [
+        0.8,
+        0.8,
+        0.6282,
+        0.6101,
+        0.5,
+        0.5,
+        0.3527,
+        0.3297,
+        0.2,
+        0.1
+      ],
+      "portfolio_returns": [
+        15.1538
+      ],
+      "portfolio_volatility": [
+        0.09182
+      ]
+    },
+    "read_seconds": 63,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 2,
+    "violations": 1,
+    "word_count": 211
+  },
+  "CASE-008": {
+    "actions": 3,
+    "block_count": 11,
+    "evidence_index_size": 30,
+    "findings": 16,
+    "numbers": {
+      "aum": [
+        307552.1
+      ],
+      "finding_scores": [
+        1.0,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.4,
+        0.3519,
+        0.2,
+        0.1
+      ],
+      "portfolio_returns": [
+        17.7208
+      ],
+      "portfolio_volatility": [
+        0.12731
+      ]
+    },
+    "read_seconds": 56,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 2,
+    "violations": 12,
+    "word_count": 186
+  },
+  "CASE-012": {
+    "actions": 5,
+    "block_count": 16,
+    "evidence_index_size": 38,
+    "findings": 28,
+    "numbers": {
+      "aum": [
+        44395.69
+      ],
+      "finding_scores": [
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.7931,
+        0.6794,
+        0.6343,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.4059,
+        0.3704,
+        0.2,
+        0.1
+      ],
+      "portfolio_returns": [
+        19.559
+      ],
+      "portfolio_volatility": [
+        0.18421
+      ]
+    },
+    "read_seconds": 63,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 2,
+    "violations": 21,
+    "word_count": 210
+  },
+  "CASE-017": {
+    "actions": 4,
+    "block_count": 14,
+    "evidence_index_size": 39,
+    "findings": 8,
+    "numbers": {
+      "aum": [
+        1110287.92
+      ],
+      "finding_scores": [
+        0.7,
+        0.5,
+        0.5,
+        0.5,
+        0.4015,
+        0.3153,
+        0.2,
+        0.1
+      ],
+      "portfolio_returns": [
+        24.2024
+      ],
+      "portfolio_volatility": [
+        0.10669
+      ]
+    },
+    "read_seconds": 62,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 1,
+    "violations": 2,
+    "word_count": 206
+  },
+  "CASE-027": {
+    "actions": 5,
+    "block_count": 14,
+    "evidence_index_size": 34,
+    "findings": 6,
+    "numbers": {
+      "aum": [
+        171713.24
+      ],
+      "finding_scores": [
+        1.0,
+        0.8874,
+        0.8112,
+        0.2,
+        0.1,
+        0.1
+      ],
+      "portfolio_returns": [
+        22.7983
+      ],
+      "portfolio_volatility": [
+        0.12187
+      ]
+    },
+    "read_seconds": 66,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 2,
+    "violations": 0,
+    "word_count": 220
+  },
+  "CASE-028": {
+    "actions": 4,
+    "block_count": 13,
+    "evidence_index_size": 33,
+    "findings": 6,
+    "numbers": {
+      "aum": [
+        196851.0
+      ],
+      "finding_scores": [
+        1.0,
+        0.9751,
+        0.5,
+        0.2,
+        0.1,
+        0.1
+      ],
+      "portfolio_returns": [
+        22.6037
+      ],
+      "portfolio_volatility": [
+        0.22002
+      ]
+    },
+    "read_seconds": 62,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 1,
+    "violations": 0,
+    "word_count": 207
+  },
+  "CASE-029": {
+    "actions": 3,
+    "block_count": 11,
+    "evidence_index_size": 34,
+    "findings": 12,
+    "numbers": {
+      "aum": [
+        102187.9
+      ],
+      "finding_scores": [
+        0.9555,
+        0.7853,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.3416,
+        0.3028,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "portfolio_returns": [
+        21.0234
+      ],
+      "portfolio_volatility": [
+        0.0792
+      ]
+    },
+    "read_seconds": 59,
+    "section_ids": [
+      "recent_development",
+      "health_check",
+      "outlook_actions"
+    ],
+    "unavailable_count": 3,
+    "violations": 0,
+    "word_count": 197
+  },
+  "_list_counts": {
+    "clients": 47,
+    "error_violations": 96,
+    "maturities": 9,
+    "notes": 153,
+    "open_proposals": 5,
+    "portfolios": 57,
+    "proposals": 206,
+    "violating_clients": 19,
+    "violations": 180,
+    "warning_clients": 20,
+    "warning_violations": 84
+  }
+}

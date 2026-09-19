@@ -1,0 +1,5 @@
+__pycache__/
+.pytest_cache/
+.venv/
+# Market-news cache: regenerable, keyed by query slug.
+app/external/cache/news/*.json

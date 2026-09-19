@@ -1,0 +1,786 @@
+{
+  "client": {
+    "client": {
+      "aum": 580060.27,
+      "birthday": "1990-10-02",
+      "city": null,
+      "client_id": 990001,
+      "company": null,
+      "counts": {
+        "errors": 0,
+        "external_portfolios": 0,
+        "notes": 2,
+        "portfolios": 1,
+        "proposals": 0,
+        "tags": 2,
+        "warnings": 0
+      },
+      "display_name": "Lena Vogt",
+      "esg_profile": "Yes",
+      "first_name": "Lena",
+      "is_company": false,
+      "is_employee": false,
+      "last_changed": "2026-09-03",
+      "last_consultation": "2026-08-12",
+      "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+      "last_name": "Vogt",
+      "liquidity": 29003.01,
+      "liquidity_pct": 0.05,
+      "profiling_date": "2022-07-31",
+      "ref": "SCEN-001",
+      "reporting_currency": "CHF",
+      "risk_profile": {
+        "equity_quote": 0.45,
+        "id": 15,
+        "max_prc": 4,
+        "max_vola": 0.075,
+        "name": "Anlageprofil 3",
+        "risk_level": 3
+      },
+      "risk_profile_id": 15,
+      "street": null,
+      "type": "Private client",
+      "zip": null
+    },
+    "counts": {
+      "dangling_violations": 0,
+      "distinct_notes": 2,
+      "errors": 0,
+      "external_portfolios": 0,
+      "industry_tags": 1,
+      "notes": 2,
+      "open_proposals": 0,
+      "overrides": 0,
+      "portfolios": 1,
+      "proposals": 0,
+      "region_tags": 1,
+      "rejected_proposals": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "data_gaps": [
+      "No consultations recorded for this client"
+    ],
+    "lang": "en",
+    "notes": [
+      {
+        "date": "2026-08-12",
+        "duplicate_of": null,
+        "index": 0,
+        "path": "clients[SCEN-001].ClientNotes[0]",
+        "source": "clients.json",
+        "text": "Client is explicitly risk-sensitive and asked to keep drawdowns small; called after the last statement worried her."
+      },
+      {
+        "date": "2026-08-12",
+        "duplicate_of": null,
+        "index": 1,
+        "path": "clients[SCEN-001].ClientNotes[1]",
+        "source": "clients.json",
+        "text": "Plans to use CHF 250'000 of the invested assets for a property purchase in 2027."
+      }
+    ],
+    "overrides": [],
+    "portfolios": [
+      {
+        "aum": 580060.27,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.061,
+        "id": 99000101,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "SCEN-001-01",
+        "performance_as_of": "2025-10-01",
+        "position_count": 3,
+        "return_12m_pct": -11.8959,
+        "return_3m_pct": -16.5139,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "EUR",
+        "top_security": "Na. u. Inh. Ti.-Aktie ASML Holding NV",
+        "top_weight": 0.62,
+        "value_at_risk": 0.0,
+        "volatility": 0.184
+      }
+    ],
+    "proposals": [],
+    "tags": {
+      "all": [
+        {
+          "name": "Switzerland",
+          "scope": "Client",
+          "type": "Region"
+        },
+        {
+          "name": "Information Technology",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "industry": [
+        {
+          "name": "Information Technology",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "other": [],
+      "region": [
+        {
+          "name": "Switzerland",
+          "scope": "Client",
+          "type": "Region"
+        }
+      ]
+    },
+    "violations": []
+  },
+  "portfolios": [
+    {
+      "client": {
+        "aum": 580060.27,
+        "birthday": "1990-10-02",
+        "city": null,
+        "client_id": 990001,
+        "company": null,
+        "counts": {
+          "errors": 0,
+          "external_portfolios": 0,
+          "notes": 2,
+          "portfolios": 1,
+          "proposals": 0,
+          "tags": 2,
+          "warnings": 0
+        },
+        "display_name": "Lena Vogt",
+        "esg_profile": "Yes",
+        "first_name": "Lena",
+        "is_company": false,
+        "is_employee": false,
+        "last_changed": "2026-09-03",
+        "last_consultation": "2026-08-12",
+        "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+        "last_name": "Vogt",
+        "liquidity": 29003.01,
+        "liquidity_pct": 0.05,
+        "profiling_date": "2022-07-31",
+        "ref": "SCEN-001",
+        "reporting_currency": "CHF",
+        "risk_profile": {
+          "equity_quote": 0.45,
+          "id": 15,
+          "max_prc": 4,
+          "max_vola": 0.075,
+          "name": "Anlageprofil 3",
+          "risk_level": 3
+        },
+        "risk_profile_id": 15,
+        "street": null,
+        "type": "Private client",
+        "zip": null
+      },
+      "data_gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ],
+      "exposures": {
+        "asset_class": {
+          "splitting_off": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 464048.22,
+              "weight": 0.8
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 464048.22,
+              "weight": 0.8
+            },
+            {
+              "category": "Bonds",
+              "label": "Bonds",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ]
+        },
+        "country": {
+          "splitting_off": [
+            {
+              "category": "Rest of Europe",
+              "label": "Rest of Europe",
+              "value": 359637.37,
+              "weight": 0.62
+            },
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 104410.85,
+              "weight": 0.18
+            },
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Rest of Europe",
+              "label": "Rest of Europe",
+              "value": 359637.37,
+              "weight": 0.62
+            },
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 104410.85,
+              "weight": 0.18
+            },
+            {
+              "category": "Switzerland",
+              "label": "Switzerland",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ]
+        },
+        "currency": {
+          "splitting_off": [
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 359637.37,
+              "weight": 0.62
+            },
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 116012.05,
+              "weight": 0.2
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 104410.85,
+              "weight": 0.18
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Euro",
+              "label": "Euro",
+              "value": 359637.37,
+              "weight": 0.62
+            },
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 116012.05,
+              "weight": 0.2
+            },
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 104410.85,
+              "weight": 0.18
+            }
+          ]
+        },
+        "industry": {
+          "splitting_off": [
+            {
+              "category": "Information Technology",
+              "label": "Information Technology",
+              "value": 464048.22,
+              "weight": 0.8
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Information Technology",
+              "label": "Information Technology",
+              "value": 464048.22,
+              "weight": 0.8
+            },
+            {
+              "category": "Materials",
+              "label": "Materials",
+              "value": 87009.04,
+              "weight": 0.15
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 29003.01,
+              "weight": 0.05
+            }
+          ]
+        }
+      },
+      "fx": {
+        "portfolio_currency": "CHF",
+        "rows": [
+          {
+            "currency": "EUR",
+            "currency_group": "Euro",
+            "value": 359637.37,
+            "weight": 0.62
+          },
+          {
+            "currency": "CHF",
+            "currency_group": "Swiss francs",
+            "value": 116012.05,
+            "weight": 0.2
+          },
+          {
+            "currency": "USD",
+            "currency_group": "US-Dollar",
+            "value": 104410.85,
+            "weight": 0.18
+          }
+        ],
+        "total": 580060.27
+      },
+      "groups": [
+        {
+          "category": "Liquidity",
+          "expandable": true,
+          "positions": 1,
+          "value": 29003.01,
+          "weight": 0.05
+        },
+        {
+          "category": "Bonds",
+          "expandable": true,
+          "positions": 1,
+          "value": 87009.04,
+          "weight": 0.15
+        },
+        {
+          "category": "Shares",
+          "expandable": true,
+          "positions": 2,
+          "value": 464048.22,
+          "weight": 0.8
+        }
+      ],
+      "integrity": {
+        "data_as_of": "2026-09-03",
+        "factory_date": "2026-09-03",
+        "portfolio_known": true
+      },
+      "lang": "en",
+      "maturity": {
+        "as_of": "2026-09-03",
+        "buckets": [
+          {
+            "category": "Unter 1 Jahr",
+            "label": "Under 1 year",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "1\u20135 Jahre",
+            "label": "1\u20135 years",
+            "value": 87009.04,
+            "weight": 0.157895
+          },
+          {
+            "category": "5\u201310 Jahre",
+            "label": "5\u201310 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "\u00dcber 10 Jahre",
+            "label": "Over 10 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "Nicht klassifiziert",
+            "label": "Not classified",
+            "value": 464048.22,
+            "weight": 0.842105
+          }
+        ],
+        "classified_weight": 0.157895
+      },
+      "metrics": [
+        {
+          "alert": false,
+          "formula": "centre = largest actual-vs-target deviation; alert when an actual leaves Min/Max",
+          "id": "saa",
+          "sub": "Shares",
+          "title": "SAA",
+          "type": "donut",
+          "value": 5.0
+        },
+        {
+          "formula": "share of the client's portfolios without an Error-severity violation",
+          "id": "suitability",
+          "sub": "0 error rule violations",
+          "title": "Suitability",
+          "type": "gauge",
+          "value": 100.0
+        },
+        {
+          "formula": "Portfolio.Volatility / Portfolio.ExpectedReturn, as delivered by the risk engine",
+          "id": "risk_return",
+          "sub": 6.1,
+          "sub_label": "Return",
+          "title": "Risk / Return",
+          "type": "scatter",
+          "value": 18.4,
+          "value_label": "Risk"
+        },
+        {
+          "formula": "share of value in holdings with PRC >= 5",
+          "id": "product_risk",
+          "sub": "max PRC 7",
+          "title": "Product Risk",
+          "type": "donut",
+          "value": 84.2105
+        },
+        {
+          "formula": "value-weighted country exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "countries",
+          "sub": "Rest of Europe \u00b7 5% unclassified",
+          "title": "Countries",
+          "type": "map",
+          "value": 62.0
+        },
+        {
+          "formula": "value-weighted industry exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "industries",
+          "sub": "Information Technology \u00b7 5% unclassified",
+          "title": "Sectors",
+          "type": "donut",
+          "value": 80.0
+        },
+        {
+          "formula": "value-weighted currency exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "currencies",
+          "sub": "Euro",
+          "title": "Currencies",
+          "type": "donut",
+          "value": 62.0
+        },
+        {
+          "formula": "share of value in dated holdings, bucketed by MaturityDateUtc",
+          "id": "maturities",
+          "sub": "1\u20135 years",
+          "title": "Maturities",
+          "type": "bar",
+          "value": 15.7895
+        },
+        {
+          "formula": "IndividualRuleOverrides / SuitabilityRules / SuitabilityViolations counts",
+          "id": "restrictions",
+          "rows": [
+            {
+              "label": "Overrides",
+              "value": 0
+            },
+            {
+              "label": "Rules",
+              "value": 54
+            },
+            {
+              "label": "Violations",
+              "value": 0
+            }
+          ],
+          "sub": null,
+          "title": "Restrictions",
+          "type": "rows",
+          "value": 0
+        },
+        {
+          "direction": "down",
+          "formula": "trailing 12m from PerformanceHistory",
+          "id": "performance",
+          "sub": "12 months",
+          "title": "Performance",
+          "type": "line",
+          "value": -11.8959
+        },
+        {
+          "formula": "value-weighted SustainabilityScore over scored holdings",
+          "id": "sustainability",
+          "sub": "9.11 ESG score",
+          "title": "Sustainability",
+          "type": "donut",
+          "value": "Yes"
+        },
+        {
+          "formula": "SecurityPositions count",
+          "id": "positions",
+          "sub": "positions",
+          "title": "Positions list",
+          "type": "grid",
+          "value": 3
+        }
+      ],
+      "portfolio": {
+        "aum": 580060.27,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.061,
+        "id": 99000101,
+        "is_external": false,
+        "name": "Depotberatung",
+        "nr": "SCEN-001-01",
+        "performance_as_of": "2025-10-01",
+        "position_count": 3,
+        "return_12m_pct": -11.8959,
+        "return_3m_pct": -16.5139,
+        "saa_id": 69,
+        "service": "Depository Advisory",
+        "source": "clients.json",
+        "strategy": "Investor profile 6",
+        "top_currency": "EUR",
+        "top_security": "Na. u. Inh. Ti.-Aktie ASML Holding NV",
+        "top_weight": 0.62,
+        "value_at_risk": 0.0,
+        "volatility": 0.184
+      },
+      "positions": [
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 29003.01,
+          "weight": 0.05,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Bonds",
+          "cost_basis": null,
+          "group": "Bonds",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "CH0469273541",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.03823,
+          "position": "1.125 % Clariant AG 2019-30.01.29",
+          "prc": 2,
+          "price": 0.9865,
+          "quantity": 88199.7369,
+          "risk_contribution": 0.004,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 5768,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 8.1,
+          "valor": "46927354",
+          "value": 87009.04,
+          "weight": 0.15,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "NL0010273215",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.37321,
+          "position": "Na. u. Inh. Ti.-Aktie ASML Holding NV",
+          "prc": 7,
+          "price": 1435.4,
+          "quantity": 250.5485,
+          "risk_contribution": 0.112,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 11208,
+          "success": null,
+          "sustainability_rating": 1,
+          "sustainability_score": 10.0,
+          "valor": "19531091",
+          "value": 359637.37,
+          "weight": 0.62,
+          "whg": "EUR"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US7475251036",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": 0.35665,
+          "position": "Namen-Aktie Qualcomm Inc",
+          "prc": 7,
+          "price": 166.61,
+          "quantity": 626.6782,
+          "risk_contribution": 0.041,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 7846,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 6.9,
+          "valor": "964930",
+          "value": 104410.85,
+          "weight": 0.18,
+          "whg": "USD"
+        }
+      ],
+      "prc": {
+        "distribution": {
+          "2": 0.157895,
+          "7": 0.842105
+        },
+        "max_prc": 7,
+        "share_prc_ge_5": 0.842105
+      },
+      "saa": {
+        "available": true,
+        "description": "Depotberatung / CHF / Anlageprofil 6",
+        "reason": null,
+        "rows": [
+          {
+            "actual": 0.05,
+            "category": "Liquidity",
+            "difference": 0.02,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.15,
+            "category": "Bonds",
+            "difference": -0.04,
+            "max": 0.6,
+            "min": 0.0,
+            "target": 0.19
+          },
+          {
+            "actual": 0.8,
+            "category": "Shares",
+            "difference": 0.05,
+            "max": 1.0,
+            "min": 0.3,
+            "target": 0.75
+          },
+          {
+            "actual": 0.0,
+            "category": "Real estate",
+            "difference": -0.03,
+            "max": 0.15,
+            "min": 0.0,
+            "target": 0.03
+          },
+          {
+            "actual": 0.0,
+            "category": "Specialties andCommodities",
+            "difference": 0.0,
+            "max": 0.2,
+            "min": 0.0,
+            "target": 0.0
+          }
+        ],
+        "saa_id": 69,
+        "saa_name": "Depotberatung / CHF / Anlageprofil 6"
+      },
+      "sustainability": {
+        "esg_profile": "Yes",
+        "positioned_weight": 551057.26,
+        "score": 9.11,
+        "scored_weight": 551057.26
+      },
+      "total": {
+        "accounts": 1,
+        "currency": "CHF",
+        "portfolio_aum": 580060.27,
+        "positions": 3,
+        "value": 580060.27
+      },
+      "violations": []
+    }
+  ]
+}

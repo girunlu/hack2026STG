@@ -1,0 +1,7 @@
+# Keep one line ending in the repository; check out native on Windows.
+* text=auto eol=lf
+
+# Provided PDFs are binary.
+*.pdf binary
+*.png binary
+*.woff2 binary

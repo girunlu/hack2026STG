@@ -1,0 +1,441 @@
+{
+  "clients": 48,
+  "portfolios": 58,
+  "gaps": [
+    {
+      "client": "CASE-008",
+      "gaps": [
+        "At least one proposal references a portfolio id that exists on no client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-027",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (risk contributions are not populated in the source data)"
+      ]
+    },
+    {
+      "client": "CASE-028",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-038",
+      "gaps": [
+        "No SAA targets: the strategy has no AssetClass rows with target values",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-012",
+      "gaps": [
+        "Birthday missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-018",
+      "gaps": [
+        "Birthday missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-022",
+      "gaps": [
+        "Birthday missing",
+        "No market price available for: RC Notes Lehman Brothers Treasury Bv 2006-12.5.09 on Zurich Insur Grp Shs -In Default-",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-041",
+      "gaps": [
+        "Birthday missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contribution withheld for 1 position(s): the source risk figure is not a usable number (1.25 % National Australia Bank Ltd 2016-18.05.26 Guaranteed Global Series 957 Reg S)"
+      ]
+    },
+    {
+      "client": "CASE-030",
+      "gaps": [
+        "Risk profile unavailable for this client (RiskProfileId is null)",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-009",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-011",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-033",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-023",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (risk contributions are not populated in the source data)"
+      ]
+    },
+    {
+      "client": "CASE-037",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-021",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-016",
+      "gaps": [
+        "No consultations recorded for this client",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-017",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-025",
+      "gaps": [
+        "No consultations recorded for this client",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-002",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-047",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-014",
+      "gaps": [
+        "No consultations recorded for this client",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "SCEN-001",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-007",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-005",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-036",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-019",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-032",
+      "gaps": [
+        "Risk profile unavailable for this client (RiskProfileId is null)",
+        "Client has no last name in the source data",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-015",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-044",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-004",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-003",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-039",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-040",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-029",
+      "gaps": [
+        "Risk profile unavailable for this client (RiskProfileId is null)",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-010",
+      "gaps": [
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-006",
+      "gaps": [
+        "Client has no last name in the source data",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "ValueAtRisk missing",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-035",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-026",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-013",
+      "gaps": [
+        "Client has no last name in the source data",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-020",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-046",
+      "gaps": [
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-034",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-024",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-043",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-045",
+      "gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (risk contributions are not populated in the source data)"
+      ]
+    },
+    {
+      "client": "CASE-031",
+      "gaps": [
+        "Risk profile unavailable for this client (RiskProfileId is null)",
+        "Client has no last name in the source data",
+        "No consultations recorded for this client",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    },
+    {
+      "client": "CASE-001",
+      "gaps": [
+        "Client has no last name in the source data",
+        "SecurityPositions missing on this portfolio (not null \u2014 the key is absent)",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "PRC missing for all holdings",
+        "Risk contributions are not available for this portfolio (Portfolio.Volatility is not available)"
+      ]
+    },
+    {
+      "client": "CASE-042",
+      "gaps": [
+        "Client has no last name in the source data",
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference"
+      ]
+    }
+  ],
+  "elapsed_ms": 863
+}

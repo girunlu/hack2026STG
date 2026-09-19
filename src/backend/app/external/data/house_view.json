@@ -1,0 +1,178 @@
+{
+  "source": "UBS CIO Global Wealth Management — «Market Outlook / Jahresrückblick 2025 und Ausblick 2026» (veröffentlicht Dezember 2025)",
+  "source_url": "https://www.ubs.com/ch/de/wealth-management/chief-investment-office/market-outlook.html",
+  "title": "UBS CIO Market Outlook 2026 — Marktausblick",
+  "as_of": "2025-12-10",
+  "mock": true,
+  "disclaimer": "Mock-Eingabe zu Prototyp-Zwecken. Nicht als Anlageberatung zu verstehen. Die tatsächliche CIO-Sicht der Bank ist vertraulich und wird hier nicht abgebildet.",
+  "stances": [
+    {
+      "dimension": "AssetClass",
+      "category": "Shares",
+      "stance": "overweight",
+      "note": "Aktien bleiben übergewichtet: solide Unternehmensgewinne, moderate Zinsen und attraktive Bewertungen in ausgewählten Märkten stützen die Renditeerwartung."
+    },
+    {
+      "dimension": "AssetClass",
+      "category": "Bonds",
+      "stance": "neutral",
+      "note": "Obligationen bieten wieder attraktive Renditen, doch das Zinsumfeld bleibt volatil. Neutrale Gewichtung als Diversifikationsbaustein."
+    },
+    {
+      "dimension": "AssetClass",
+      "category": "Liquidity",
+      "stance": "underweight",
+      "note": "Cash-Positionen sollten reduziert werden, da die Opportunitätskosten gegenüber Aktien und Obligationen hoch bleiben."
+    },
+    {
+      "dimension": "AssetClass",
+      "category": "Real estate",
+      "stance": "neutral",
+      "note": "Immobilien bieten Inflationsschutz, doch höhere Finanzierungskosten dämpfen die Kursaussichten. Neutrale Haltung."
+    },
+    {
+      "dimension": "AssetClass",
+      "category": "Specialties andCommodities",
+      "stance": "underweight",
+      "note": "Rohstoffe und Spezialwerte bleiben untergewichtet — zu hohe Volatilität bei begrenztem Diversifikationsnutzen."
+    },
+    {
+      "dimension": "CurrencyGroup",
+      "category": "Swiss francs",
+      "stance": "neutral",
+      "note": "Der Franken bleibt ein sicherer Hafen, bietet aber kaum Renditebeitrag. Neutrale Gewichtung für CHF-Portfolios."
+    },
+    {
+      "dimension": "CurrencyGroup",
+      "category": "US-Dollar",
+      "stance": "overweight",
+      "note": "USD-Engagement bleibt attraktiv dank robuster US-Konjunktur und Zinsdifferenzial. Übergewicht empfohlen."
+    },
+    {
+      "dimension": "CurrencyGroup",
+      "category": "Euro",
+      "stance": "neutral",
+      "note": "Euro stabilisiert sich nach der Schwächephase. Neutrale Haltung, da EZB und Fed konvergieren."
+    },
+    {
+      "dimension": "CurrencyGroup",
+      "category": "Andere",
+      "stance": "underweight",
+      "note": "Schwellenländer-Währungen bleiben anfällig für Rohstoffschocks und geopolitische Spannungen."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Switzerland",
+      "stance": "neutral",
+      "note": "Schweizer Aktien sind qualitativ hochwertig, aber voll bewertet. Neutrale Gewichtung im Heimmarkt."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "North America",
+      "stance": "overweight",
+      "note": "US-Markt bleibt führend bei Innovation und Gewinnwachstum. Übergewichtung in Technologie und Gesundheitswesen."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Rest of Europe",
+      "stance": "neutral",
+      "note": "Europa erholt sich graduell, bleibt aber durch regulatorische Unsicherheit gebremst. Neutrale Haltung."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Japan",
+      "stance": "overweight",
+      "note": "Japans Corporate-Governance-Reformen und schwacher Yen stützen die Exportwirtschaft. Übergewichtung empfohlen."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Asia/Pacific (ex Japan)",
+      "stance": "neutral",
+      "note": "Asien-Pazifik bleibt heterogen — selektive Chancen in Indien, Zurückhaltung bei China."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Great Britain",
+      "stance": "underweight",
+      "note": "Brexit-Folgen und politische Unsicherheit dämpfen die Aussichten. Untergewichtung empfohlen."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Others",
+      "stance": "underweight",
+      "note": "Übrige Schwellenländer bleiben mit Vorsicht zu gewichten — geopolitische Risiken überwiegen oft die Chancen."
+    },
+    {
+      "dimension": "CountryGroup",
+      "category": "Not classified",
+      "stance": "neutral",
+      "note": "Nicht klassifizierte Positionen neutral bewerten — keine aktive Meinung."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Information Technology",
+      "stance": "overweight",
+      "note": "Technologie bleibt der wichtigste Wachstumstreiber — KI, Cloud und Cybersecurity bieten überdurchschnittliches Potenzial."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Health Care",
+      "stance": "overweight",
+      "note": "Gesundheitswesen profitiert von alternder Bevölkerung und Innovationen in Biotech und Medtech. Übergewichtung empfohlen."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Financials",
+      "stance": "neutral",
+      "note": "Finanzsektor profitiert von höheren Zinsen, doch Kreditrisiken steigen. Neutrale Haltung."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Consumer Staples",
+      "stance": "neutral",
+      "note": "Basiskonsumgüter bieten defensive Qualitäten, aber begrenztes Aufwärtspotenzial. Neutral gewichten."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Industrials",
+      "stance": "neutral",
+      "note": "Industriegüter profitieren von Infrastrukturinvestitionen, doch die globale Konjunktur bleibt fragil."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Consumer Discretionary",
+      "stance": "neutral",
+      "note": "Diskretionäre Konsumgüter sind abhängig von der Konsumentenstimmung — selektiv vorgehen."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Telecommunication Services",
+      "stance": "overweight",
+      "note": "Telekommunikationsdienste und Medienplattformen profitieren von Digitalisierung und KI-Integration."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Utilities",
+      "stance": "underweight",
+      "note": "Versorger bleiben defensiv, bieten aber geringes Wachstum. Untergewichtung im Vergleich zu zyklischen Sektoren."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Energy",
+      "stance": "underweight",
+      "note": "Energiesektor bleibt volatil wegen geopolitischer Spannungen und Energiewende. Untergewichtung empfohlen."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Materials",
+      "stance": "underweight",
+      "note": "Rohstoffsektor leidet unter schwacher China-Nachfrage und Überkapazitäten. Untergewichtung."
+    },
+    {
+      "dimension": "Industry",
+      "category": "Real Estate",
+      "stance": "underweight",
+      "note": "Immobilienaktien bleiben unter Druck durch hohe Finanzierungskosten. Untergewichtung empfohlen."
+    }
+  ]
+}

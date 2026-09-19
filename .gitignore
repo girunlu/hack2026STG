@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Runtime state — regenerable, never source
+data/uploads/
+data/excustody/
+src/backend/app/external/cache/
+
+# Local secrets — the optional LLM key lives here
+.env
+.env.local

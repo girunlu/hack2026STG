@@ -1,0 +1,767 @@
+{
+  "client": {
+    "client": {
+      "aum": 171713.24,
+      "birthday": "1934-12-07",
+      "city": null,
+      "client_id": 88772,
+      "company": null,
+      "counts": {
+        "errors": 0,
+        "external_portfolios": 0,
+        "notes": 4,
+        "portfolios": 1,
+        "proposals": 0,
+        "tags": 2,
+        "warnings": 0
+      },
+      "display_name": "Buzz Lightyear",
+      "esg_profile": "Yes",
+      "first_name": "Buzz",
+      "is_company": false,
+      "is_employee": false,
+      "last_changed": "2026-09-03",
+      "last_consultation": "2026-07-20",
+      "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+      "last_name": "Lightyear",
+      "liquidity": 3605.96,
+      "liquidity_pct": 0.021,
+      "profiling_date": "2022-10-01",
+      "ref": "CASE-027",
+      "reporting_currency": "CHF",
+      "risk_profile": {
+        "equity_quote": 0.85,
+        "id": 17,
+        "max_prc": 7,
+        "max_vola": 0.12,
+        "name": "Anlageprofil 5",
+        "risk_level": 5
+      },
+      "risk_profile_id": 17,
+      "street": null,
+      "type": "Private client",
+      "zip": null
+    },
+    "counts": {
+      "dangling_violations": 0,
+      "distinct_notes": 4,
+      "errors": 0,
+      "external_portfolios": 0,
+      "industry_tags": 2,
+      "notes": 4,
+      "open_proposals": 0,
+      "overrides": 0,
+      "portfolios": 1,
+      "proposals": 0,
+      "region_tags": 0,
+      "rejected_proposals": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "data_gaps": [
+      "No consultations recorded for this client"
+    ],
+    "lang": "en",
+    "notes": [
+      {
+        "date": "2026-07-20",
+        "duplicate_of": null,
+        "index": 0,
+        "path": "clients[CASE-027].ClientNotes[0]",
+        "source": "clients.json",
+        "text": "Very enthusiastic about space travel, follows private spaceflight companies with great interest."
+      },
+      {
+        "date": "2026-07-04",
+        "duplicate_of": null,
+        "index": 1,
+        "path": "clients[CASE-027].ClientNotes[1]",
+        "source": "clients.json",
+        "text": "Asked for more detail on how private spaceflight and aerospace exposure could be expanded further."
+      },
+      {
+        "date": "2026-06-04",
+        "duplicate_of": null,
+        "index": 2,
+        "path": "clients[CASE-027].ClientNotes[2]",
+        "source": "clients.json",
+        "text": "Mentioned a preference for forward-looking, high-conviction positions over defensive ones."
+      },
+      {
+        "date": "2026-05-05",
+        "duplicate_of": null,
+        "index": 3,
+        "path": "clients[CASE-027].ClientNotes[3]",
+        "source": "clients.json",
+        "text": "Comfortable with a long time horizon; not concerned by short-term volatility in thematic growth positions."
+      }
+    ],
+    "overrides": [],
+    "portfolios": [
+      {
+        "aum": 171713.24,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.06529,
+        "id": 702,
+        "is_external": false,
+        "name": "Konto / Depot",
+        "nr": "CASE-027-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 3,
+        "return_12m_pct": 22.7983,
+        "return_3m_pct": 5.6715,
+        "saa_id": 1,
+        "service": "Execution only",
+        "source": "clients.json",
+        "strategy": "No strategy",
+        "top_currency": "USD",
+        "top_security": "SpaceX Aktie",
+        "top_weight": 0.6853,
+        "value_at_risk": 0.08847,
+        "volatility": 0.12187
+      }
+    ],
+    "proposals": [],
+    "tags": {
+      "all": [
+        {
+          "name": "Industrials",
+          "scope": "Client",
+          "type": "Industry"
+        },
+        {
+          "name": "Consumer Discretionary",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "industry": [
+        {
+          "name": "Industrials",
+          "scope": "Client",
+          "type": "Industry"
+        },
+        {
+          "name": "Consumer Discretionary",
+          "scope": "Client",
+          "type": "Industry"
+        }
+      ],
+      "other": [],
+      "region": []
+    },
+    "violations": []
+  },
+  "portfolios": [
+    {
+      "client": {
+        "aum": 171713.24,
+        "birthday": "1934-12-07",
+        "city": null,
+        "client_id": 88772,
+        "company": null,
+        "counts": {
+          "errors": 0,
+          "external_portfolios": 0,
+          "notes": 4,
+          "portfolios": 1,
+          "proposals": 0,
+          "tags": 2,
+          "warnings": 0
+        },
+        "display_name": "Buzz Lightyear",
+        "esg_profile": "Yes",
+        "first_name": "Buzz",
+        "is_company": false,
+        "is_employee": false,
+        "last_changed": "2026-09-03",
+        "last_consultation": "2026-07-20",
+        "last_consultation_basis": "latest of FinalizedDateUTC/ProposedDateUTC and ClientNotes.CreatedByDateUTC",
+        "last_name": "Lightyear",
+        "liquidity": 3605.96,
+        "liquidity_pct": 0.021,
+        "profiling_date": "2022-10-01",
+        "ref": "CASE-027",
+        "reporting_currency": "CHF",
+        "risk_profile": {
+          "equity_quote": 0.85,
+          "id": 17,
+          "max_prc": 7,
+          "max_vola": 0.12,
+          "name": "Anlageprofil 5",
+          "risk_level": 5
+        },
+        "risk_profile_id": 17,
+        "street": null,
+        "type": "Private client",
+        "zip": null
+      },
+      "data_gaps": [
+        "Price/cost basis and performance need a cost basis, which the source data does not contain",
+        "Per-position rules are not available: violations carry no position reference",
+        "Risk contributions are not available for this portfolio (risk contributions are not populated in the source data)"
+      ],
+      "exposures": {
+        "asset_class": {
+          "splitting_off": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Shares",
+              "label": "Shares",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Liquidity",
+              "label": "Liquidity",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ]
+        },
+        "country": {
+          "splitting_off": [
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "North America",
+              "label": "North America",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ]
+        },
+        "currency": {
+          "splitting_off": [
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 1826.25,
+              "weight": 0.010635
+            },
+            {
+              "category": "Andere",
+              "label": "Andere",
+              "value": 1779.71,
+              "weight": 0.010364
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "US-Dollar",
+              "label": "US-Dollar",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Swiss francs",
+              "label": "Swiss francs",
+              "value": 1826.25,
+              "weight": 0.010635
+            },
+            {
+              "category": "Andere",
+              "label": "Andere",
+              "value": 1779.71,
+              "weight": 0.010364
+            }
+          ]
+        },
+        "industry": {
+          "splitting_off": [
+            {
+              "category": "Industrials",
+              "label": "Industrials",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ],
+          "splitting_on": [
+            {
+              "category": "Industrials",
+              "label": "Industrials",
+              "value": 168107.28,
+              "weight": 0.979
+            },
+            {
+              "category": "Nicht klassifiziert",
+              "label": "Not classified",
+              "value": 3605.96,
+              "weight": 0.021
+            }
+          ]
+        }
+      },
+      "fx": {
+        "portfolio_currency": "CHF",
+        "rows": [
+          {
+            "currency": "USD",
+            "currency_group": "US-Dollar",
+            "value": 168107.28,
+            "weight": 0.979
+          },
+          {
+            "currency": "CHF",
+            "currency_group": "Swiss francs",
+            "value": 1826.25,
+            "weight": 0.010635
+          },
+          {
+            "currency": "SOL",
+            "currency_group": "Andere",
+            "value": 1779.71,
+            "weight": 0.010364
+          }
+        ],
+        "total": 171713.24
+      },
+      "groups": [
+        {
+          "category": "Liquidity",
+          "expandable": true,
+          "positions": 2,
+          "value": 3605.96,
+          "weight": 0.021
+        },
+        {
+          "category": "Shares",
+          "expandable": true,
+          "positions": 3,
+          "value": 168107.28,
+          "weight": 0.979
+        }
+      ],
+      "integrity": {
+        "data_as_of": "2026-09-03",
+        "factory_date": "2026-09-03",
+        "portfolio_known": true
+      },
+      "lang": "en",
+      "maturity": {
+        "as_of": "2026-09-03",
+        "buckets": [
+          {
+            "category": "Unter 1 Jahr",
+            "label": "Under 1 year",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "1\u20135 Jahre",
+            "label": "1\u20135 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "5\u201310 Jahre",
+            "label": "5\u201310 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "\u00dcber 10 Jahre",
+            "label": "Over 10 years",
+            "value": 0.0,
+            "weight": 0.0
+          },
+          {
+            "category": "Nicht klassifiziert",
+            "label": "Not classified",
+            "value": 168107.28,
+            "weight": 1.0
+          }
+        ],
+        "classified_weight": 0.0
+      },
+      "metrics": [
+        {
+          "alert": false,
+          "formula": "centre = largest actual-vs-target deviation; alert when an actual leaves Min/Max",
+          "id": "saa",
+          "sub": "Shares",
+          "title": "SAA",
+          "type": "donut",
+          "value": 97.9
+        },
+        {
+          "formula": "share of the client's portfolios without an Error-severity violation",
+          "id": "suitability",
+          "sub": "0 error rule violations",
+          "title": "Suitability",
+          "type": "gauge",
+          "value": 100.0
+        },
+        {
+          "formula": "Portfolio.Volatility / Portfolio.ExpectedReturn, as delivered by the risk engine",
+          "id": "risk_return",
+          "sub": 6.529,
+          "sub_label": "Return",
+          "title": "Risk / Return",
+          "type": "scatter",
+          "value": 12.187,
+          "value_label": "Risk"
+        },
+        {
+          "formula": "share of value in holdings with PRC >= 5",
+          "id": "product_risk",
+          "sub": "max PRC 7",
+          "title": "Product Risk",
+          "type": "donut",
+          "value": 100.0
+        },
+        {
+          "formula": "value-weighted country exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "countries",
+          "sub": "North America \u00b7 2% unclassified",
+          "title": "Countries",
+          "type": "map",
+          "value": 97.9
+        },
+        {
+          "formula": "value-weighted industry exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "industries",
+          "sub": "Industrials \u00b7 2% unclassified",
+          "title": "Sectors",
+          "type": "donut",
+          "value": 97.9
+        },
+        {
+          "formula": "value-weighted currency exposure with fund look-through (FundUnbundlingMappings)",
+          "id": "currencies",
+          "sub": "US-Dollar",
+          "title": "Currencies",
+          "type": "donut",
+          "value": 97.9
+        },
+        {
+          "formula": "IndividualRuleOverrides / SuitabilityRules / SuitabilityViolations counts",
+          "id": "restrictions",
+          "rows": [
+            {
+              "label": "Overrides",
+              "value": 0
+            },
+            {
+              "label": "Rules",
+              "value": 54
+            },
+            {
+              "label": "Violations",
+              "value": 0
+            }
+          ],
+          "sub": null,
+          "title": "Restrictions",
+          "type": "rows",
+          "value": 0
+        },
+        {
+          "direction": "up",
+          "formula": "trailing 12m from PerformanceHistory",
+          "id": "performance",
+          "sub": "12 months",
+          "title": "Performance",
+          "type": "line",
+          "value": 22.7983
+        },
+        {
+          "formula": "value-weighted SustainabilityScore over scored holdings",
+          "id": "sustainability",
+          "sub": "7.34 ESG score",
+          "title": "Sustainability",
+          "type": "donut",
+          "value": "Yes"
+        },
+        {
+          "formula": "SecurityPositions count",
+          "id": "positions",
+          "sub": "positions",
+          "title": "Positions list",
+          "type": "grid",
+          "value": 3
+        }
+      ],
+      "portfolio": {
+        "aum": 171713.24,
+        "currency": "CHF",
+        "data_gaps": [
+          "PerformanceYTD missing; returns computed from PerformanceHistory"
+        ],
+        "expected_return": 0.06529,
+        "id": 702,
+        "is_external": false,
+        "name": "Konto / Depot",
+        "nr": "CASE-027-01",
+        "performance_as_of": "2026-07-01",
+        "position_count": 3,
+        "return_12m_pct": 22.7983,
+        "return_3m_pct": 5.6715,
+        "saa_id": 1,
+        "service": "Execution only",
+        "source": "clients.json",
+        "strategy": "No strategy",
+        "top_currency": "USD",
+        "top_security": "SpaceX Aktie",
+        "top_weight": 0.6853,
+        "value_at_risk": 0.08847,
+        "volatility": 0.12187
+      },
+      "positions": [
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Kontokorrentkonto CHF",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 1826.25,
+          "weight": 0.01064,
+          "whg": "CHF"
+        },
+        {
+          "asset_class": "Liquidity",
+          "cost_basis": null,
+          "group": "Liquidity",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": null,
+          "kind": "account",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Kryptowaehrungskonto Solana",
+          "prc": null,
+          "price": null,
+          "quantity": null,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": null,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": null,
+          "value": 1779.71,
+          "weight": 0.01036,
+          "whg": "SOL"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US84615Q1031",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "SpaceX Aktie",
+          "prc": 7,
+          "price": 149.78,
+          "quantity": 893.0,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": -900001,
+          "success": null,
+          "sustainability_rating": null,
+          "sustainability_score": null,
+          "valor": "156888148",
+          "value": 117675.1,
+          "weight": 0.6853,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US9078181081",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Namen-Aktie Union Pacific Corp",
+          "prc": 5,
+          "price": 290.62,
+          "quantity": 118.0,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 8268,
+          "success": null,
+          "sustainability_rating": 2,
+          "sustainability_score": 7.5,
+          "valor": "979840",
+          "value": 30259.31,
+          "weight": 0.17622,
+          "whg": "USD"
+        },
+        {
+          "asset_class": "Shares",
+          "cost_basis": null,
+          "group": "Shares",
+          "has_price": true,
+          "is_fund": false,
+          "kennung": "US1491231015",
+          "kind": "security",
+          "lookthrough_rows": 0,
+          "marginal_risk": null,
+          "position": "Namen-Aktie Caterpillar Inc",
+          "prc": 6,
+          "price": 779.16,
+          "quantity": 29.0,
+          "risk_contribution": null,
+          "risk_figure_dropped": false,
+          "risk_figure_reason": null,
+          "rules": null,
+          "security_id": 7890,
+          "success": null,
+          "sustainability_rating": 3,
+          "sustainability_score": 7.1,
+          "valor": "916546",
+          "value": 20172.87,
+          "weight": 0.11748,
+          "whg": "USD"
+        }
+      ],
+      "prc": {
+        "distribution": {
+          "5": 0.18,
+          "6": 0.12,
+          "7": 0.7
+        },
+        "max_prc": 7,
+        "share_prc_ge_5": 1.0
+      },
+      "saa": {
+        "available": true,
+        "description": "Execution only / beratungsfreies Gesch\u00e4ft / CHF / Keine Strategie",
+        "reason": null,
+        "rows": [
+          {
+            "actual": 0.021,
+            "category": "Liquidity",
+            "difference": 0.021,
+            "max": 1.0,
+            "min": 0.0,
+            "target": 0.0
+          },
+          {
+            "actual": 0.0,
+            "category": "Bonds",
+            "difference": 0.0,
+            "max": 1.0,
+            "min": 0.0,
+            "target": 0.0
+          },
+          {
+            "actual": 0.979,
+            "category": "Shares",
+            "difference": 0.979,
+            "max": 1.0,
+            "min": 0.0,
+            "target": 0.0
+          },
+          {
+            "actual": 0.0,
+            "category": "Real estate",
+            "difference": 0.0,
+            "max": 1.0,
+            "min": 0.0,
+            "target": 0.0
+          },
+          {
+            "actual": 0.0,
+            "category": "Specialties andCommodities",
+            "difference": 0.0,
+            "max": 1.0,
+            "min": 0.0,
+            "target": 0.0
+          }
+        ],
+        "saa_id": 1,
+        "saa_name": "Execution only / beratungsfreies Gesch\u00e4ft / CHF / Keine Strategie"
+      },
+      "sustainability": {
+        "esg_profile": "Yes",
+        "positioned_weight": 168107.28,
+        "score": 7.34,
+        "scored_weight": 50432.18
+      },
+      "total": {
+        "accounts": 2,
+        "currency": "CHF",
+        "portfolio_aum": 171713.24,
+        "positions": 3,
+        "value": 171713.24
+      },
+      "violations": []
+    }
+  ]
+}

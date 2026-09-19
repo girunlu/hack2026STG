@@ -1,0 +1,414 @@
+[
+  {
+    "ClientId": 5506,
+    "ClientRef": "DRILL-FX-001",
+    "FirstName": "Beat",
+    "LastName": "Meier",
+    "IsClientACompany": false,
+    "IsEmployee": false,
+    "RegulatoryClientTypeId": 13,
+    "RegulatoryClientTypeName": "Private client",
+    "ReportingCurrency": "CHF",
+    "Birthday": "1958-12-04",
+    "ProfilingDateUtc": "2026-01-15T09:00:00Z",
+    "AssetsUnderManagementInDefaultCurrency": 1459140.2,
+    "LiquidityInDefaultCurrency": 1435553.16,
+    "RiskProfileId": 15,
+    "RiskProfileName": "Anlageprofil 3",
+    "EsgProfileId": 1,
+    "EsgProfileName": "Yes",
+    "Portfolios": [
+      {
+        "PortfolioId": 87397,
+        "PublicGuid": "D7E805DA-846A-32C3-BB81-E3C29B621792",
+        "PortfolioNr": "DRILL-FX-001-01",
+        "Name": "Depot A",
+        "PortfolioCurrency": "CHF",
+        "StrategicAssetAllocationId": 93,
+        "InvestmentServiceId": 12,
+        "InvestmentServiceName": "Individual Pension - Depository Advisory",
+        "StrategyId": 5,
+        "StrategyName": "Investor profile 5",
+        "ReferenceCurrency": "CHF",
+        "AssetsUnderManagementInDefaultCurrency": 1459140.2,
+        "LiquidityInDefaultCurrency": 1413916.06,
+        "Volatility": 0.125341,
+        "ExpectedReturn": 0.071706,
+        "ValueAtRisk": 0.066265,
+        "FactoryDateUtc": "2026-09-03T11:15:26.1149572Z",
+        "SecurityPositions": [
+          {
+            "SecurityId": 42048,
+            "Isin": "",
+            "Valor": "",
+            "SecurityName": "Kap",
+            "Quantity": 510699.0692,
+            "PricePerUnit": 1.0,
+            "Currency": "USD",
+            "TotalAmountInPortfolioCurrency": 510699.07,
+            "PortfolioValuePercentage": 0.35,
+            "MarginalContributionToRisk": 0.113288,
+            "ContributionVolatility": 0.022384
+          },
+          {
+            "SecurityId": 2665,
+            "Isin": "CH0233387510",
+            "Valor": "23338751",
+            "SecurityName": "Anteile -QB- Credit Suisse Index Fd (CH) Umbrella  - CSIF (CH) Equity World ex CH Small Cap Blue",
+            "Quantity": 194.57,
+            "PricePerUnit": 2624.75692,
+            "Currency": "USD",
+            "TotalAmountInPortfolioCurrency": 510699.07,
+            "PortfolioValuePercentage": 0.35,
+            "MarginalContributionToRisk": 0.082796,
+            "ContributionVolatility": 0.060428
+          },
+          {
+            "SecurityId": 5768,
+            "Isin": "CH0469273541",
+            "Valor": "46927354",
+            "SecurityName": "1.125 % Clariant AG 2019-30.01.29",
+            "Quantity": 443732.4473,
+            "PricePerUnit": 0.9865,
+            "Currency": "CHF",
+            "TotalAmountInPortfolioCurrency": 437742.06,
+            "PortfolioValuePercentage": 0.3,
+            "MarginalContributionToRisk": 0.05398,
+            "ContributionVolatility": 0.035907
+          }
+        ],
+        "AccountPositions": [],
+        "PerformanceHistory": [
+          {
+            "Date": "2021-10-01",
+            "Value": 979162.07
+          },
+          {
+            "Date": "2021-11-01",
+            "Value": 1015511.28
+          },
+          {
+            "Date": "2021-12-01",
+            "Value": 1057387.56
+          },
+          {
+            "Date": "2022-01-01",
+            "Value": 1098478.9
+          },
+          {
+            "Date": "2022-02-01",
+            "Value": 1053751.4
+          },
+          {
+            "Date": "2022-03-01",
+            "Value": 1088048.03
+          },
+          {
+            "Date": "2022-04-01",
+            "Value": 1109197.71
+          },
+          {
+            "Date": "2022-05-01",
+            "Value": 1089038.5
+          },
+          {
+            "Date": "2022-06-01",
+            "Value": 1100031.07
+          },
+          {
+            "Date": "2022-07-01",
+            "Value": 1083633.15
+          },
+          {
+            "Date": "2022-08-01",
+            "Value": 1159813.48
+          },
+          {
+            "Date": "2022-09-01",
+            "Value": 1205580.95
+          },
+          {
+            "Date": "2022-10-01",
+            "Value": 1179721.2
+          },
+          {
+            "Date": "2022-11-01",
+            "Value": 1170468.36
+          },
+          {
+            "Date": "2022-12-01",
+            "Value": 1228852.22
+          },
+          {
+            "Date": "2023-01-01",
+            "Value": 1176345.74
+          },
+          {
+            "Date": "2023-02-01",
+            "Value": 1243202.57
+          },
+          {
+            "Date": "2023-03-01",
+            "Value": 1311150.99
+          },
+          {
+            "Date": "2023-04-01",
+            "Value": 1313971.83
+          },
+          {
+            "Date": "2023-05-01",
+            "Value": 1259579.33
+          },
+          {
+            "Date": "2023-06-01",
+            "Value": 1346122.13
+          },
+          {
+            "Date": "2023-07-01",
+            "Value": 1378070.19
+          },
+          {
+            "Date": "2023-08-01",
+            "Value": 1437780.4
+          },
+          {
+            "Date": "2023-09-01",
+            "Value": 1405633.71
+          },
+          {
+            "Date": "2023-10-01",
+            "Value": 1426577.74
+          },
+          {
+            "Date": "2023-11-01",
+            "Value": 1519317.86
+          },
+          {
+            "Date": "2023-12-01",
+            "Value": 1570322.49
+          },
+          {
+            "Date": "2024-01-01",
+            "Value": 1520972.45
+          },
+          {
+            "Date": "2024-02-01",
+            "Value": 1472532.43
+          },
+          {
+            "Date": "2024-03-01",
+            "Value": 1541518.47
+          },
+          {
+            "Date": "2024-04-01",
+            "Value": 1572452.19
+          },
+          {
+            "Date": "2024-05-01",
+            "Value": 1646533.24
+          },
+          {
+            "Date": "2024-06-01",
+            "Value": 1655912.55
+          },
+          {
+            "Date": "2024-07-01",
+            "Value": 1698733.25
+          },
+          {
+            "Date": "2024-08-01",
+            "Value": 1693738.19
+          },
+          {
+            "Date": "2024-09-01",
+            "Value": 1828648.42
+          },
+          {
+            "Date": "2024-10-01",
+            "Value": 1770100.82
+          },
+          {
+            "Date": "2024-11-01",
+            "Value": 1795160.24
+          },
+          {
+            "Date": "2024-12-01",
+            "Value": 1881779.73
+          },
+          {
+            "Date": "2025-01-01",
+            "Value": 1998343.53
+          },
+          {
+            "Date": "2025-02-01",
+            "Value": 1938132.18
+          },
+          {
+            "Date": "2025-03-01",
+            "Value": 1881534.19
+          },
+          {
+            "Date": "2025-04-01",
+            "Value": 1953902.8
+          },
+          {
+            "Date": "2025-05-01",
+            "Value": 2007699.95
+          },
+          {
+            "Date": "2025-06-01",
+            "Value": 2007739.6
+          },
+          {
+            "Date": "2025-07-01",
+            "Value": 2062883.17
+          },
+          {
+            "Date": "2025-08-01",
+            "Value": 2085258.2
+          },
+          {
+            "Date": "2025-09-01",
+            "Value": 2049149.53
+          },
+          {
+            "Date": "2025-10-01",
+            "Value": 2094065.58
+          },
+          {
+            "Date": "2025-11-01",
+            "Value": 2245918.87
+          },
+          {
+            "Date": "2025-12-01",
+            "Value": 2332244.9
+          },
+          {
+            "Date": "2026-01-01",
+            "Value": 2250363.81
+          },
+          {
+            "Date": "2026-02-01",
+            "Value": 2396688.09
+          },
+          {
+            "Date": "2026-03-01",
+            "Value": 2510804.27
+          },
+          {
+            "Date": "2026-04-01",
+            "Value": 2636138.18
+          },
+          {
+            "Date": "2026-05-01",
+            "Value": 2620908.71
+          },
+          {
+            "Date": "2026-06-01",
+            "Value": 2589864.09
+          },
+          {
+            "Date": "2026-07-01",
+            "Value": 1459140.2
+          }
+        ]
+      }
+    ],
+    "SuitabilityViolations": [
+      {
+        "Id": 624902,
+        "RuleCode": "Significant overweight in the equity sector \"Consumer Discretionary\"",
+        "RuleDescription": "Starkes Übergewicht (+/- 10% zum SAA-Sollwert der Benchmark) im Aktiensektor \"Nicht-Basiskonsumgüter\"",
+        "ErrorLevel": 0,
+        "Severity": "Warning",
+        "PortfolioId": 87397,
+        "LastViolatedDateUTC": "2026-08-15T10:30:00Z",
+        "ViolationPath": [
+          {
+            "FieldName": "SimulationVolatilityRuleField`1",
+            "LeftValue": 0.231378,
+            "RightValue": 0.076339,
+            "Operator": 60
+          }
+        ]
+      }
+    ],
+    "Proposals": [
+      {
+        "ProposalId": 269396,
+        "PublicGuid": "0AF03B97-1722-F244-F58D-669CBEE3772A",
+        "PortfolioId": 87397,
+        "ProposalStatusId": 4,
+        "ProposalStatusName": "Abgelehnt",
+        "AdvisoryTypeId": 1,
+        "AdvisoryTypeName": "Depot meeting",
+        "Currency": "CHF",
+        "StrategicAssetAllocationId": 90,
+        "ProposedDateUTC": "2026-08-10T14:00:00Z",
+        "Reason": "Market rebalancing",
+        "ExpectedReturn": 0.057696,
+        "Volatility": 0.138844,
+        "ValueAtRisk": 0.050719,
+        "SecurityPositions": [
+          {
+            "Isin": "CH0183136065",
+            "SecurityName": "Anteile -AA CHF- ZKB Palladium ETF",
+            "Quantity": 73.71,
+            "PricePerUnit": 314.55,
+            "Currency": "CHF",
+            "TotalAmountInProposalCurrency": 7649.32,
+            "ProposalValuePercentage": 0.124783
+          }
+        ],
+        "AccountPositions": [],
+        "Contracts": [],
+        "StandingOrders": []
+      },
+      {
+        "ProposalId": 639131,
+        "PublicGuid": "78F64F7F-D633-DBDD-E131-CA3766E4D58E",
+        "PortfolioId": 87397,
+        "ProposalStatusId": 1,
+        "ProposalStatusName": "Entwurf",
+        "AdvisoryTypeId": 1,
+        "AdvisoryTypeName": "Depot meeting",
+        "Currency": "CHF",
+        "StrategicAssetAllocationId": 97,
+        "ProposedDateUTC": "2026-08-10T14:00:00Z",
+        "Reason": "Follow-up from prior meeting",
+        "ExpectedReturn": 0.052157,
+        "Volatility": 0.166135,
+        "ValueAtRisk": 0.105033,
+        "SecurityPositions": [
+          {
+            "Isin": "LU0489337690",
+            "SecurityName": "Shs -1C- Xtrackers SICAV - FTSE Developed Europe Real Estate UCITS ETF",
+            "Quantity": 14.55,
+            "PricePerUnit": 22.736,
+            "Currency": "CHF",
+            "TotalAmountInProposalCurrency": 49967.71,
+            "ProposalValuePercentage": 0.116086
+          }
+        ],
+        "AccountPositions": [],
+        "Contracts": [],
+        "StandingOrders": []
+      }
+    ],
+    "Transactions": [],
+    "IndividualRuleOverrides": [],
+    "Tags": [
+      {
+        "TagName": "Great Britain",
+        "TagTypeName": "Region",
+        "Scope": "Client"
+      }
+    ],
+    "ClientNotes": [
+      {
+        "Note": "Expects an inheritance in the coming years, strategy to be reviewed at that point.",
+        "CreatedByDateUTC": "2026-01-10T14:30:00Z"
+      }
+    ]
+  }
+]
